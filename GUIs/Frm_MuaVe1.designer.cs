@@ -1,4 +1,4 @@
-﻿namespace DoAn
+﻿namespace QuanLyBanVeMayBay.GUI
 {
     partial class Frm_MuaVe1
     {
@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MuaVe1));
             this.Pnl_Header = new System.Windows.Forms.Panel();
             this.Btn_DangKy = new System.Windows.Forms.Button();
             this.Btn_DangNhap = new System.Windows.Forms.Button();
-            this.Pnl_Logo = new System.Windows.Forms.Panel();
             this.Btn_TraCuuChuyenBay = new System.Windows.Forms.Button();
             this.Btn_TraCuuHoaDon = new System.Windows.Forms.Button();
             this.Btn_MuaVe = new System.Windows.Forms.Button();
@@ -53,10 +51,10 @@
             this.Dtp_NgayVe = new System.Windows.Forms.DateTimePicker();
             this.Lbl_NgayVe = new System.Windows.Forms.Label();
             this.Pnl_HanhKhach = new System.Windows.Forms.Panel();
+            this.Btn_HanhKhach = new System.Windows.Forms.Button();
             this.Txt_HanhKhach = new System.Windows.Forms.TextBox();
             this.Lbl_HanhKhach = new System.Windows.Forms.Label();
             this.Btn_TimKiem = new System.Windows.Forms.Button();
-            this.Btn_HanhKhach = new System.Windows.Forms.Button();
             this.Pnl_Header.SuspendLayout();
             this.Pnl_DiemDi.SuspendLayout();
             this.Pnl_DiemDen.SuspendLayout();
@@ -72,7 +70,6 @@
             this.Pnl_Header.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Pnl_Header.Controls.Add(this.Btn_DangKy);
             this.Pnl_Header.Controls.Add(this.Btn_DangNhap);
-            this.Pnl_Header.Controls.Add(this.Pnl_Logo);
             this.Pnl_Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Header.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Header.Name = "Pnl_Header";
@@ -98,15 +95,6 @@
             this.Btn_DangNhap.TabIndex = 1;
             this.Btn_DangNhap.Text = "Đăng nhập";
             this.Btn_DangNhap.UseVisualStyleBackColor = true;
-            // 
-            // Pnl_Logo
-            // 
-            this.Pnl_Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pnl_Logo.BackgroundImage")));
-            this.Pnl_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pnl_Logo.Location = new System.Drawing.Point(25, 3);
-            this.Pnl_Logo.Name = "Pnl_Logo";
-            this.Pnl_Logo.Size = new System.Drawing.Size(96, 51);
-            this.Pnl_Logo.TabIndex = 0;
             // 
             // Btn_TraCuuChuyenBay
             // 
@@ -302,6 +290,17 @@
             this.Pnl_HanhKhach.Size = new System.Drawing.Size(540, 65);
             this.Pnl_HanhKhach.TabIndex = 14;
             // 
+            // Btn_HanhKhach
+            // 
+            this.Btn_HanhKhach.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Btn_HanhKhach.Location = new System.Drawing.Point(443, 20);
+            this.Btn_HanhKhach.Name = "Btn_HanhKhach";
+            this.Btn_HanhKhach.Size = new System.Drawing.Size(43, 30);
+            this.Btn_HanhKhach.TabIndex = 17;
+            this.Btn_HanhKhach.Text = "...";
+            this.Btn_HanhKhach.UseVisualStyleBackColor = true;
+            this.Btn_HanhKhach.Click += new System.EventHandler(this.Btn_HanhKhach_Click);
+            // 
             // Txt_HanhKhach
             // 
             this.Txt_HanhKhach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,17 +328,6 @@
             this.Btn_TimKiem.TabIndex = 3;
             this.Btn_TimKiem.Text = "Tìm kiếm";
             this.Btn_TimKiem.UseVisualStyleBackColor = true;
-            // 
-            // Btn_HanhKhach
-            // 
-            this.Btn_HanhKhach.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Btn_HanhKhach.Location = new System.Drawing.Point(443, 20);
-            this.Btn_HanhKhach.Name = "Btn_HanhKhach";
-            this.Btn_HanhKhach.Size = new System.Drawing.Size(43, 30);
-            this.Btn_HanhKhach.TabIndex = 17;
-            this.Btn_HanhKhach.Text = "...";
-            this.Btn_HanhKhach.UseVisualStyleBackColor = true;
-            this.Btn_HanhKhach.Click += new System.EventHandler(this.Btn_HanhKhach_Click);
             // 
             // Frm_MuaVe1
             // 
@@ -385,7 +373,6 @@
         private System.Windows.Forms.Panel Pnl_Header;
         private System.Windows.Forms.Button Btn_DangKy;
         private System.Windows.Forms.Button Btn_DangNhap;
-        private System.Windows.Forms.Panel Pnl_Logo;
         private System.Windows.Forms.Button Btn_TraCuuChuyenBay;
         private System.Windows.Forms.Button Btn_TraCuuHoaDon;
         private System.Windows.Forms.Button Btn_MuaVe;

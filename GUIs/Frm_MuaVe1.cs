@@ -1,16 +1,9 @@
 ﻿using QuanLyBanVeMayBay.BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyBanVeMayBay.GUI.Form_HanhKhach;
 
-namespace DoAn
+namespace QuanLyBanVeMayBay.GUI
 {
     public partial class Frm_MuaVe1 : Form
     {

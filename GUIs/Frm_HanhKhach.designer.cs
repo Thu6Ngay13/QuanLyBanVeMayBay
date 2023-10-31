@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.GUI.Form_HanhKhach
+﻿namespace QuanLyBanVeMayBay.GUI
 {
     partial class Frm_HanhKhach
     {

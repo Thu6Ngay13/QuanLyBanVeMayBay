@@ -242,6 +242,9 @@
     <EmbeddedResource Include="GUIs\Frm_HanhKhach.resx">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_MuaVe1.resx">
+      <DependentUpon>Frm_MuaVe1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_TraCuuChuyenBay.resx">
       <DependentUpon>Frm_TraCuuChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
