@@ -69,18 +69,18 @@ namespace QuanLyBanVeMayBay.GUI
             LayThongTinChuyenBay();
             if (KiemTraThongTin())
             {
-                themChuyenBay.ThemChuyenBay(
-                    MaMaybay,
-                    LoaiChuyenBay,
-                    DiemDi,
-                    DiemDen,
-                    string.Concat(FormatDate(NgayDi), " ", ThoiGianDi),
-                    string.Concat(FormatDate(NgayDi), " ", ThoiGianDuKienDen),
-                    ChiPhi,
-                    GiaVePhoThong,
-                    GiaVeThuongGia,
-                    KhoiLuongHanhLy,
-                    ref error);
+                themChuyenBay.ThemChuyenBay(MaMaybay,
+                                            LoaiChuyenBay,
+                                            DiemDi,
+                                            DiemDen,
+                                            string.Concat(FormatDate(NgayDi), " ", ThoiGianDi),
+                                            string.Concat(FormatDate(NgayDi), " ", ThoiGianDuKienDen),
+                                            ChiPhi,
+                                            GiaVePhoThong,
+                                            GiaVeThuongGia,
+                                            KhoiLuongHanhLy,
+                                            ref error);
+
             }
             else
             {

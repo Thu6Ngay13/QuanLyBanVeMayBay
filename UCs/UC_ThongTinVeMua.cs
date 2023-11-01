@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace QuanLyBanVeMayBay.UC
@@ -12,7 +12,7 @@ namespace QuanLyBanVeMayBay.UC
 
         private void UC_ThongTinVeMua_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
