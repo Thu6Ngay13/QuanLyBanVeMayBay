@@ -37,7 +37,7 @@ namespace QuanLyBanVeMayBay.GUI
                 vemaybay.Lbl_ThoiGianDuKien.Text = "Thời gian dự kiến bay: "
                     + ((DateTime)datatable.Rows[i]["ThoiGianDuKienDen"])
                     .Subtract((DateTime)datatable.Rows[i]["ThoiGianDi"]).ToString();
-                vemaybay.Lbl_MaMayBayChuyenBay.Text = "Số hiệu chuyến bay: "
+                vemaybay.Lbl_MaMayBay.Text = "Số hiệu chuyến bay: "
                     + datatable.Rows[i]["MaMayBay"].ToString()
                     + " - " + datatable.Rows[i]["MaChuyenBay"].ToString();
                 vemaybay.Btn_GiaVePhoThong.Text = datatable.Rows[i]["GiaVePhoThong"].ToString();
