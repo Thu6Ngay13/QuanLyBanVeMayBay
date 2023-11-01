@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.UC
+namespace QuanLyBanVeMayBay.UC
 {
     partial class UC_ThongTinVeMua
     {
@@ -61,6 +61,7 @@
             // 
             // Btn_GiaVePhoThong
             // 
+            this.Btn_GiaVePhoThong.Enabled = false;
             this.Btn_GiaVePhoThong.Location = new System.Drawing.Point(690, 7);
             this.Btn_GiaVePhoThong.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_GiaVePhoThong.Name = "Btn_GiaVePhoThong";
@@ -91,6 +92,7 @@
             // 
             // Btn_GiaVeThuongGia
             // 
+            this.Btn_GiaVeThuongGia.Enabled = false;
             this.Btn_GiaVeThuongGia.Location = new System.Drawing.Point(949, 7);
             this.Btn_GiaVeThuongGia.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_GiaVeThuongGia.Name = "Btn_GiaVeThuongGia";
