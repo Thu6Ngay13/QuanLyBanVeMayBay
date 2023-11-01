@@ -10,14 +10,9 @@ namespace QuanLyBanVeMayBay.UC
             InitializeComponent();
         }
 
-        private void Btn_GiaVePhoThong_Click(object sender, EventArgs e)
+        private void UC_ThongTinVeMua_Click(object sender, EventArgs e)
         {
             
-        }
-
-        private void Btn_GiaVeThuongGia_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

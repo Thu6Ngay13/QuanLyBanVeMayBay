@@ -42,6 +42,7 @@
             this.Pnl_DiemDi = new System.Windows.Forms.Panel();
             this.Pnl_DiemDen = new System.Windows.Forms.Panel();
             this.Pnl_KhuHoi = new System.Windows.Forms.Panel();
+            this.Btn_TimKiem = new System.Windows.Forms.Button();
             this.Rdb_MotChieu = new System.Windows.Forms.RadioButton();
             this.Pnl_NgayDi = new System.Windows.Forms.Panel();
             this.Dtp_NgayDi = new System.Windows.Forms.DateTimePicker();
@@ -51,10 +52,8 @@
             this.Lbl_NgayVe = new System.Windows.Forms.Label();
             this.Pnl_HanhKhach = new System.Windows.Forms.Panel();
             this.Btn_HanhKhach = new System.Windows.Forms.Button();
-            this.Btn_TimKiem = new System.Windows.Forms.Button();
             this.Txt_HanhKhach = new System.Windows.Forms.TextBox();
             this.Lbl_HanhKhach = new System.Windows.Forms.Label();
-            this.Pnl_DanhSachChuyenBay = new System.Windows.Forms.Panel();
             this.Pnl_Header.SuspendLayout();
             this.Pnl_DiemDi.SuspendLayout();
             this.Pnl_DiemDen.SuspendLayout();
@@ -167,7 +166,7 @@
             // 
             this.Rdb_KhuHoi.AutoSize = true;
             this.Rdb_KhuHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rdb_KhuHoi.Location = new System.Drawing.Point(242, 5);
+            this.Rdb_KhuHoi.Location = new System.Drawing.Point(143, 5);
             this.Rdb_KhuHoi.Name = "Rdb_KhuHoi";
             this.Rdb_KhuHoi.Size = new System.Drawing.Size(95, 26);
             this.Rdb_KhuHoi.TabIndex = 10;
@@ -197,17 +196,29 @@
             // Pnl_KhuHoi
             // 
             this.Pnl_KhuHoi.Controls.Add(this.Rdb_KhuHoi);
+            this.Pnl_KhuHoi.Controls.Add(this.Btn_TimKiem);
             this.Pnl_KhuHoi.Controls.Add(this.Rdb_MotChieu);
-            this.Pnl_KhuHoi.Location = new System.Drawing.Point(855, 137);
+            this.Pnl_KhuHoi.Location = new System.Drawing.Point(855, 177);
             this.Pnl_KhuHoi.Name = "Pnl_KhuHoi";
             this.Pnl_KhuHoi.Size = new System.Drawing.Size(399, 36);
             this.Pnl_KhuHoi.TabIndex = 13;
+            // 
+            // Btn_TimKiem
+            // 
+            this.Btn_TimKiem.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Btn_TimKiem.Location = new System.Drawing.Point(265, 3);
+            this.Btn_TimKiem.Name = "Btn_TimKiem";
+            this.Btn_TimKiem.Size = new System.Drawing.Size(119, 30);
+            this.Btn_TimKiem.TabIndex = 3;
+            this.Btn_TimKiem.Text = "Tìm kiếm";
+            this.Btn_TimKiem.UseVisualStyleBackColor = true;
+            this.Btn_TimKiem.Click += new System.EventHandler(this.Btn_TimKiem_Click);
             // 
             // Rdb_MotChieu
             // 
             this.Rdb_MotChieu.AutoSize = true;
             this.Rdb_MotChieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rdb_MotChieu.Location = new System.Drawing.Point(65, 5);
+            this.Rdb_MotChieu.Location = new System.Drawing.Point(14, 5);
             this.Rdb_MotChieu.Name = "Rdb_MotChieu";
             this.Rdb_MotChieu.Size = new System.Drawing.Size(110, 26);
             this.Rdb_MotChieu.TabIndex = 10;
@@ -275,10 +286,9 @@
             // Pnl_HanhKhach
             // 
             this.Pnl_HanhKhach.Controls.Add(this.Btn_HanhKhach);
-            this.Pnl_HanhKhach.Controls.Add(this.Btn_TimKiem);
             this.Pnl_HanhKhach.Controls.Add(this.Txt_HanhKhach);
             this.Pnl_HanhKhach.Controls.Add(this.Lbl_HanhKhach);
-            this.Pnl_HanhKhach.Location = new System.Drawing.Point(855, 176);
+            this.Pnl_HanhKhach.Location = new System.Drawing.Point(855, 138);
             this.Pnl_HanhKhach.Name = "Pnl_HanhKhach";
             this.Pnl_HanhKhach.Size = new System.Drawing.Size(399, 36);
             this.Pnl_HanhKhach.TabIndex = 14;
@@ -286,7 +296,7 @@
             // Btn_HanhKhach
             // 
             this.Btn_HanhKhach.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Btn_HanhKhach.Location = new System.Drawing.Point(196, 3);
+            this.Btn_HanhKhach.Location = new System.Drawing.Point(341, 3);
             this.Btn_HanhKhach.Name = "Btn_HanhKhach";
             this.Btn_HanhKhach.Size = new System.Drawing.Size(43, 30);
             this.Btn_HanhKhach.TabIndex = 17;
@@ -294,23 +304,12 @@
             this.Btn_HanhKhach.UseVisualStyleBackColor = true;
             this.Btn_HanhKhach.Click += new System.EventHandler(this.Btn_HanhKhach_Click);
             // 
-            // Btn_TimKiem
-            // 
-            this.Btn_TimKiem.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Btn_TimKiem.Location = new System.Drawing.Point(277, 3);
-            this.Btn_TimKiem.Name = "Btn_TimKiem";
-            this.Btn_TimKiem.Size = new System.Drawing.Size(119, 30);
-            this.Btn_TimKiem.TabIndex = 3;
-            this.Btn_TimKiem.Text = "Tìm kiếm";
-            this.Btn_TimKiem.UseVisualStyleBackColor = true;
-            this.Btn_TimKiem.Click += new System.EventHandler(this.Btn_TimKiem_Click);
-            // 
             // Txt_HanhKhach
             // 
             this.Txt_HanhKhach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_HanhKhach.Location = new System.Drawing.Point(139, 3);
+            this.Txt_HanhKhach.Location = new System.Drawing.Point(119, 3);
             this.Txt_HanhKhach.Name = "Txt_HanhKhach";
-            this.Txt_HanhKhach.Size = new System.Drawing.Size(56, 30);
+            this.Txt_HanhKhach.Size = new System.Drawing.Size(202, 30);
             this.Txt_HanhKhach.TabIndex = 10;
             // 
             // Lbl_HanhKhach
@@ -323,31 +322,23 @@
             this.Lbl_HanhKhach.TabIndex = 9;
             this.Lbl_HanhKhach.Text = "Hành khách";
             // 
-            // Pnl_DanhSachChuyenBay
-            // 
-            this.Pnl_DanhSachChuyenBay.Location = new System.Drawing.Point(7, 222);
-            this.Pnl_DanhSachChuyenBay.Name = "Pnl_DanhSachChuyenBay";
-            this.Pnl_DanhSachChuyenBay.Size = new System.Drawing.Size(1247, 435);
-            this.Pnl_DanhSachChuyenBay.TabIndex = 17;
-            // 
-            // Frm_MuaVe1
+            // Frm_TimKiemChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 669);
-            this.Controls.Add(this.Pnl_DanhSachChuyenBay);
+            this.Controls.Add(this.Pnl_KhuHoi);
             this.Controls.Add(this.Pnl_HanhKhach);
             this.Controls.Add(this.Pnl_NgayVe);
             this.Controls.Add(this.Pnl_NgayDi);
-            this.Controls.Add(this.Pnl_KhuHoi);
             this.Controls.Add(this.Pnl_DiemDen);
             this.Controls.Add(this.Pnl_DiemDi);
             this.Controls.Add(this.Btn_TraCuuChuyenBay);
             this.Controls.Add(this.Btn_TraCuuHoaDon);
             this.Controls.Add(this.Btn_MuaVe);
             this.Controls.Add(this.Pnl_Header);
-            this.Name = "Frm_MuaVe1";
-            this.Text = "Frm_MuaVe1";
+            this.Name = "Frm_TimKiemChuyenBay";
+            this.Text = "Frm_TimKiemChuyenBay";
             this.Load += new System.EventHandler(this.Frm_MuaVe1_Load);
             this.Pnl_Header.ResumeLayout(false);
             this.Pnl_DiemDi.ResumeLayout(false);
@@ -368,32 +359,31 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel Pnl_Header;
-        private System.Windows.Forms.Button Btn_DangKy;
-        private System.Windows.Forms.Button Btn_DangNhap;
-        private System.Windows.Forms.Button Btn_TraCuuChuyenBay;
-        private System.Windows.Forms.Button Btn_TraCuuHoaDon;
-        private System.Windows.Forms.Button Btn_MuaVe;
-        private System.Windows.Forms.Label Lbl_DiemDi;
-        private System.Windows.Forms.Label Lbl_DiemDen;
-        private System.Windows.Forms.ComboBox Cbb_DiemDi;
-        private System.Windows.Forms.ComboBox Cbb_DiemDen;
-        private System.Windows.Forms.RadioButton Rdb_KhuHoi;
-        private System.Windows.Forms.Panel Pnl_DiemDi;
-        private System.Windows.Forms.Panel Pnl_DiemDen;
-        private System.Windows.Forms.Panel Pnl_KhuHoi;
-        private System.Windows.Forms.RadioButton Rdb_MotChieu;
-        private System.Windows.Forms.Panel Pnl_NgayDi;
-        private System.Windows.Forms.Label Lbl_NgayDi;
-        private System.Windows.Forms.Panel Pnl_NgayVe;
-        private System.Windows.Forms.Label Lbl_NgayVe;
-        private System.Windows.Forms.DateTimePicker Dtp_NgayDi;
-        private System.Windows.Forms.DateTimePicker Dtp_NgayVe;
-        private System.Windows.Forms.Panel Pnl_HanhKhach;
-        private System.Windows.Forms.TextBox Txt_HanhKhach;
-        private System.Windows.Forms.Label Lbl_HanhKhach;
-        private System.Windows.Forms.Button Btn_TimKiem;
-        private System.Windows.Forms.Button Btn_HanhKhach;
-        private System.Windows.Forms.Panel Pnl_DanhSachChuyenBay;
+        public System.Windows.Forms.Panel Pnl_Header;
+        public System.Windows.Forms.Button Btn_DangKy;
+        public System.Windows.Forms.Button Btn_DangNhap;
+        public System.Windows.Forms.Button Btn_TraCuuChuyenBay;
+        public System.Windows.Forms.Button Btn_TraCuuHoaDon;
+        public System.Windows.Forms.Button Btn_MuaVe;
+        public System.Windows.Forms.Label Lbl_DiemDi;
+        public System.Windows.Forms.Label Lbl_DiemDen;
+        public System.Windows.Forms.ComboBox Cbb_DiemDi;
+        public System.Windows.Forms.ComboBox Cbb_DiemDen;
+        public System.Windows.Forms.RadioButton Rdb_KhuHoi;
+        public System.Windows.Forms.Panel Pnl_DiemDi;
+        public System.Windows.Forms.Panel Pnl_DiemDen;
+        public System.Windows.Forms.Panel Pnl_KhuHoi;
+        public System.Windows.Forms.RadioButton Rdb_MotChieu;
+        public System.Windows.Forms.Panel Pnl_NgayDi;
+        public System.Windows.Forms.Label Lbl_NgayDi;
+        public System.Windows.Forms.Panel Pnl_NgayVe;
+        public System.Windows.Forms.Label Lbl_NgayVe;
+        public System.Windows.Forms.DateTimePicker Dtp_NgayDi;
+        public System.Windows.Forms.DateTimePicker Dtp_NgayVe;
+        public System.Windows.Forms.Panel Pnl_HanhKhach;
+        public System.Windows.Forms.TextBox Txt_HanhKhach;
+        public System.Windows.Forms.Label Lbl_HanhKhach;
+        public System.Windows.Forms.Button Btn_TimKiem;
+        public System.Windows.Forms.Button Btn_HanhKhach;
     }
 }
