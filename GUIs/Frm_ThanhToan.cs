@@ -25,6 +25,7 @@ namespace QuanLyBanVeMayBay.GUI
         private void Btn_Xong_Click(object sender, EventArgs e)
         {
             int mahoadon = khoitao_HoaDon();
+
             int manguoilon = them_KhachHangNguoiLon(
                 "Nguyen Van A",
                 "Nam",
@@ -42,6 +43,7 @@ namespace QuanLyBanVeMayBay.GUI
                 4,
                 3,
                 mahoadon);
+
             bool success1 = them_ThongTinNguoiDungMuaVe(1, 1);
             bool success2 = them_NguoiLonQuanLyTreEm(manguoilon, matreem);
         }

@@ -1,16 +1,10 @@
 ﻿using QuanLyBanVeMayBay.BLL;
 using QuanLyBanVeMayBay.UC;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay
+namespace QuanLyBanVeMayBay.GUI
 {
     public partial class Frm_CapNhat : Form
     {
