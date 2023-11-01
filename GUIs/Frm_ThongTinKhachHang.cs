@@ -23,15 +23,17 @@ namespace QuanLyBanVeMayBay.GUI
 
         int SoVeNguoiLon;
         int SoVeTreEm;
-        List<ThongTinChuyenBay> thongTinChuyenBays = null;
+        List<ThongTinChieuBay> thongTinChieuBays = null;
 
-        public Frm_ThongTinKhachHang(int SoVeNguoiLon, int SoVeTreEm, List<ThongTinChuyenBay> thongTinChuyenBays)
+        public Frm_ThongTinKhachHang()
         {
             InitializeComponent();
-
+        }
+        public void Temp(int SoVeNguoiLon, int SoVeTreEm, List<ThongTinChieuBay> thongTinChieuBays)
+        {
             this.SoVeNguoiLon = SoVeNguoiLon;
             this.SoVeTreEm = SoVeTreEm;
-            this.thongTinChuyenBays = thongTinChuyenBays;
+            this.thongTinChieuBays = thongTinChieuBays;
         }
 
         public void Init()
@@ -41,6 +43,9 @@ namespace QuanLyBanVeMayBay.GUI
 
         private void Frm_ThongTinKhachHang_Load(object sender, EventArgs e)
         {
+            // Test
+            SoVeNguoiLon = 4;
+            SoVeTreEm = 3;
             // Load form dien thong tin khach hang 
             int X = 3;
             int Y = 0;
@@ -63,7 +68,7 @@ namespace QuanLyBanVeMayBay.GUI
             }
 
             // Lay thong tin chuyen bay
-            ThongTinChuyenBay();
+            ThongTinChieuBay();
         }
 
         private bool KiemTraThongTinNguoiLon(UC_ThongTinNguoiLon thongTinNguoiLon)
@@ -146,18 +151,24 @@ namespace QuanLyBanVeMayBay.GUI
             return true;
         }
 
-        private void ThongTinChuyenBay()
+        private void ThongTinChieuBay()
         {
-            for (int i = 0; i < thongTinChuyenBays.Count; i++)
+            // Test
+            thongTinChieuBays = new List<ThongTinChieuBay>();
+            thongTinChieuBays.Add(new ThongTinChieuBay(1, 2, "Tp.Hồ Chí Minh (SGN)", "Hà Nội (HAN)", "23:00, 12/12/2023"));
+            thongTinChieuBays.Add(new ThongTinChieuBay(1, 2, "Hà Nội (HAN)", "Tp.Hồ Chí Minh (SGN)", "23:00, 12/12/2023"));
+
+            for (int i = 0; i < thongTinChieuBays.Count; i++)
             {
-                UC_ChiTietChuyenBay uC_ChiTietChuyenBay = new UC_ChiTietChuyenBay();
-                uC_ChiTietChuyenBay.Lbl_TenMayBay.Text = thongTinChuyenBays[i].TenMayBay;
-                uC_ChiTietChuyenBay.Lbl_DiemDi.Text = thongTinChuyenBays[i].DiemDi;
-                uC_ChiTietChuyenBay.Lbl_DiemDen.Text = thongTinChuyenBays[i].DiemDen;
-                uC_ChiTietChuyenBay.Lbl_ThoiGianBay.Text = thongTinChuyenBays[i].ThoiGianDi;
-                uC_ChiTietChuyenBay.Lbl_KhoiHanh.Text = i == 1 ? "Trở về" : "Khởi hành";
-                uC_ChiTietChuyenBay.Location = new Point(2, 230 * i + 3);
-                Pnl_ChiTietChuyenBay.Controls.Add(uC_ChiTietChuyenBay);
+                UC_ThongTinChieuBay thongTinChieuBay = new UC_ThongTinChieuBay();
+                thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongTinChieuBays[i].MaChuyenBay.ToString());
+                thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongTinChieuBays[i].MaMayBay.ToString());
+                thongTinChieuBay.Lbl_DiemDi.Text = thongTinChieuBays[i].DiemDi;
+                thongTinChieuBay.Lbl_DiemDen.Text = thongTinChieuBays[i].DiemDen;
+                thongTinChieuBay.Lbl_GioDi.Text = thongTinChieuBays[i].ThoiGianDi;
+                thongTinChieuBay.Lbl_ChieuBay.Text = i == 1 ? "Chiều về" : "Chiều đi";
+                thongTinChieuBay.Location = new Point(2, 146 * i + 4);
+                Pnl_ThongTinChieuBay.Controls.Add(thongTinChieuBay);
 
             }
         }
@@ -174,7 +185,7 @@ namespace QuanLyBanVeMayBay.GUI
             }
             else
             {
-                MessageBox.Show("Thông tin khách hàng không phù hợp!");
+                MessageBox.Show("Thông tin khách hàng không hợp lệ!");
             }
         }
     }
