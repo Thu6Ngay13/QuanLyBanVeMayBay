@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.UC
+namespace QuanLyBanVeMayBay.UC
 {
     partial class UC_ThongTinVeMua
     {
@@ -124,7 +124,7 @@
             // Lbl_MaChuyenBay
             // 
             this.Lbl_MaChuyenBay.AutoSize = true;
-            this.Lbl_MaChuyenBay.Location = new System.Drawing.Point(427, 57);
+            this.Lbl_MaChuyenBay.Location = new System.Drawing.Point(418, 57);
             this.Lbl_MaChuyenBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_MaChuyenBay.Name = "Lbl_MaChuyenBay";
             this.Lbl_MaChuyenBay.Size = new System.Drawing.Size(128, 22);

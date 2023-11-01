@@ -1,4 +1,5 @@
 ﻿using QuanLyBanVeMayBay.BLL;
+using QuanLyBanVeMayBay.UC;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -11,6 +12,7 @@ namespace QuanLyBanVeMayBay.GUI
         private string diemdi = "-1";
         private string diemden = "-1";
         private DateTime ngaydi = new DateTime(2010, 1, 1);
+        private int soluonghanhkhach = -1;
 
         public Frm_TimKiemChuyenBay()
         {
@@ -23,6 +25,9 @@ namespace QuanLyBanVeMayBay.GUI
             InitializeComponent();
             Rdb_MotChieu.Checked = true;    
             chuyenbayduocdexuat = true;
+            this.diemdi = diemdi;
+            this.diemden = diemden;
+            this.ngaydi = ngaydi;   
         }
 
         private void Frm_MuaVe1_Load(object sender, EventArgs e)
@@ -67,24 +72,49 @@ namespace QuanLyBanVeMayBay.GUI
             }
         }
 
-        private void Btn_HanhKhach_Click(object sender, EventArgs e)
+        public void nhap_HanhKhach()
         {
             Frm_HanhKhach form = new Frm_HanhKhach();
-            form.ShowDialog();  
+            form.ShowDialog();
+
+            int SoKhachNguoiLon = (int)form.Nud_NguoiLon.Value;
+            int SoKhachTreEm = (int)form.Nud_TreEm.Value;
+            string skn = "- " + SoKhachTreEm.ToString() + " trẻ em";
+            if (SoKhachTreEm == 0)
+            {
+                skn = "";
+            }
+            soluonghanhkhach = SoKhachNguoiLon + SoKhachTreEm;
+
+            this.Txt_HanhKhach.Text = " " + SoKhachNguoiLon.ToString() + " người lớn " + skn;
+        }
+
+        private void Btn_HanhKhach_Click(object sender, EventArgs e)
+        {
+            nhap_HanhKhach();
         }
 
         private void nhan_ThongTinChuyenBayDeXuat()
         {
-            //show chuyen bay de xuat len day
+            Cbb_DiemDi.Text = diemdi;
+            Cbb_DiemDen.Text = diemden;
+            Dtp_NgayDi.Value = ngaydi;
         }
 
         private void Btn_TimKiem_Click(object sender, EventArgs e)
         {
-
-
-            for(int i = 0; i < 5; ++i)
+            if (soluonghanhkhach == -1)
             {
-                //Frm_MuaVeChieuDi 
+                DialogResult temp = MessageBox.Show("Bạn chưa nhập số lượng hành khách!", "Warning", MessageBoxButtons.OK);
+                if (temp == DialogResult.OK)
+                {
+                    nhap_HanhKhach();
+                }
+            }
+            else if (soluonghanhkhach != -1)
+            {
+                Frm_MuaVeChieuDi muavechieudi = new Frm_MuaVeChieuDi(diemdi, diemden, ngaydi, soluonghanhkhach);
+                muavechieudi.ShowDialog();
             }
         }
     }
