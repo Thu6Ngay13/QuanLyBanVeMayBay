@@ -175,15 +175,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label Lbl_DiemDi;
-        private System.Windows.Forms.Label Lbl_DiemDen;
-        private System.Windows.Forms.Label Lbl_HangKhaiThac;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label Lbl_ChieuBay;
         private System.Windows.Forms.Label Lbl_KhoiHanh;
-        private System.Windows.Forms.Label Lbl_GioDi;
         public System.Windows.Forms.Label Lbl_MaChuyenBay;
         public System.Windows.Forms.Label Lbl_MaMayBay;
+        public System.Windows.Forms.Label Lbl_DiemDi;
+        public System.Windows.Forms.Label Lbl_DiemDen;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label Lbl_ChieuBay;
+        public System.Windows.Forms.Label Lbl_GioDi;
+        private System.Windows.Forms.Label Lbl_HangKhaiThac;
     }
 }

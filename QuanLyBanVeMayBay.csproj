@@ -150,15 +150,9 @@
     </Compile>
     <Compile Include="Models\KhachHangNguoiLon.cs" />
     <Compile Include="Models\KhachHangTreEm.cs" />
-    <Compile Include="Models\ThongTinChuyenBay.cs" />
+    <Compile Include="Models\ThongTinChieuBay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCs\UC_ChiTietChuyenBay.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCs\UC_ChiTietChuyenBay.designer.cs">
-      <DependentUpon>UC_ChiTietChuyenBay.cs</DependentUpon>
-    </Compile>
     <Compile Include="UCs\UC_DonViTien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,6 +231,9 @@
     <EmbeddedResource Include="GUIs\Frm_HanhKhach.resx">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_ThongTinKhachHang.resx">
+      <DependentUpon>Frm_ThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_TimKiemChuyenBay.resx">
       <DependentUpon>Frm_TimKiemChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,11 +256,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UCs\UC_ChiTietChuyenBay.resx">
-      <DependentUpon>UC_ChiTietChuyenBay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_GoiHanhLy.resx">
       <DependentUpon>UC_GoiHanhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinChieuBay.resx">
+      <DependentUpon>UC_ThongTinChieuBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinChuyenBay.resx">
       <DependentUpon>UC_ThongTinChuyenBay.cs</DependentUpon>
