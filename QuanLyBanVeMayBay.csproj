@@ -82,11 +82,11 @@
     <Compile Include="GUIs\Frm_HanhKhach.designer.cs">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUIs\Frm_MuaVe1.cs">
+    <Compile Include="GUIs\Frm_TimKiemChuyenBay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUIs\Frm_MuaVe1.designer.cs">
-      <DependentUpon>Frm_MuaVe1.cs</DependentUpon>
+    <Compile Include="GUIs\Frm_TimKiemChuyenBay.designer.cs">
+      <DependentUpon>Frm_TimKiemChuyenBay.cs</DependentUpon>
     </Compile>
     <Compile Include="GUIs\Frm_MuaVeChieuDi.cs">
       <SubType>Form</SubType>
@@ -117,12 +117,6 @@
     </Compile>
     <Compile Include="GUIs\Frm_ThongTinKhachHang.designer.cs">
       <DependentUpon>Frm_ThongTinKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUIs\Frm_TimKiemChuyenBay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUIs\Frm_TimKiemChuyenBay.Designer.cs">
-      <DependentUpon>Frm_TimKiemChuyenBay.cs</DependentUpon>
     </Compile>
     <Compile Include="GUIs\Frm_TraCuuChuyenBay.cs">
       <SubType>Form</SubType>
@@ -243,6 +237,9 @@
     <EmbeddedResource Include="GUIs\Frm_HanhKhach.resx">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_TimKiemChuyenBay.resx">
+      <DependentUpon>Frm_TimKiemChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_TraCuuChuyenBay.resx">
       <DependentUpon>Frm_TraCuuChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,8 +268,14 @@
     <EmbeddedResource Include="UCs\UC_ThongTinChuyenBay.resx">
       <DependentUpon>UC_ThongTinChuyenBay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinChuyenBayDeXuat.resx">
+      <DependentUpon>UC_ThongTinChuyenBayDeXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinHoaDon.resx">
       <DependentUpon>UC_ThongTinHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinVeMua.resx">
+      <DependentUpon>UC_ThongTinVeMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_TraCuuChuyenBay.resx">
       <DependentUpon>UC_TraCuuChuyenBay.cs</DependentUpon>

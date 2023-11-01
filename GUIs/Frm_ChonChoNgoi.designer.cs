@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay
+﻿namespace QuanLyBanVeMayBay.GUI
 {
     partial class Frm_ChonChoNgoi
     {
