@@ -144,14 +144,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label Lbl_KhoiHanh;
-        private System.Windows.Forms.Label Lbl_ThoiGianBay;
-        private System.Windows.Forms.Label Lbl_DiemDi;
-        private System.Windows.Forms.Label Lbl_DiemDen;
-        private System.Windows.Forms.Label Lbl_TenMayBay;
         private System.Windows.Forms.Label Lbl_HangHangKhong;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Label Lbl_KhoiHanh;
+        public System.Windows.Forms.Label Lbl_ThoiGianBay;
+        public System.Windows.Forms.Label Lbl_DiemDi;
+        public System.Windows.Forms.Label Lbl_DiemDen;
+        public System.Windows.Forms.Label Lbl_TenMayBay;
     }
 }
