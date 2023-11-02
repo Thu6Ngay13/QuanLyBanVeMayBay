@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using HeQuanTriDemo01.Models;
 using QuanLyBanVeMayBay.BLL;
 using QuanLyBanVeMayBay.UC;
 
@@ -8,6 +9,8 @@ namespace QuanLyBanVeMayBay.GUI
 {
     public partial class Frm_TrangChuNguoiDung : Form
     {
+        private ThongTinChuyenBay thongtinchuyenbaydaluachon = null;
+
         public Frm_TrangChuNguoiDung()
         {
             InitializeComponent();
@@ -98,5 +101,13 @@ namespace QuanLyBanVeMayBay.GUI
 
             lay_DeXuatChuyenBay(soluongdexuat, diemdi, diemden, ngansach);
         }
+
+        private void Btn_MuaVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_TimKiemChuyenBay form1 = new Frm_TimKiemChuyenBay();
+            form1.ShowDialog();
+        }
     }
 }
+ 

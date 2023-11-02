@@ -61,14 +61,15 @@ namespace QuanLyBanVeMayBay.UC
             // 
             // Btn_GiaVePhoThong
             // 
-            this.Btn_GiaVePhoThong.Enabled = false;
+            this.Btn_GiaVePhoThong.BackColor = System.Drawing.Color.Blue;
+            this.Btn_GiaVePhoThong.ForeColor = System.Drawing.Color.White;
             this.Btn_GiaVePhoThong.Location = new System.Drawing.Point(690, 7);
             this.Btn_GiaVePhoThong.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_GiaVePhoThong.Name = "Btn_GiaVePhoThong";
             this.Btn_GiaVePhoThong.Size = new System.Drawing.Size(250, 63);
             this.Btn_GiaVePhoThong.TabIndex = 16;
             this.Btn_GiaVePhoThong.Text = "Giá vé phổ thông ";
-            this.Btn_GiaVePhoThong.UseVisualStyleBackColor = true;
+            this.Btn_GiaVePhoThong.UseVisualStyleBackColor = false;
             // 
             // Lbl_GioDi
             // 
@@ -92,14 +93,14 @@ namespace QuanLyBanVeMayBay.UC
             // 
             // Btn_GiaVeThuongGia
             // 
-            this.Btn_GiaVeThuongGia.Enabled = false;
+            this.Btn_GiaVeThuongGia.BackColor = System.Drawing.Color.Gold;
             this.Btn_GiaVeThuongGia.Location = new System.Drawing.Point(949, 7);
             this.Btn_GiaVeThuongGia.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_GiaVeThuongGia.Name = "Btn_GiaVeThuongGia";
             this.Btn_GiaVeThuongGia.Size = new System.Drawing.Size(250, 63);
             this.Btn_GiaVeThuongGia.TabIndex = 18;
             this.Btn_GiaVeThuongGia.Text = "Giá vé thương gia";
-            this.Btn_GiaVeThuongGia.UseVisualStyleBackColor = true;
+            this.Btn_GiaVeThuongGia.UseVisualStyleBackColor = false;
             // 
             // Lbl_SoGheConLaiPhoThong
             // 
@@ -135,6 +136,7 @@ namespace QuanLyBanVeMayBay.UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.NavajoWhite;
             this.Controls.Add(this.Lbl_MaChuyenBay);
             this.Controls.Add(this.Lbl_SoGheConLaiThuongGia);
             this.Controls.Add(this.Lbl_SoGheConLaiPhoThong);
