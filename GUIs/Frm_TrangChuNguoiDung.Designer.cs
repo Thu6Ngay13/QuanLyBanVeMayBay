@@ -87,6 +87,7 @@
             this.Btn_MuaVe.TabIndex = 0;
             this.Btn_MuaVe.Text = "Mua vé";
             this.Btn_MuaVe.UseVisualStyleBackColor = true;
+            this.Btn_MuaVe.Click += new System.EventHandler(this.Btn_MuaVe_Click);
             // 
             // Pnl_Header
             // 

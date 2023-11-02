@@ -1,4 +1,4 @@
-﻿using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.UC;
 
 namespace QuanLyBanVeMayBay.GUI
 {
@@ -36,7 +36,24 @@ namespace QuanLyBanVeMayBay.GUI
             this.Pnl_ChiTietChuyenBay = new System.Windows.Forms.Panel();
             this.Pnl_ThongTinChieuBay = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Lbl_ChiTietChuyenBay = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Lbl_TongSoTien = new System.Windows.Forms.Label();
+            this.Lbl_GiaTriHoaDon = new System.Windows.Forms.Label();
+            this.usc_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.usc_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.Lbl_Thue = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Lbl_GiaVeTE = new System.Windows.Forms.Label();
+            this.Lbl_SoLuongVeTE = new System.Windows.Forms.Label();
+            this.Lbl_TreEm = new System.Windows.Forms.Label();
+            this.Lbl_SoLuongVeNL = new System.Windows.Forms.Label();
+            this.Lbl_NguoiLon = new System.Windows.Forms.Label();
+            this.Lbl_GiaVeNL = new System.Windows.Forms.Label();
+            this.uC_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.uC_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.Pnl_ChiTietChuyenBay.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -101,14 +118,197 @@ namespace QuanLyBanVeMayBay.GUI
             // 
             // Lbl_ChiTietChuyenBay
             // 
-            this.Lbl_ChiTietChuyenBay.AutoSize = true;
-            this.Lbl_ChiTietChuyenBay.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_ChiTietChuyenBay.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_ChiTietChuyenBay.Location = new System.Drawing.Point(18, 18);
-            this.Lbl_ChiTietChuyenBay.Name = "Lbl_ChiTietChuyenBay";
-            this.Lbl_ChiTietChuyenBay.Size = new System.Drawing.Size(247, 32);
-            this.Lbl_ChiTietChuyenBay.TabIndex = 0;
-            this.Lbl_ChiTietChuyenBay.Text = "Chi tiết chuyến bay";
+            this.panel2.AutoScroll = true;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(460, 238);
+            this.panel2.TabIndex = 1;
+            // 
+            // Lbl_TongSoTien
+            // 
+            this.Lbl_TongSoTien.AutoSize = true;
+            this.Lbl_TongSoTien.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_TongSoTien.Location = new System.Drawing.Point(17, 25);
+            this.Lbl_TongSoTien.Name = "Lbl_TongSoTien";
+            this.Lbl_TongSoTien.Size = new System.Drawing.Size(160, 32);
+            this.Lbl_TongSoTien.TabIndex = 6;
+            this.Lbl_TongSoTien.Text = "Tổng số tiền";
+            // 
+            // Lbl_GiaTriHoaDon
+            // 
+            this.Lbl_GiaTriHoaDon.AutoSize = true;
+            this.Lbl_GiaTriHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_GiaTriHoaDon.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_GiaTriHoaDon.Location = new System.Drawing.Point(300, 25);
+            this.Lbl_GiaTriHoaDon.Name = "Lbl_GiaTriHoaDon";
+            this.Lbl_GiaTriHoaDon.Size = new System.Drawing.Size(90, 23);
+            this.Lbl_GiaTriHoaDon.TabIndex = 7;
+            this.Lbl_GiaTriHoaDon.Text = "4,836,000";
+            // 
+            // usc_DonViTien2
+            // 
+            this.usc_DonViTien2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usc_DonViTien2.Location = new System.Drawing.Point(384, 28);
+            this.usc_DonViTien2.Margin = new System.Windows.Forms.Padding(6);
+            this.usc_DonViTien2.Name = "usc_DonViTien2";
+            this.usc_DonViTien2.Size = new System.Drawing.Size(58, 23);
+            this.usc_DonViTien2.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.usc_DonViTien2);
+            this.panel4.Controls.Add(this.Lbl_GiaTriHoaDon);
+            this.panel4.Controls.Add(this.Lbl_TongSoTien);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 452);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(460, 78);
+            this.panel4.TabIndex = 1;
+            // 
+            // usc_DonViTien1
+            // 
+            this.usc_DonViTien1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usc_DonViTien1.Location = new System.Drawing.Point(384, 19);
+            this.usc_DonViTien1.Margin = new System.Windows.Forms.Padding(4);
+            this.usc_DonViTien1.Name = "usc_DonViTien1";
+            this.usc_DonViTien1.Size = new System.Drawing.Size(48, 19);
+            this.usc_DonViTien1.TabIndex = 6;
+            // 
+            // Lbl_Thue
+            // 
+            this.Lbl_Thue.AutoSize = true;
+            this.Lbl_Thue.Location = new System.Drawing.Point(19, 17);
+            this.Lbl_Thue.Name = "Lbl_Thue";
+            this.Lbl_Thue.Size = new System.Drawing.Size(219, 22);
+            this.Lbl_Thue.TabIndex = 3;
+            this.Lbl_Thue.Text = "Thuế, phí và các khoản thu";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(300, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "1,018,000";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.Lbl_Thue);
+            this.panel3.Controls.Add(this.usc_DonViTien1);
+            this.panel3.Location = new System.Drawing.Point(0, 389);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(460, 63);
+            this.panel3.TabIndex = 1;
+            // 
+            // Lbl_GiaVeTE
+            // 
+            this.Lbl_GiaVeTE.AutoSize = true;
+            this.Lbl_GiaVeTE.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_GiaVeTE.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_GiaVeTE.Location = new System.Drawing.Point(299, 54);
+            this.Lbl_GiaVeTE.Name = "Lbl_GiaVeTE";
+            this.Lbl_GiaVeTE.Size = new System.Drawing.Size(90, 23);
+            this.Lbl_GiaVeTE.TabIndex = 12;
+            this.Lbl_GiaVeTE.Text = "1,740,000";
+            // 
+            // Lbl_SoLuongVeTE
+            // 
+            this.Lbl_SoLuongVeTE.AutoSize = true;
+            this.Lbl_SoLuongVeTE.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_SoLuongVeTE.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_SoLuongVeTE.Location = new System.Drawing.Point(99, 56);
+            this.Lbl_SoLuongVeTE.Name = "Lbl_SoLuongVeTE";
+            this.Lbl_SoLuongVeTE.Size = new System.Drawing.Size(18, 19);
+            this.Lbl_SoLuongVeTE.TabIndex = 10;
+            this.Lbl_SoLuongVeTE.Text = "1";
+            // 
+            // Lbl_TreEm
+            // 
+            this.Lbl_TreEm.AutoSize = true;
+            this.Lbl_TreEm.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_TreEm.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_TreEm.Location = new System.Drawing.Point(22, 56);
+            this.Lbl_TreEm.Name = "Lbl_TreEm";
+            this.Lbl_TreEm.Size = new System.Drawing.Size(72, 19);
+            this.Lbl_TreEm.TabIndex = 9;
+            this.Lbl_TreEm.Text = "Trẻ em x";
+            // 
+            // Lbl_SoLuongVeNL
+            // 
+            this.Lbl_SoLuongVeNL.AutoSize = true;
+            this.Lbl_SoLuongVeNL.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_SoLuongVeNL.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_SoLuongVeNL.Location = new System.Drawing.Point(123, 14);
+            this.Lbl_SoLuongVeNL.Name = "Lbl_SoLuongVeNL";
+            this.Lbl_SoLuongVeNL.Size = new System.Drawing.Size(18, 19);
+            this.Lbl_SoLuongVeNL.TabIndex = 8;
+            this.Lbl_SoLuongVeNL.Text = "1";
+            // 
+            // Lbl_NguoiLon
+            // 
+            this.Lbl_NguoiLon.AutoSize = true;
+            this.Lbl_NguoiLon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_NguoiLon.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_NguoiLon.Location = new System.Drawing.Point(22, 14);
+            this.Lbl_NguoiLon.Name = "Lbl_NguoiLon";
+            this.Lbl_NguoiLon.Size = new System.Drawing.Size(95, 19);
+            this.Lbl_NguoiLon.TabIndex = 7;
+            this.Lbl_NguoiLon.Text = "Người lớn x";
+            // 
+            // Lbl_GiaVeNL
+            // 
+            this.Lbl_GiaVeNL.AutoSize = true;
+            this.Lbl_GiaVeNL.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_GiaVeNL.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_GiaVeNL.Location = new System.Drawing.Point(299, 12);
+            this.Lbl_GiaVeNL.Name = "Lbl_GiaVeNL";
+            this.Lbl_GiaVeNL.Size = new System.Drawing.Size(90, 23);
+            this.Lbl_GiaVeNL.TabIndex = 11;
+            this.Lbl_GiaVeNL.Text = "1,959,000";
+            // 
+            // uC_DonViTien2
+            // 
+            this.uC_DonViTien2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uC_DonViTien2.Location = new System.Drawing.Point(384, 14);
+            this.uC_DonViTien2.Margin = new System.Windows.Forms.Padding(4);
+            this.uC_DonViTien2.Name = "uC_DonViTien2";
+            this.uC_DonViTien2.Size = new System.Drawing.Size(48, 19);
+            this.uC_DonViTien2.TabIndex = 13;
+            // 
+            // uC_DonViTien1
+            // 
+            this.uC_DonViTien1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uC_DonViTien1.Location = new System.Drawing.Point(384, 56);
+            this.uC_DonViTien1.Margin = new System.Windows.Forms.Padding(6);
+            this.uC_DonViTien1.Name = "uC_DonViTien1";
+            this.uC_DonViTien1.Size = new System.Drawing.Size(50, 26);
+            this.uC_DonViTien1.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Beige;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.uC_DonViTien1);
+            this.panel5.Controls.Add(this.uC_DonViTien2);
+            this.panel5.Controls.Add(this.Lbl_GiaVeNL);
+            this.panel5.Controls.Add(this.Lbl_NguoiLon);
+            this.panel5.Controls.Add(this.Lbl_SoLuongVeNL);
+            this.panel5.Controls.Add(this.Lbl_TreEm);
+            this.panel5.Controls.Add(this.Lbl_SoLuongVeTE);
+            this.panel5.Controls.Add(this.Lbl_GiaVeTE);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 298);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(460, 96);
+            this.panel5.TabIndex = 17;
             // 
             // Frm_ThongTinKhachHang
             // 
@@ -138,7 +338,24 @@ namespace QuanLyBanVeMayBay.GUI
         private System.Windows.Forms.Panel Pnl_ThongTinKhachHang;
         private System.Windows.Forms.Button Btn_TiepTuc;
         private System.Windows.Forms.Panel Pnl_ChiTietChuyenBay;
-        private System.Windows.Forms.Panel Pnl_ThongTinChieuBay;
+        private System.Windows.Forms.Panel panel5;
+        private UC_DonViTien uC_DonViTien1;
+        private UC_DonViTien uC_DonViTien2;
+        private System.Windows.Forms.Label Lbl_GiaVeNL;
+        private System.Windows.Forms.Label Lbl_NguoiLon;
+        private System.Windows.Forms.Label Lbl_SoLuongVeNL;
+        private System.Windows.Forms.Label Lbl_TreEm;
+        private System.Windows.Forms.Label Lbl_SoLuongVeTE;
+        private System.Windows.Forms.Label Lbl_GiaVeTE;
+        private System.Windows.Forms.Panel panel4;
+        private UC_DonViTien usc_DonViTien2;
+        private System.Windows.Forms.Label Lbl_GiaTriHoaDon;
+        private System.Windows.Forms.Label Lbl_TongSoTien;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Lbl_Thue;
+        private UC_DonViTien usc_DonViTien1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Lbl_ChiTietChuyenBay;
     }
