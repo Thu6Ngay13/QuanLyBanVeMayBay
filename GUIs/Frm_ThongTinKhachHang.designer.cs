@@ -37,7 +37,6 @@ namespace QuanLyBanVeMayBay.GUI
             this.Lbl_ChiTietChuyenBay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_ChiTietChuyenBay1 = new QuanLyBanVeMayBay.UC.UC_ChiTietChuyenBay();
             this.Lbl_TongSoTien = new System.Windows.Forms.Label();
             this.Lbl_GiaTriHoaDon = new System.Windows.Forms.Label();
             this.usc_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
@@ -131,21 +130,11 @@ namespace QuanLyBanVeMayBay.GUI
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.uC_ChiTietChuyenBay1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 60);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(460, 238);
             this.panel2.TabIndex = 1;
-            // 
-            // uC_ChiTietChuyenBay1
-            // 
-            this.uC_ChiTietChuyenBay1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uC_ChiTietChuyenBay1.Location = new System.Drawing.Point(2, 4);
-            this.uC_ChiTietChuyenBay1.Margin = new System.Windows.Forms.Padding(4);
-            this.uC_ChiTietChuyenBay1.Name = "uC_ChiTietChuyenBay1";
-            this.uC_ChiTietChuyenBay1.Size = new System.Drawing.Size(452, 229);
-            this.uC_ChiTietChuyenBay1.TabIndex = 0;
             // 
             // Lbl_TongSoTien
             // 
@@ -380,7 +369,6 @@ namespace QuanLyBanVeMayBay.GUI
         private System.Windows.Forms.Label Lbl_GiaTriHoaDon;
         private System.Windows.Forms.Label Lbl_TongSoTien;
         private System.Windows.Forms.Panel panel2;
-        private UC_ChiTietChuyenBay uC_ChiTietChuyenBay1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Lbl_Thue;
