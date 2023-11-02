@@ -32,16 +32,14 @@ namespace QuanLyBanVeMayBay.GUI
         {
             this.Lbl_ThongTinKhachHang = new System.Windows.Forms.Label();
             this.Pnl_ThongTinKhachHang = new System.Windows.Forms.Panel();
-            this.Btn_TiepTuc = new System.Windows.Forms.Button();
+            this.Pnl_HanhTrinh = new System.Windows.Forms.Panel();
             this.Pnl_ChiTietChuyenBay = new System.Windows.Forms.Panel();
-            this.Pnl_ThongTinChieuBay = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_TiepTuc = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Lbl_TongSoTien = new System.Windows.Forms.Label();
             this.Lbl_GiaTriHoaDon = new System.Windows.Forms.Label();
-            this.usc_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.usc_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.Lbl_Thue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -51,11 +49,17 @@ namespace QuanLyBanVeMayBay.GUI
             this.Lbl_SoLuongVeNL = new System.Windows.Forms.Label();
             this.Lbl_NguoiLon = new System.Windows.Forms.Label();
             this.Lbl_GiaVeNL = new System.Windows.Forms.Label();
-            this.uC_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
-            this.uC_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.Lbl_ChiTietChuyenBay = new System.Windows.Forms.Label();
+            this.usc_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.usc_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.uC_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.uC_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.Pnl_ChiTietChuyenBay.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_ThongTinKhachHang
@@ -78,6 +82,24 @@ namespace QuanLyBanVeMayBay.GUI
             this.Pnl_ThongTinKhachHang.Size = new System.Drawing.Size(769, 532);
             this.Pnl_ThongTinKhachHang.TabIndex = 22;
             // 
+            // Pnl_HanhTrinh
+            // 
+            this.Pnl_HanhTrinh.AutoScroll = true;
+            this.Pnl_HanhTrinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pnl_HanhTrinh.Location = new System.Drawing.Point(0, 60);
+            this.Pnl_HanhTrinh.Name = "Pnl_HanhTrinh";
+            this.Pnl_HanhTrinh.Size = new System.Drawing.Size(460, 470);
+            this.Pnl_HanhTrinh.TabIndex = 1;
+            // 
+            // Pnl_ChiTietChuyenBay
+            // 
+            this.Pnl_ChiTietChuyenBay.Controls.Add(this.Lbl_ChiTietChuyenBay);
+            this.Pnl_ChiTietChuyenBay.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_ChiTietChuyenBay.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_ChiTietChuyenBay.Name = "Pnl_ChiTietChuyenBay";
+            this.Pnl_ChiTietChuyenBay.Size = new System.Drawing.Size(460, 60);
+            this.Pnl_ChiTietChuyenBay.TabIndex = 0;
+            // 
             // Btn_TiepTuc
             // 
             this.Btn_TiepTuc.Location = new System.Drawing.Point(1103, 618);
@@ -88,35 +110,17 @@ namespace QuanLyBanVeMayBay.GUI
             this.Btn_TiepTuc.UseVisualStyleBackColor = true;
             this.Btn_TiepTuc.Click += new System.EventHandler(this.Btn_TiepTuc_Click);
             // 
-            // Pnl_ChiTietChuyenBay
+            // panel6
             // 
-            this.Pnl_ChiTietChuyenBay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Pnl_ChiTietChuyenBay.Controls.Add(this.Pnl_ThongTinChieuBay);
-            this.Pnl_ChiTietChuyenBay.Controls.Add(this.panel1);
-            this.Pnl_ChiTietChuyenBay.Location = new System.Drawing.Point(787, 55);
-            this.Pnl_ChiTietChuyenBay.Name = "Pnl_ChiTietChuyenBay";
-            this.Pnl_ChiTietChuyenBay.Size = new System.Drawing.Size(462, 532);
-            this.Pnl_ChiTietChuyenBay.TabIndex = 21;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.Pnl_HanhTrinh);
+            this.panel6.Controls.Add(this.Pnl_ChiTietChuyenBay);
+            this.panel6.Location = new System.Drawing.Point(787, 55);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(462, 532);
+            this.panel6.TabIndex = 21;
             // 
-            // Pnl_ThongTinChieuBay
-            // 
-            this.Pnl_ThongTinChieuBay.AutoScroll = true;
-            this.Pnl_ThongTinChieuBay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_ThongTinChieuBay.Location = new System.Drawing.Point(0, 60);
-            this.Pnl_ThongTinChieuBay.Name = "Pnl_ThongTinChieuBay";
-            this.Pnl_ThongTinChieuBay.Size = new System.Drawing.Size(460, 470);
-            this.Pnl_ThongTinChieuBay.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.Lbl_ChiTietChuyenBay);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 60);
-            this.panel1.TabIndex = 0;
-            // 
-            // Lbl_ChiTietChuyenBay
+            // panel2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -147,15 +151,6 @@ namespace QuanLyBanVeMayBay.GUI
             this.Lbl_GiaTriHoaDon.TabIndex = 7;
             this.Lbl_GiaTriHoaDon.Text = "4,836,000";
             // 
-            // usc_DonViTien2
-            // 
-            this.usc_DonViTien2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usc_DonViTien2.Location = new System.Drawing.Point(384, 28);
-            this.usc_DonViTien2.Margin = new System.Windows.Forms.Padding(6);
-            this.usc_DonViTien2.Name = "usc_DonViTien2";
-            this.usc_DonViTien2.Size = new System.Drawing.Size(58, 23);
-            this.usc_DonViTien2.TabIndex = 8;
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -168,21 +163,12 @@ namespace QuanLyBanVeMayBay.GUI
             this.panel4.Size = new System.Drawing.Size(460, 78);
             this.panel4.TabIndex = 1;
             // 
-            // usc_DonViTien1
-            // 
-            this.usc_DonViTien1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usc_DonViTien1.Location = new System.Drawing.Point(384, 19);
-            this.usc_DonViTien1.Margin = new System.Windows.Forms.Padding(4);
-            this.usc_DonViTien1.Name = "usc_DonViTien1";
-            this.usc_DonViTien1.Size = new System.Drawing.Size(48, 19);
-            this.usc_DonViTien1.TabIndex = 6;
-            // 
             // Lbl_Thue
             // 
             this.Lbl_Thue.AutoSize = true;
             this.Lbl_Thue.Location = new System.Drawing.Point(19, 17);
             this.Lbl_Thue.Name = "Lbl_Thue";
-            this.Lbl_Thue.Size = new System.Drawing.Size(219, 22);
+            this.Lbl_Thue.Size = new System.Drawing.Size(165, 16);
             this.Lbl_Thue.TabIndex = 3;
             this.Lbl_Thue.Text = "Thuế, phí và các khoản thu";
             // 
@@ -274,24 +260,6 @@ namespace QuanLyBanVeMayBay.GUI
             this.Lbl_GiaVeNL.TabIndex = 11;
             this.Lbl_GiaVeNL.Text = "1,959,000";
             // 
-            // uC_DonViTien2
-            // 
-            this.uC_DonViTien2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uC_DonViTien2.Location = new System.Drawing.Point(384, 14);
-            this.uC_DonViTien2.Margin = new System.Windows.Forms.Padding(4);
-            this.uC_DonViTien2.Name = "uC_DonViTien2";
-            this.uC_DonViTien2.Size = new System.Drawing.Size(48, 19);
-            this.uC_DonViTien2.TabIndex = 13;
-            // 
-            // uC_DonViTien1
-            // 
-            this.uC_DonViTien1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uC_DonViTien1.Location = new System.Drawing.Point(384, 56);
-            this.uC_DonViTien1.Margin = new System.Windows.Forms.Padding(6);
-            this.uC_DonViTien1.Name = "uC_DonViTien1";
-            this.uC_DonViTien1.Size = new System.Drawing.Size(50, 26);
-            this.uC_DonViTien1.TabIndex = 14;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Beige;
@@ -310,6 +278,53 @@ namespace QuanLyBanVeMayBay.GUI
             this.panel5.Size = new System.Drawing.Size(460, 96);
             this.panel5.TabIndex = 17;
             // 
+            // Lbl_ChiTietChuyenBay
+            // 
+            this.Lbl_ChiTietChuyenBay.AutoSize = true;
+            this.Lbl_ChiTietChuyenBay.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_ChiTietChuyenBay.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_ChiTietChuyenBay.Location = new System.Drawing.Point(13, 18);
+            this.Lbl_ChiTietChuyenBay.Name = "Lbl_ChiTietChuyenBay";
+            this.Lbl_ChiTietChuyenBay.Size = new System.Drawing.Size(247, 32);
+            this.Lbl_ChiTietChuyenBay.TabIndex = 24;
+            this.Lbl_ChiTietChuyenBay.Text = "Chi tiết chuyến bay";
+            // 
+            // usc_DonViTien2
+            // 
+            this.usc_DonViTien2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usc_DonViTien2.Location = new System.Drawing.Point(384, 28);
+            this.usc_DonViTien2.Margin = new System.Windows.Forms.Padding(6);
+            this.usc_DonViTien2.Name = "usc_DonViTien2";
+            this.usc_DonViTien2.Size = new System.Drawing.Size(58, 23);
+            this.usc_DonViTien2.TabIndex = 8;
+            // 
+            // usc_DonViTien1
+            // 
+            this.usc_DonViTien1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usc_DonViTien1.Location = new System.Drawing.Point(384, 19);
+            this.usc_DonViTien1.Margin = new System.Windows.Forms.Padding(4);
+            this.usc_DonViTien1.Name = "usc_DonViTien1";
+            this.usc_DonViTien1.Size = new System.Drawing.Size(48, 19);
+            this.usc_DonViTien1.TabIndex = 6;
+            // 
+            // uC_DonViTien1
+            // 
+            this.uC_DonViTien1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uC_DonViTien1.Location = new System.Drawing.Point(384, 56);
+            this.uC_DonViTien1.Margin = new System.Windows.Forms.Padding(6);
+            this.uC_DonViTien1.Name = "uC_DonViTien1";
+            this.uC_DonViTien1.Size = new System.Drawing.Size(50, 26);
+            this.uC_DonViTien1.TabIndex = 14;
+            // 
+            // uC_DonViTien2
+            // 
+            this.uC_DonViTien2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uC_DonViTien2.Location = new System.Drawing.Point(384, 14);
+            this.uC_DonViTien2.Margin = new System.Windows.Forms.Padding(4);
+            this.uC_DonViTien2.Name = "uC_DonViTien2";
+            this.uC_DonViTien2.Size = new System.Drawing.Size(48, 19);
+            this.uC_DonViTien2.TabIndex = 13;
+            // 
             // Frm_ThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -317,7 +332,7 @@ namespace QuanLyBanVeMayBay.GUI
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.Lbl_ThongTinKhachHang);
             this.Controls.Add(this.Pnl_ThongTinKhachHang);
-            this.Controls.Add(this.Pnl_ChiTietChuyenBay);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.Btn_TiepTuc);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -325,8 +340,14 @@ namespace QuanLyBanVeMayBay.GUI
             this.Text = "Frm_ThongTinKhachHang";
             this.Load += new System.EventHandler(this.Frm_ThongTinKhachHang_Load);
             this.Pnl_ChiTietChuyenBay.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Pnl_ChiTietChuyenBay.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,7 +358,7 @@ namespace QuanLyBanVeMayBay.GUI
         private System.Windows.Forms.Label Lbl_ThongTinKhachHang;
         private System.Windows.Forms.Panel Pnl_ThongTinKhachHang;
         private System.Windows.Forms.Button Btn_TiepTuc;
-        private System.Windows.Forms.Panel Pnl_ChiTietChuyenBay;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private UC_DonViTien uC_DonViTien1;
         private UC_DonViTien uC_DonViTien2;
@@ -356,7 +377,8 @@ namespace QuanLyBanVeMayBay.GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Lbl_Thue;
         private UC_DonViTien usc_DonViTien1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Pnl_ChiTietChuyenBay;
+        private System.Windows.Forms.Panel Pnl_HanhTrinh;
         private System.Windows.Forms.Label Lbl_ChiTietChuyenBay;
     }
 }

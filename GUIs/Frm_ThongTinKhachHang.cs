@@ -42,8 +42,18 @@ namespace QuanLyBanVeMayBay.GUI
         private void Frm_ThongTinKhachHang_Load(object sender, EventArgs e)
         {
             // Test
-            SoVeNguoiLon = 4;
-            SoVeTreEm = 3;
+            thongtinchuyenbay = new ThongTinChuyenBay(
+                "Tp.Hồ Chí Minh (SGN)", 
+                "Hà Nội (HAN)", 
+                new DateTime(2023, 6, 1, 7, 47, 0), 
+                new DateTime(2023, 6, 1, 7, 47, 0), 
+                4, // so nguoi lon
+                3, // so tre em
+                1, // ma chieu di
+                2, // ma chieu ve
+                3, // ma may bay di
+                4); // ma may bay ve
+
             // Load form dien thong tin khach hang 
             int X = 3;
             int Y = 0;
@@ -66,7 +76,7 @@ namespace QuanLyBanVeMayBay.GUI
             }
 
             // Lay thong tin chuyen bay
-            ThongTinChieuBay();
+            LayThongTinChuyenBay();
         }
 
         private bool KiemTraThongTinNguoiLon(UC_ThongTinNguoiLon thongTinNguoiLon)
@@ -148,9 +158,31 @@ namespace QuanLyBanVeMayBay.GUI
             return true;
         }
 
-        private void ThongTinChieuBay()
+        private void LayThongTinChuyenBay()
         {
+            // Thong tin chieu di
+            UC_ThongTinChieuBay thongTinChieuBay = new UC_ThongTinChieuBay();
+            thongTinChieuBay.Location = new Point(2, 3);
+            thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongtinchuyenbay.Machieudi);
+            thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongtinchuyenbay.Mamaybaydi);
+            thongTinChieuBay.Lbl_DiemDi.Text = thongtinchuyenbay.Diemdi;
+            thongTinChieuBay.Lbl_DiemDen.Text = thongtinchuyenbay.Diemden;
+            thongTinChieuBay.Lbl_GioDi.Text = thongtinchuyenbay.Thoigiandi.ToString();
+            Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
 
+            // Thong tin ve chieu ve
+            if (thongtinchuyenbay.Machieuve != 0)
+            {
+                thongTinChieuBay = new UC_ThongTinChieuBay();
+                thongTinChieuBay.Location = new Point(2, 145);
+                thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongtinchuyenbay.Machieuve);
+                thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongtinchuyenbay.Mamaybayve);
+                thongTinChieuBay.Lbl_DiemDi.Text = thongtinchuyenbay.Diemden;
+                thongTinChieuBay.Lbl_DiemDen.Text = thongtinchuyenbay.Diemdi;
+                thongTinChieuBay.Lbl_ChieuBay.Text = "Chiều về";
+                thongTinChieuBay.Lbl_GioDi.Text = thongtinchuyenbay.Thoigianve.ToString();
+                Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
+            }
         }
 
         private void Btn_TiepTuc_Click(object sender, EventArgs e)
