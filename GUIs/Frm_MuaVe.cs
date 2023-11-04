@@ -14,6 +14,7 @@ namespace QuanLyBanVeMayBay.GUI
         private DateTime ngaydi= new DateTime(2010, 1, 1);
         private int sohanhkhach = -1;
         private int machuyenbay = -1;
+        private int mamaybay = -1;
 
         public Frm_MuaVe()
         {
@@ -74,11 +75,17 @@ namespace QuanLyBanVeMayBay.GUI
         {
             UC_ThongTinVeMua vemaybay = (UC_ThongTinVeMua)sender;
             int.TryParse(vemaybay.Lbl_MaChuyenBay.Text.ToString(), out machuyenbay);
+            int.TryParse(vemaybay.Lbl_MaMayBay.Text.ToString(), out mamaybay);
         }
 
         public int lay_MaChuyenBay()
         {
             return machuyenbay;
+        }
+
+        public int lay_MaMayBay()
+        {
+            return mamaybay;
         }
     }
 }

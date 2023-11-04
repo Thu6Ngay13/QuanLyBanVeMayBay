@@ -1,4 +1,5 @@
-﻿using QuanLyBanVeMayBay.BLL;
+﻿using HeQuanTriDemo01.Models;
+using QuanLyBanVeMayBay.BLL;
 using QuanLyBanVeMayBay.UC;
 using System;
 using System.Data;
@@ -21,6 +22,9 @@ namespace QuanLyBanVeMayBay.GUI
 
         private int mavechieudi = -1;
         private int mavechieuve = -1;
+
+        private int mamaybaychieudi = -1;
+        private int mamaybaychieuve = -1;
 
         public Frm_TimKiemChuyenBay()
         {
@@ -126,14 +130,40 @@ namespace QuanLyBanVeMayBay.GUI
                 Frm_MuaVe muavechieudi = new Frm_MuaVe(diemdi, diemden, ngaydi, soluonghanhkhach);
                 muavechieudi.ShowDialog();
                 mavechieudi = muavechieudi.lay_MaChuyenBay();
+                mamaybaychieudi = muavechieudi.lay_MaMayBay();
+
+                if (mavechieudi == -1 || mamaybaychieudi == -1)
+                {
+                    this.Show();
+                    return;
+                }
 
                 if (Rdb_KhuHoi.Checked)
                 {
                     ngayve = Dtp_NgayVe.Value;
                     Frm_MuaVe muavechieuve = new Frm_MuaVe(diemden, diemdi, ngayve, soluonghanhkhach);
                     muavechieuve.ShowDialog();
-                    mavechieuve = muavechieudi.lay_MaChuyenBay();
+                    mavechieuve = muavechieuve.lay_MaChuyenBay();
+                    mamaybaychieuve = muavechieuve.lay_MaMayBay();
+
+                    if (mavechieuve == -1 || mamaybaychieuve == -1)
+                    {
+                        this.Show();
+                        return;
+                    }
                 }
+
+                ThongTinChuyenBay thongtinchuyenbay = new ThongTinChuyenBay(
+                    diemdi, diemden, 
+                    ngaydi, ngayve, 
+                    sokhachnguoilon, sokhachtreem, 
+                    mavechieudi, mavechieuve,
+                    mamaybaychieudi, mamaybaychieuve);
+
+                Frm_ThongTinKhachHang khachhang = new Frm_ThongTinKhachHang(thongtinchuyenbay);
+                khachhang.ShowDialog();
+
+                this.Show();
             }
         }
     }

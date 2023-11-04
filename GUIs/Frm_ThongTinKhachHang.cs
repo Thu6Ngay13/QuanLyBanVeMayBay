@@ -11,8 +11,6 @@ namespace QuanLyBanVeMayBay.GUI
 {
     public partial class Frm_ThongTinKhachHang : Form
     {
-        BLL_KhachHang themThongTinKhachHang = null;
-
         private ThongTinChuyenBay thongtinchuyenbay;
         private string ho = null;
         private string ten = null;
@@ -34,25 +32,9 @@ namespace QuanLyBanVeMayBay.GUI
             this.thongtinchuyenbay = thongtinchuyenbay;
         }
 
-        public void Init()
-        {
-            themThongTinKhachHang = new BLL_KhachHang();
-        }
-
         private void Frm_ThongTinKhachHang_Load(object sender, EventArgs e)
         {
-            // Test
-            thongtinchuyenbay = new ThongTinChuyenBay(
-                "Tp.Hồ Chí Minh (SGN)", 
-                "Hà Nội (HAN)", 
-                new DateTime(2023, 6, 1, 7, 47, 0), 
-                new DateTime(2023, 6, 1, 7, 47, 0), 
-                4, // so nguoi lon
-                3, // so tre em
-                1, // ma chieu di
-                2, // ma chieu ve
-                3, // ma may bay di
-                4); // ma may bay ve
+            BLL_KhachHang bll = new BLL_KhachHang();
 
             // Load form dien thong tin khach hang 
             int X = 3;
@@ -193,7 +175,9 @@ namespace QuanLyBanVeMayBay.GUI
 
             if (DanhSachNguoiLon(ref khachHangNguoiLons) && DanhSachTreEm(ref khachHangTreEms))
             {
-                // Thuc hien thanh cong lay thong tin khach hang
+                this.Hide();
+                //todo
+                //this.Show();
             }
             else
             {

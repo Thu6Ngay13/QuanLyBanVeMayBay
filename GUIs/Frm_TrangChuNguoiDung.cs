@@ -105,8 +105,11 @@ namespace QuanLyBanVeMayBay.GUI
         private void Btn_MuaVe_Click(object sender, EventArgs e)
         {
             this.Hide();
+            
             Frm_TimKiemChuyenBay form1 = new Frm_TimKiemChuyenBay();
             form1.ShowDialog();
+
+            this.Show();
         }
     }
 }
