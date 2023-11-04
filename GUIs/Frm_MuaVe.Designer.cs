@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanVeMayBay.GUI
 {
-    partial class Frm_MuaVeChieuVe
+    partial class Frm_MuaVe
     {
         /// <summary>
         /// Required designer variable.
@@ -164,7 +164,7 @@
             this.Lbl_ChuyenBayChieuDi.TabIndex = 0;
             this.Lbl_ChuyenBayChieuDi.Text = "Chuyến bay chiều đi";
             // 
-            // Frm_MuaVeChieuVe
+            // Frm_MuaVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,9 +173,9 @@
             this.Controls.Add(this.Pnl_Header);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_MuaVeChieuVe";
-            this.Text = "Mua vé chiều về ";
-            this.Load += new System.EventHandler(this.Frm_MuaVeChieuVe_Load);
+            this.Name = "Frm_MuaVe";
+            this.Text = "Mua vé";
+            this.Load += new System.EventHandler(this.Frm_MuaVeChieuDi_Load);
             this.Pnl_Header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Logo)).EndInit();
             this.Pnl_KetQuaTimKiemChuyenBay.ResumeLayout(false);
