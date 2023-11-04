@@ -11,17 +11,14 @@ namespace QuanLyBanVeMayBay.GUI
 {
     public partial class Frm_ThongTinKhachHang : Form
     {
-        BLL_KhachHang themThongTinKhachHang = null;
-
         private ThongTinChuyenBay thongtinchuyenbay;
-        private string ho = null;
-        private string ten = null;
-        private string gioitinh = null;
-        private string ngaysinh = null;
-        private string sodienthoai = null;
-        private string email = null;
-        private string diachi = null;
-        private string error = null;
+        private string ho = "-1";
+        private string ten = "-1";
+        private string gioitinh = "-1";
+        private DateTime ngaysinh = new DateTime(2010, 1, 1);
+        private string sodienthoai = "-1";
+        private string email = "-1";
+        private string diachi = "-1";
 
         public Frm_ThongTinKhachHang()
         {
@@ -34,25 +31,9 @@ namespace QuanLyBanVeMayBay.GUI
             this.thongtinchuyenbay = thongtinchuyenbay;
         }
 
-        public void Init()
-        {
-            themThongTinKhachHang = new BLL_KhachHang();
-        }
-
         private void Frm_ThongTinKhachHang_Load(object sender, EventArgs e)
         {
-            // Test
-            thongtinchuyenbay = new ThongTinChuyenBay(
-                "Tp.Hồ Chí Minh (SGN)", 
-                "Hà Nội (HAN)", 
-                new DateTime(2023, 6, 1, 7, 47, 0), 
-                new DateTime(2023, 6, 1, 7, 47, 0), 
-                4, // so nguoi lon
-                3, // so tre em
-                1, // ma chieu di
-                2, // ma chieu ve
-                3, // ma may bay di
-                4); // ma may bay ve
+            BLL_KhachHang bll = new BLL_KhachHang();
 
             // Load form dien thong tin khach hang 
             int X = 3;
@@ -84,7 +65,7 @@ namespace QuanLyBanVeMayBay.GUI
             ho = thongTinNguoiLon.Txt_Ho.Text.Trim();
             ten = thongTinNguoiLon.Txt_TenDemVaTen.Text.Trim();
             gioitinh = thongTinNguoiLon.Cmb_GioiTinh.Text.Trim();
-            ngaysinh = thongTinNguoiLon.Mtb_NgaySinh.Text.Trim();
+            ngaysinh = thongTinNguoiLon.Dtp_NgaySinh.Value;
             sodienthoai = thongTinNguoiLon.Txt_SoDienThoai.Text.Trim();
             email = thongTinNguoiLon.Txt_Email.Text.Trim();
             diachi = thongTinNguoiLon.Txt_DiaChi.Text.Trim();
@@ -101,7 +82,7 @@ namespace QuanLyBanVeMayBay.GUI
             ho = thongTinTreEm.Txt_Ho.Text.Trim();
             ten = thongTinTreEm.Txt_TenDemVaTen.Text.Trim();
             gioitinh = thongTinTreEm.Cmb_GioiTinh.Text.Trim();
-            ngaysinh = thongTinTreEm.Mtb_NgaySinh.Text.Trim();
+            ngaysinh = thongTinTreEm.Dtp_NgaySinh.Value;
 
             return string.IsNullOrEmpty(ho)
                 || string.IsNullOrEmpty(ten)
@@ -119,7 +100,7 @@ namespace QuanLyBanVeMayBay.GUI
                     string HoTen = string.Concat(thongTinNguoiLon.Txt_Ho.Text.Trim(), " ",
                                                  thongTinNguoiLon.Txt_TenDemVaTen.Text.Trim());
                     gioitinh = thongTinNguoiLon.Cmb_GioiTinh.Text.Trim();
-                    ngaysinh = thongTinNguoiLon.Mtb_NgaySinh.Text.Trim();
+                    ngaysinh = thongTinNguoiLon.Dtp_NgaySinh.Value;
                     sodienthoai = thongTinNguoiLon.Txt_SoDienThoai.Text.Trim();
                     email = thongTinNguoiLon.Txt_Email.Text.Trim();
                     diachi = thongTinNguoiLon.Txt_DiaChi.Text.Trim();
@@ -146,7 +127,7 @@ namespace QuanLyBanVeMayBay.GUI
                     string HoTen = string.Concat(thongTinTreEm.Txt_Ho.Text.Trim(), " ",
                                                  thongTinTreEm.Txt_TenDemVaTen.Text.Trim());
                     gioitinh = thongTinTreEm.Cmb_GioiTinh.Text.Trim();
-                    ngaysinh = thongTinTreEm.Mtb_NgaySinh.Text.Trim();
+                    ngaysinh = thongTinTreEm.Dtp_NgaySinh.Value;
 
                     KhachHangTreEm khachHangTreEm = new KhachHangTreEm(HoTen, gioitinh, ngaysinh);
 
@@ -193,7 +174,9 @@ namespace QuanLyBanVeMayBay.GUI
 
             if (DanhSachNguoiLon(ref khachHangNguoiLons) && DanhSachTreEm(ref khachHangTreEms))
             {
-                // Thuc hien thanh cong lay thong tin khach hang
+                this.Hide();
+                //todo
+                //this.Show();
             }
             else
             {

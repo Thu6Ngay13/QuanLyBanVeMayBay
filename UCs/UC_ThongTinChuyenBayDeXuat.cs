@@ -18,8 +18,11 @@ namespace QuanLyBanVeMayBay.UC
             DateTime ngaydi = DateTime.Parse(Lbl_NgayDi.Text);
 
             this.ParentForm.Hide();
+            
             Frm_TimKiemChuyenBay TimKiemChuyenBay = new Frm_TimKiemChuyenBay(diemdi, diemden, ngaydi);
-            TimKiemChuyenBay.ShowDialog(); 
+            TimKiemChuyenBay.ShowDialog();
+
+            this.ParentForm.Show();
         }
     }
 }

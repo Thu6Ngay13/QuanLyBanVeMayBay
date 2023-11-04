@@ -26,6 +26,7 @@ namespace HeQuanTriDemo01.Models
         public ThongTinChuyenBay(
             string diemdi,
             string diemden,
+
             DateTime thoigiandi,
             DateTime thoigianve,
 
@@ -40,6 +41,7 @@ namespace HeQuanTriDemo01.Models
         {
             Diemdi = diemdi;
             Diemden = diemden;
+
             Thoigiandi = thoigiandi;
             Thoigianve = thoigianve;
 
