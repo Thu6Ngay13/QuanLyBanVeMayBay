@@ -8,22 +8,63 @@ namespace HeQuanTriDemo01.Models
 {
     public class ThongTinChuyenBay
     {
-        string tenmaybay;
-        string diemdi;
-        string diemden;
-        string thoigiandi;
+        private string diemdi;
+        private string diemden;
+        private DateTime thoigiandi;
+        private DateTime thoigianve;
 
-        public ThongTinChuyenBay(string tenmaybay, string diemdi, string diemden, string thoigiandi)
+        private int sokhachnguoilon;
+        private int sokhachtreem;
+
+        private int machieudi;
+        private int machieuve;
+
+        private int mamaybaydi;
+        private int mamaybayve;
+
+        public ThongTinChuyenBay() { }  
+        public ThongTinChuyenBay(
+            string diemdi,
+            string diemden,
+
+            DateTime thoigiandi,
+            DateTime thoigianve,
+
+            int sokhachnguoilon,
+            int sokhachtreem,
+
+            int machieudi,
+            int machieuve,
+
+            int mamaybaydi,
+            int mamaybayve)
         {
-            this.TenMayBay = tenmaybay;
-            this.DiemDi = diemdi;
-            this.DiemDen = diemden;
-            this.ThoiGianDi = thoigiandi;
+            Diemdi = diemdi;
+            Diemden = diemden;
+
+            Thoigiandi = thoigiandi;
+            Thoigianve = thoigianve;
+
+            Sokhachnguoilon = sokhachnguoilon;
+            Sokhachtreem = sokhachtreem;
+
+            Machieudi = machieudi;
+            Machieuve = machieuve;
+
+            Mamaybaydi = mamaybaydi;
+            Mamaybayve = mamaybayve;
+
         }
 
-        public string TenMayBay { get => tenmaybay; set => tenmaybay = value; }
-        public string DiemDi { get => diemdi; set => diemdi = value; }
-        public string DiemDen { get => diemden; set => diemden = value; }
-        public string ThoiGianDi { get => thoigiandi; set => thoigiandi = value; }
+        public string Diemdi { get => diemdi; set => diemdi = value; }
+        public string Diemden { get => diemden; set => diemden = value; }
+        public DateTime Thoigiandi { get => thoigiandi; set => thoigiandi = value; }
+        public DateTime Thoigianve { get => thoigianve; set => thoigianve = value; }
+        public int Sokhachnguoilon { get => sokhachnguoilon; set => sokhachnguoilon = value; }
+        public int Sokhachtreem { get => sokhachtreem; set => sokhachtreem = value; }
+        public int Machieudi { get => machieudi; set => machieudi = value; }
+        public int Machieuve { get => machieuve; set => machieuve = value; }
+        public int Mamaybaydi { get => mamaybaydi; set => mamaybaydi = value; }
+        public int Mamaybayve { get => mamaybayve; set => mamaybayve = value; }
     }
 }
