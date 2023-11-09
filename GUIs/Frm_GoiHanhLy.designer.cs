@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Pnl_Body = new System.Windows.Forms.Panel();
+            this.Lbl_TenKhachHang = new System.Windows.Forms.Label();
+            this.Btn_XoaGoiHanhLy = new System.Windows.Forms.Button();
             this.Pnl_GoiHanhLy = new System.Windows.Forms.Panel();
             this.Btn_TiepTuc_GoiHanhLy = new System.Windows.Forms.Button();
             this.Dgv_ChiTietChuyenBay = new System.Windows.Forms.DataGridView();
@@ -42,7 +44,7 @@
             this.Ptb_Logo = new System.Windows.Forms.PictureBox();
             this.Btn_DangKy = new System.Windows.Forms.Button();
             this.Btn_DangNhap = new System.Windows.Forms.Button();
-            this.Btn_XoaGoiHanhLy = new System.Windows.Forms.Button();
+            this.Cmb_Chieu = new System.Windows.Forms.ComboBox();
             this.Pnl_Body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ChiTietChuyenBay)).BeginInit();
             this.Pnl_ChucNang.SuspendLayout();
@@ -52,6 +54,8 @@
             // 
             // Pnl_Body
             // 
+            this.Pnl_Body.Controls.Add(this.Cmb_Chieu);
+            this.Pnl_Body.Controls.Add(this.Lbl_TenKhachHang);
             this.Pnl_Body.Controls.Add(this.Btn_XoaGoiHanhLy);
             this.Pnl_Body.Controls.Add(this.Pnl_GoiHanhLy);
             this.Pnl_Body.Controls.Add(this.Btn_TiepTuc_GoiHanhLy);
@@ -62,6 +66,26 @@
             this.Pnl_Body.Name = "Pnl_Body";
             this.Pnl_Body.Size = new System.Drawing.Size(1257, 513);
             this.Pnl_Body.TabIndex = 3;
+            // 
+            // Lbl_TenKhachHang
+            // 
+            this.Lbl_TenKhachHang.AutoSize = true;
+            this.Lbl_TenKhachHang.Location = new System.Drawing.Point(258, 25);
+            this.Lbl_TenKhachHang.Name = "Lbl_TenKhachHang";
+            this.Lbl_TenKhachHang.Size = new System.Drawing.Size(37, 22);
+            this.Lbl_TenKhachHang.TabIndex = 6;
+            this.Lbl_TenKhachHang.Text = "aaa";
+            // 
+            // Btn_XoaGoiHanhLy
+            // 
+            this.Btn_XoaGoiHanhLy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_XoaGoiHanhLy.Location = new System.Drawing.Point(431, 467);
+            this.Btn_XoaGoiHanhLy.Name = "Btn_XoaGoiHanhLy";
+            this.Btn_XoaGoiHanhLy.Size = new System.Drawing.Size(180, 36);
+            this.Btn_XoaGoiHanhLy.TabIndex = 5;
+            this.Btn_XoaGoiHanhLy.Text = "Xóa gói hành lý";
+            this.Btn_XoaGoiHanhLy.UseVisualStyleBackColor = true;
+            this.Btn_XoaGoiHanhLy.Click += new System.EventHandler(this.Btn_XoaGoiHanhLy_Click);
             // 
             // Pnl_GoiHanhLy
             // 
@@ -79,6 +103,7 @@
             this.Btn_TiepTuc_GoiHanhLy.TabIndex = 3;
             this.Btn_TiepTuc_GoiHanhLy.Text = "Tiếp tục";
             this.Btn_TiepTuc_GoiHanhLy.UseVisualStyleBackColor = true;
+            this.Btn_TiepTuc_GoiHanhLy.Click += new System.EventHandler(this.Btn_TiepTuc_GoiHanhLy_Click);
             // 
             // Dgv_ChiTietChuyenBay
             // 
@@ -104,9 +129,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 22);
+            this.label1.Size = new System.Drawing.Size(254, 22);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Các gói hành lý";
+            this.label1.Text = "Mua gói hành lý   Khách hàng: ";
             // 
             // Pnl_ChucNang
             // 
@@ -182,16 +207,13 @@
             this.Btn_DangNhap.Text = "Đăng nhập";
             this.Btn_DangNhap.UseVisualStyleBackColor = true;
             // 
-            // Btn_XoaGoiHanhLy
+            // Cmb_Chieu
             // 
-            this.Btn_XoaGoiHanhLy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_XoaGoiHanhLy.Location = new System.Drawing.Point(431, 467);
-            this.Btn_XoaGoiHanhLy.Name = "Btn_XoaGoiHanhLy";
-            this.Btn_XoaGoiHanhLy.Size = new System.Drawing.Size(180, 36);
-            this.Btn_XoaGoiHanhLy.TabIndex = 5;
-            this.Btn_XoaGoiHanhLy.Text = "Xóa gói hành lý";
-            this.Btn_XoaGoiHanhLy.UseVisualStyleBackColor = true;
-            this.Btn_XoaGoiHanhLy.Click += new System.EventHandler(this.Btn_XoaGoiHanhLy_Click);
+            this.Cmb_Chieu.FormattingEnabled = true;
+            this.Cmb_Chieu.Location = new System.Drawing.Point(466, 17);
+            this.Cmb_Chieu.Name = "Cmb_Chieu";
+            this.Cmb_Chieu.Size = new System.Drawing.Size(130, 30);
+            this.Cmb_Chieu.TabIndex = 7;
             // 
             // Frm_GoiHanhLy
             // 
@@ -232,5 +254,7 @@
         private System.Windows.Forms.Button Btn_DangNhap;
         private System.Windows.Forms.Panel Pnl_GoiHanhLy;
         private System.Windows.Forms.Button Btn_XoaGoiHanhLy;
+        private System.Windows.Forms.Label Lbl_TenKhachHang;
+        private System.Windows.Forms.ComboBox Cmb_Chieu;
     }
 }

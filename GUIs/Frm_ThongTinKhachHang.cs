@@ -168,7 +168,6 @@ namespace QuanLyBanVeMayBay.GUI
 
         private void Btn_TiepTuc_Click(object sender, EventArgs e)
         {
-            // Lay thong tin khach hang
             List<KhachHangNguoiLon> khachHangNguoiLons = new List<KhachHangNguoiLon>();
             List<KhachHangTreEm> khachHangTreEms = new List<KhachHangTreEm>();
 
@@ -177,8 +176,9 @@ namespace QuanLyBanVeMayBay.GUI
                 Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi();
                 frm_ChonChoNgoi.ShowDialog();
                 this.Hide();
-                //todo
-                //this.Show();
+                Frm_GoiHanhLy frm_GoiHanhLy = new Frm_GoiHanhLy(khachHangNguoiLons, khachHangTreEms, thongtinchuyenbay);
+                frm_GoiHanhLy.ShowDialog();
+                this.Show();
             }
             else
             {

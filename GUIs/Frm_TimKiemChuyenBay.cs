@@ -26,6 +26,8 @@ namespace QuanLyBanVeMayBay.GUI
         private int mamaybaychieudi = -1;
         private int mamaybaychieuve = -1;
 
+        private bool khuhoi = false;
+
         public Frm_TimKiemChuyenBay()
         {
             InitializeComponent();
@@ -35,11 +37,11 @@ namespace QuanLyBanVeMayBay.GUI
         public Frm_TimKiemChuyenBay(string diemdi, string diemden, DateTime ngaydi)
         {
             InitializeComponent();
-            Rdb_MotChieu.Checked = true;
-            chuyenbayduocdexuat = true;
             this.diemdi = diemdi;
             this.diemden = diemden;
             this.ngaydi = ngaydi;
+            this.chuyenbayduocdexuat = true;
+            this.khuhoi = false;
         }
 
         private void Frm_MuaVe1_Load(object sender, EventArgs e)
@@ -69,6 +71,7 @@ namespace QuanLyBanVeMayBay.GUI
 
         private void nhan_ThongTinChuyenBayDeXuat()
         {
+            Rdb_MotChieu.Checked = true;
             Cbb_DiemDi.Text = diemdi;
             Cbb_DiemDen.Text = diemden;
             Dtp_NgayDi.Value = ngaydi;
@@ -146,6 +149,8 @@ namespace QuanLyBanVeMayBay.GUI
                     mavechieuve = muavechieuve.lay_MaChuyenBay();
                     mamaybaychieuve = muavechieuve.lay_MaMayBay();
 
+                    khuhoi = true;
+
                     if (mavechieuve == -1 || mamaybaychieuve == -1)
                     {
                         this.Show();
@@ -158,7 +163,8 @@ namespace QuanLyBanVeMayBay.GUI
                     ngaydi, ngayve, 
                     sokhachnguoilon, sokhachtreem, 
                     mavechieudi, mavechieuve,
-                    mamaybaychieudi, mamaybaychieuve);
+                    mamaybaychieudi, mamaybaychieuve,
+                    khuhoi);
 
                 Frm_ThongTinKhachHang khachhang = new Frm_ThongTinKhachHang(thongtinchuyenbay);
                 khachhang.ShowDialog();
