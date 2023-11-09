@@ -93,12 +93,12 @@
             // 
             this.Lbl_TenMayBay.AutoSize = true;
             this.Lbl_TenMayBay.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_TenMayBay.Location = new System.Drawing.Point(324, 287);
+            this.Lbl_TenMayBay.Location = new System.Drawing.Point(352, 292);
             this.Lbl_TenMayBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_TenMayBay.Name = "Lbl_TenMayBay";
-            this.Lbl_TenMayBay.Size = new System.Drawing.Size(140, 29);
+            this.Lbl_TenMayBay.Size = new System.Drawing.Size(81, 29);
             this.Lbl_TenMayBay.TabIndex = 15;
-            this.Lbl_TenMayBay.Text = "Airbus A321";
+            this.Lbl_TenMayBay.Text = "Airbus";
             // 
             // Pnl_ChonViTri
             // 
