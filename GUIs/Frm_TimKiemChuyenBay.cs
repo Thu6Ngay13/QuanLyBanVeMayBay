@@ -171,9 +171,11 @@ namespace QuanLyBanVeMayBay.GUI
                 Frm_ThongTinKhachHang khachhang = new Frm_ThongTinKhachHang(thongtinchuyenbay);
                 khachhang.ShowDialog();
 
+                if (Frm_ThanhToan.thanhtoanthanhcong == 999) this.Close();
                 this.Show();
             }
         }
+
     }
 }
 
