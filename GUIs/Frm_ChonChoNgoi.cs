@@ -108,7 +108,10 @@ namespace QuanLyBanVeMayBay.GUI
                 {
                     if (datatable.Rows[numCols * row + col]["TinhTrangVe"].Equals("chưa bán"))
                     {
-                        Button btn_ChuaMua = new Button();  
+                        Button btn_ChuaMua = new Button();
+                        btn_ChuaMua.Width = 80;
+                        btn_ChuaMua.Height = 40;
+                        btn_ChuaMua.BackColor = Color.SkyBlue;
                         btn_ChuaMua.Left = x - 5 + (col * (btn_ChuaMua.Width + khoangCach)) + (col / 2) * khoangCachGiua;
                         btn_ChuaMua.Top = 10 + (row * (btn_ChuaMua.Height + khoangCach));
                         btn_ChuaMua.Text = datatable.Rows[numCols * row + col]["ChoNgoi"].ToString();
@@ -121,6 +124,9 @@ namespace QuanLyBanVeMayBay.GUI
                     else
                     {
                         Button btn_DaMua = new Button();
+                        btn_DaMua.Width = 80;
+                        btn_DaMua.Height = 40;
+                        btn_DaMua.BackColor = Color.Silver;
                         btn_DaMua.Left = x - 5 + (col * (btn_DaMua.Width + khoangCach)) + (col / 2) * khoangCachGiua;
                         btn_DaMua.Top = 10 + (row * (btn_DaMua.Height + khoangCach));
                         btn_DaMua.Enabled = false;
@@ -195,7 +201,6 @@ namespace QuanLyBanVeMayBay.GUI
             buttons[idx].Click -= chonGhe;
             buttons[idx].Enabled = false;   
             LayDanhSachKhachHang();
-
         }
 
         private void Btn_TiepTuc_Click(object sender, EventArgs e)
