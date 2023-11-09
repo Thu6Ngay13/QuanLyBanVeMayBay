@@ -3,25 +3,34 @@ using QuanLyBanVeMayBay.BLL;
 using QuanLyBanVeMayBay.Models;
 using QuanLyBanVeMayBay.UC;
 using QuanLyBanVeMayBay.UCs;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace QuanLyBanVeMayBay.GUI
 {
     public partial class Frm_ChonChoNgoi : Form
     {
-        ThongTinChuyenBay thongTinChuyenBay = null;
-        List<KhachHangNguoiLon> khachHangNguoiLons = new List<KhachHangNguoiLon>();
-        List<KhachHangTreEm> khachHangTreEms = new List<KhachHangTreEm>();
+        private ThongTinChuyenBay thongTinChuyenBay;
+        private List<KhachHangNguoiLon> khachHangNguoiLons = new List<KhachHangNguoiLon>();
+        private List<KhachHangTreEm> khachHangTreEms = new List<KhachHangTreEm>();
+        private int i = 0;
+        private int j = 0;
+        private int X = 10;
+        private int Y = 10;
+        private int mave = -1;
+        private int idx = -1;
 
-        private int sokhachlon = -1;
-        private int sokhachnho = -1;    
-        private int sohanhkhach = -1;
-        
+        private List<UC_HanhKhachChonChoNgoi> uckhs = new List<UC_HanhKhachChonChoNgoi>();
+        private List<Button> buttons = new List<Button>();
+        private List<int> mavedachons = new List<int>();
+        private List<int> maves = new List<int>();
+
         public Frm_ChonChoNgoi()
         {
             InitializeComponent();
@@ -36,21 +45,37 @@ namespace QuanLyBanVeMayBay.GUI
             this.khachHangNguoiLons = khachHangNguoiLons;
             this.khachHangTreEms = khachHangTreEms;
             this.thongTinChuyenBay = thongTinChuyenBay;
-            
+        }
+
+        private void Frm_ChonChoNgoi_Load(object sender, System.EventArgs e)
+        {
+            //Pnl_ChonViTri.Hide();
+            LayThongTinChuyenBay();
+            LayThongTinChoNgoi();
+            LayDanhSachKhachHang();
         }
 
         public void LayDanhSachKhachHang()
         {
-            //Frm_HanhKhach hk = new Frm_HanhKhach();
-            //sokhachlon = (int)hk.Nud_NguoiLon.Value;
-            //sokhachnho = (int)hk.Nud_TreEm.Value;
+            UC_HanhKhachChonChoNgoi hanhKhachChonChoNgoi = new UC_HanhKhachChonChoNgoi();
 
-            sohanhkhach = sokhachlon + sokhachnho;
-            if (thongTinChuyenBay.Sokhachnguoilon != -1)
+            if (i < thongTinChuyenBay.Sokhachnguoilon)
             {
-                UC_HanhKhachChonChoNgoi hanhKhachChonChoNgoi = new UC_HanhKhachChonChoNgoi();
-                Pnl_DanhSachHanhKhach.Controls.Add(hanhKhachChonChoNgoi);
+                hanhKhachChonChoNgoi.Lbl_TenKhach.Text = khachHangNguoiLons[i].Hoten;
             }
+            else if (j < thongTinChuyenBay.Sokhachtreem)
+            {
+                hanhKhachChonChoNgoi.Lbl_TenKhach.Text = khachHangTreEms[j].Hoten;
+            }
+            else
+            {
+                return;
+            }
+
+            hanhKhachChonChoNgoi.Location = new Point(X, Y);
+            Pnl_DanhSachHanhKhach.Controls.Add(hanhKhachChonChoNgoi);
+            uckhs.Add(hanhKhachChonChoNgoi);
+            Y = Y + 90;
         }
         
         public void LayThongTinChoNgoi()
@@ -83,18 +108,22 @@ namespace QuanLyBanVeMayBay.GUI
                 {
                     if (datatable.Rows[numCols * row + col]["TinhTrangVe"].Equals("chưa bán"))
                     {
-                        UC_ButtonChonViTriChuaMua btn_ChuaMua = new UC_ButtonChonViTriChuaMua();
+                        Button btn_ChuaMua = new Button();  
                         btn_ChuaMua.Left = x - 5 + (col * (btn_ChuaMua.Width + khoangCach)) + (col / 2) * khoangCachGiua;
                         btn_ChuaMua.Top = 10 + (row * (btn_ChuaMua.Height + khoangCach));
-                        btn_ChuaMua.Btn_MaGhe.Text = datatable.Rows[numCols * row + col]["ChoNgoi"].ToString();
+                        btn_ChuaMua.Text = datatable.Rows[numCols * row + col]["ChoNgoi"].ToString();
+                        btn_ChuaMua.Click += chonGhe;
+                        buttons.Add(btn_ChuaMua);
+                        maves.Add(Convert.ToInt32(datatable.Rows[numCols * row + col]["MaVe"].ToString()));
                         Pnl_ChonViTri.Controls.Add(btn_ChuaMua);
+
                     }
                     else
                     {
-                        UC_ButtonChonViTriDaMua btn_DaMua = new UC_ButtonChonViTriDaMua();
+                        Button btn_DaMua = new Button();
                         btn_DaMua.Left = x - 5 + (col * (btn_DaMua.Width + khoangCach)) + (col / 2) * khoangCachGiua;
                         btn_DaMua.Top = 10 + (row * (btn_DaMua.Height + khoangCach));
-                        btn_DaMua.Btn_MaGhe.Text = datatable.Rows[numCols * row + col]["ChoNgoi"].ToString();
+                        btn_DaMua.Enabled = false;
                         Pnl_ChonViTri.Controls.Add(btn_DaMua);
                     }
                 }
@@ -102,37 +131,83 @@ namespace QuanLyBanVeMayBay.GUI
             this.Pnl_ChonViTri.ResumeLayout(false);
             this.ResumeLayout(false);
         }
-        /*private void LayThongTinChuyenBay()
+        private void LayThongTinChuyenBay()
         {
             // Thong tin chieu di
             UC_ThongTinChieuBay thongTinChieuBay = new UC_ThongTinChieuBay();
             thongTinChieuBay.Location = new Point(2, 3);
-            thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongtinchuyenbay.Machieudi);
-            thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongtinchuyenbay.Mamaybaydi);
-            thongTinChieuBay.Lbl_DiemDi.Text = thongtinchuyenbay.Diemdi;
-            thongTinChieuBay.Lbl_DiemDen.Text = thongtinchuyenbay.Diemden;
-            thongTinChieuBay.Lbl_GioDi.Text = thongtinchuyenbay.Thoigiandi.ToString();
+            thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongTinChuyenBay.Machieudi);
+            thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongTinChuyenBay.Mamaybaydi);
+            thongTinChieuBay.Lbl_DiemDi.Text = thongTinChuyenBay.Diemdi;
+            thongTinChieuBay.Lbl_DiemDen.Text = thongTinChuyenBay.Diemden;
+            thongTinChieuBay.Lbl_GioDi.Text = thongTinChuyenBay.Thoigiandi.ToString();
             Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
 
             // Thong tin ve chieu ve
-            if (thongtinchuyenbay.Machieuve != 0)
+            if (thongTinChuyenBay.Machieuve != 0)
             {
                 thongTinChieuBay = new UC_ThongTinChieuBay();
                 thongTinChieuBay.Location = new Point(2, 145);
-                thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongtinchuyenbay.Machieuve);
-                thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongtinchuyenbay.Mamaybayve);
-                thongTinChieuBay.Lbl_DiemDi.Text = thongtinchuyenbay.Diemden;
-                thongTinChieuBay.Lbl_DiemDen.Text = thongtinchuyenbay.Diemdi;
+                thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongTinChuyenBay.Machieuve);
+                thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongTinChuyenBay.Mamaybayve);
+                thongTinChieuBay.Lbl_DiemDi.Text = thongTinChuyenBay.Diemden;
+                thongTinChieuBay.Lbl_DiemDen.Text = thongTinChuyenBay.Diemdi;
                 thongTinChieuBay.Lbl_ChieuBay.Text = "Chiều về";
-                thongTinChieuBay.Lbl_GioDi.Text = thongtinchuyenbay.Thoigianve.ToString();
+                thongTinChieuBay.Lbl_GioDi.Text = thongTinChuyenBay.Thoigianve.ToString();
                 Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
             }
-        }*/
+        }
 
-        private void Frm_ChonChoNgoi_Load(object sender, System.EventArgs e)
+
+        private void chonGhe(object sender, EventArgs e)
         {
-            // LayThongTinChuyenBay();
-            LayThongTinChoNgoi();
+            Button temp = sender as Button;
+            idx = buttons.IndexOf(temp);
+            mave = maves[idx];
+        }
+
+        private void Btn_XacNhan_Click(object sender, EventArgs e)
+        {
+            if (mavedachons.IndexOf(mave) != -1 || idx == -1) return;
+            if (i < thongTinChuyenBay.Sokhachnguoilon)
+            {
+                khachHangNguoiLons[i].Mavechieudi = mave;
+                mavedachons.Add(mave);
+                i = i + 1;
+                MessageBox.Show(i.ToString() + "lon");
+            }
+            else if (j < thongTinChuyenBay.Sokhachtreem)
+            {
+                khachHangTreEms[j].Mavechieudi = mave;
+                mavedachons.Add(mave);
+                j = j + 1;
+                MessageBox.Show(j.ToString() + "em");
+            }
+            else
+            {
+                return;
+            }
+
+            uckhs[idx].Lbl_MaGhe.Text = buttons[idx].Text;
+            uckhs[idx].Lbl_MaVe.Text = mave.ToString();
+
+            buttons[idx].Text = "";
+            buttons[idx].Click -= chonGhe;
+            buttons[idx].Enabled = false;   
+            LayDanhSachKhachHang();
+
+        }
+
+        private void Btn_TiepTuc_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Frm_ThanhToan thanhToan = new Frm_ThanhToan(khachHangNguoiLons, khachHangTreEms);
+            thanhToan.ShowDialog();
+
+            if (Frm_ThanhToan.thanhtoanthanhcong == 999) this.Close();
+            this.Show();
+
         }
     }
 }

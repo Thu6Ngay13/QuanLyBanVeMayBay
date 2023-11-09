@@ -173,11 +173,12 @@ namespace QuanLyBanVeMayBay.GUI
 
             if (DanhSachNguoiLon(ref khachHangNguoiLons) && DanhSachTreEm(ref khachHangTreEms))
             {
-                this.Close();
+                this.Hide();
                 
                 Frm_GoiHanhLy frm_GoiHanhLy = new Frm_GoiHanhLy(khachHangNguoiLons, khachHangTreEms, thongtinchuyenbay);
                 frm_GoiHanhLy.ShowDialog();
-                
+
+                if (Frm_ThanhToan.thanhtoanthanhcong == 999) this.Close();
                 this.Show();
             }
             else
