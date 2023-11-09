@@ -32,28 +32,28 @@
             this.Ptb_Logo = new System.Windows.Forms.PictureBox();
             this.Btn_DangKy = new System.Windows.Forms.Button();
             this.Btn_DangNhap = new System.Windows.Forms.Button();
-            this.Pnl_ChucNang = new System.Windows.Forms.Panel();
-            this.Btn_TraCuuChuyenBay = new System.Windows.Forms.Button();
-            this.Btn_TraCuuHoaDon = new System.Windows.Forms.Button();
-            this.Btn_MuaVe = new System.Windows.Forms.Button();
             this.Pnl_ThongTinHoaDon = new System.Windows.Forms.Panel();
+            this.Pnl_DanhSachHoaDon = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.Txt_SoDienThoaiTraCuu = new System.Windows.Forms.TextBox();
             this.Pnl_ThongTinCaNhan = new System.Windows.Forms.Panel();
+            this.Txt_MaNguoiDung = new System.Windows.Forms.TextBox();
+            this.Lbl_MaNguoiDung = new System.Windows.Forms.Label();
             this.Txt_Email = new System.Windows.Forms.TextBox();
             this.Txt_SoDienThoai = new System.Windows.Forms.TextBox();
             this.Txt_HoTen = new System.Windows.Forms.TextBox();
             this.Lbl_Email = new System.Windows.Forms.Label();
             this.Lbl_SoDienThoai = new System.Windows.Forms.Label();
             this.Lbl_HoTen = new System.Windows.Forms.Label();
-            this.Pnl_DanhSachHoaDon = new System.Windows.Forms.Panel();
-            this.Txt_MaNguoiDung = new System.Windows.Forms.TextBox();
-            this.Lbl_MaNguoiDung = new System.Windows.Forms.Label();
+            this.Btn_MuaVe = new System.Windows.Forms.Button();
+            this.Btn_TraCuuHoaDon = new System.Windows.Forms.Button();
+            this.Btn_TraCuuChuyenBay = new System.Windows.Forms.Button();
+            this.Pnl_ChucNang = new System.Windows.Forms.Panel();
             this.Pnl_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Logo)).BeginInit();
-            this.Pnl_ChucNang.SuspendLayout();
             this.Pnl_ThongTinHoaDon.SuspendLayout();
             this.Pnl_ThongTinCaNhan.SuspendLayout();
+            this.Pnl_ChucNang.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pnl_Header
@@ -93,43 +93,6 @@
             this.Btn_DangNhap.Text = "Đăng nhập";
             this.Btn_DangNhap.UseVisualStyleBackColor = true;
             // 
-            // Pnl_ChucNang
-            // 
-            this.Pnl_ChucNang.Controls.Add(this.Btn_TraCuuChuyenBay);
-            this.Pnl_ChucNang.Controls.Add(this.Btn_TraCuuHoaDon);
-            this.Pnl_ChucNang.Controls.Add(this.Btn_MuaVe);
-            this.Pnl_ChucNang.Location = new System.Drawing.Point(12, 80);
-            this.Pnl_ChucNang.Name = "Pnl_ChucNang";
-            this.Pnl_ChucNang.Size = new System.Drawing.Size(1241, 71);
-            this.Pnl_ChucNang.TabIndex = 5;
-            // 
-            // Btn_TraCuuChuyenBay
-            // 
-            this.Btn_TraCuuChuyenBay.Location = new System.Drawing.Point(839, 0);
-            this.Btn_TraCuuChuyenBay.Name = "Btn_TraCuuChuyenBay";
-            this.Btn_TraCuuChuyenBay.Size = new System.Drawing.Size(398, 71);
-            this.Btn_TraCuuChuyenBay.TabIndex = 2;
-            this.Btn_TraCuuChuyenBay.Text = "Tra cứu chuyến bay";
-            this.Btn_TraCuuChuyenBay.UseVisualStyleBackColor = true;
-            // 
-            // Btn_TraCuuHoaDon
-            // 
-            this.Btn_TraCuuHoaDon.Location = new System.Drawing.Point(421, 0);
-            this.Btn_TraCuuHoaDon.Name = "Btn_TraCuuHoaDon";
-            this.Btn_TraCuuHoaDon.Size = new System.Drawing.Size(398, 71);
-            this.Btn_TraCuuHoaDon.TabIndex = 1;
-            this.Btn_TraCuuHoaDon.Text = "Tra cứu hóa đơn";
-            this.Btn_TraCuuHoaDon.UseVisualStyleBackColor = true;
-            // 
-            // Btn_MuaVe
-            // 
-            this.Btn_MuaVe.Location = new System.Drawing.Point(3, 0);
-            this.Btn_MuaVe.Name = "Btn_MuaVe";
-            this.Btn_MuaVe.Size = new System.Drawing.Size(398, 71);
-            this.Btn_MuaVe.TabIndex = 0;
-            this.Btn_MuaVe.Text = "Mua vé";
-            this.Btn_MuaVe.UseVisualStyleBackColor = true;
-            // 
             // Pnl_ThongTinHoaDon
             // 
             this.Pnl_ThongTinHoaDon.Controls.Add(this.Pnl_DanhSachHoaDon);
@@ -139,6 +102,14 @@
             this.Pnl_ThongTinHoaDon.Name = "Pnl_ThongTinHoaDon";
             this.Pnl_ThongTinHoaDon.Size = new System.Drawing.Size(844, 504);
             this.Pnl_ThongTinHoaDon.TabIndex = 6;
+            // 
+            // Pnl_DanhSachHoaDon
+            // 
+            this.Pnl_DanhSachHoaDon.AutoScroll = true;
+            this.Pnl_DanhSachHoaDon.Location = new System.Drawing.Point(2, 39);
+            this.Pnl_DanhSachHoaDon.Name = "Pnl_DanhSachHoaDon";
+            this.Pnl_DanhSachHoaDon.Size = new System.Drawing.Size(841, 464);
+            this.Pnl_DanhSachHoaDon.TabIndex = 10;
             // 
             // button1
             // 
@@ -172,6 +143,23 @@
             this.Pnl_ThongTinCaNhan.Name = "Pnl_ThongTinCaNhan";
             this.Pnl_ThongTinCaNhan.Size = new System.Drawing.Size(398, 504);
             this.Pnl_ThongTinCaNhan.TabIndex = 8;
+            // 
+            // Txt_MaNguoiDung
+            // 
+            this.Txt_MaNguoiDung.Location = new System.Drawing.Point(167, 5);
+            this.Txt_MaNguoiDung.Name = "Txt_MaNguoiDung";
+            this.Txt_MaNguoiDung.Size = new System.Drawing.Size(216, 30);
+            this.Txt_MaNguoiDung.TabIndex = 7;
+            this.Txt_MaNguoiDung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Lbl_MaNguoiDung
+            // 
+            this.Lbl_MaNguoiDung.AutoSize = true;
+            this.Lbl_MaNguoiDung.Location = new System.Drawing.Point(16, 9);
+            this.Lbl_MaNguoiDung.Name = "Lbl_MaNguoiDung";
+            this.Lbl_MaNguoiDung.Size = new System.Drawing.Size(130, 22);
+            this.Lbl_MaNguoiDung.TabIndex = 6;
+            this.Lbl_MaNguoiDung.Text = "Mã người dùng";
             // 
             // Txt_Email
             // 
@@ -224,30 +212,42 @@
             this.Lbl_HoTen.TabIndex = 0;
             this.Lbl_HoTen.Text = "Họ tên";
             // 
-            // Pnl_DanhSachHoaDon
+            // Btn_MuaVe
             // 
-            this.Pnl_DanhSachHoaDon.AutoScroll = true;
-            this.Pnl_DanhSachHoaDon.Location = new System.Drawing.Point(2, 39);
-            this.Pnl_DanhSachHoaDon.Name = "Pnl_DanhSachHoaDon";
-            this.Pnl_DanhSachHoaDon.Size = new System.Drawing.Size(841, 464);
-            this.Pnl_DanhSachHoaDon.TabIndex = 10;
+            this.Btn_MuaVe.Location = new System.Drawing.Point(3, 0);
+            this.Btn_MuaVe.Name = "Btn_MuaVe";
+            this.Btn_MuaVe.Size = new System.Drawing.Size(398, 71);
+            this.Btn_MuaVe.TabIndex = 0;
+            this.Btn_MuaVe.Text = "Mua vé";
+            this.Btn_MuaVe.UseVisualStyleBackColor = true;
             // 
-            // Txt_MaNguoiDung
+            // Btn_TraCuuHoaDon
             // 
-            this.Txt_MaNguoiDung.Location = new System.Drawing.Point(167, 5);
-            this.Txt_MaNguoiDung.Name = "Txt_MaNguoiDung";
-            this.Txt_MaNguoiDung.Size = new System.Drawing.Size(216, 30);
-            this.Txt_MaNguoiDung.TabIndex = 7;
-            this.Txt_MaNguoiDung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btn_TraCuuHoaDon.Location = new System.Drawing.Point(421, 0);
+            this.Btn_TraCuuHoaDon.Name = "Btn_TraCuuHoaDon";
+            this.Btn_TraCuuHoaDon.Size = new System.Drawing.Size(398, 71);
+            this.Btn_TraCuuHoaDon.TabIndex = 1;
+            this.Btn_TraCuuHoaDon.Text = "Tra cứu hóa đơn";
+            this.Btn_TraCuuHoaDon.UseVisualStyleBackColor = true;
             // 
-            // Lbl_MaNguoiDung
+            // Btn_TraCuuChuyenBay
             // 
-            this.Lbl_MaNguoiDung.AutoSize = true;
-            this.Lbl_MaNguoiDung.Location = new System.Drawing.Point(16, 9);
-            this.Lbl_MaNguoiDung.Name = "Lbl_MaNguoiDung";
-            this.Lbl_MaNguoiDung.Size = new System.Drawing.Size(130, 22);
-            this.Lbl_MaNguoiDung.TabIndex = 6;
-            this.Lbl_MaNguoiDung.Text = "Mã người dùng";
+            this.Btn_TraCuuChuyenBay.Location = new System.Drawing.Point(839, 0);
+            this.Btn_TraCuuChuyenBay.Name = "Btn_TraCuuChuyenBay";
+            this.Btn_TraCuuChuyenBay.Size = new System.Drawing.Size(398, 71);
+            this.Btn_TraCuuChuyenBay.TabIndex = 2;
+            this.Btn_TraCuuChuyenBay.Text = "Tra cứu chuyến bay";
+            this.Btn_TraCuuChuyenBay.UseVisualStyleBackColor = true;
+            // 
+            // Pnl_ChucNang
+            // 
+            this.Pnl_ChucNang.Controls.Add(this.Btn_TraCuuChuyenBay);
+            this.Pnl_ChucNang.Controls.Add(this.Btn_TraCuuHoaDon);
+            this.Pnl_ChucNang.Controls.Add(this.Btn_MuaVe);
+            this.Pnl_ChucNang.Location = new System.Drawing.Point(12, 80);
+            this.Pnl_ChucNang.Name = "Pnl_ChucNang";
+            this.Pnl_ChucNang.Size = new System.Drawing.Size(1241, 71);
+            this.Pnl_ChucNang.TabIndex = 5;
             // 
             // Frm_QuanLyNguoiDung
             // 
@@ -265,11 +265,11 @@
             this.Load += new System.EventHandler(this.Frm_QuanLyNguoiDung_Load);
             this.Pnl_Header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Logo)).EndInit();
-            this.Pnl_ChucNang.ResumeLayout(false);
             this.Pnl_ThongTinHoaDon.ResumeLayout(false);
             this.Pnl_ThongTinHoaDon.PerformLayout();
             this.Pnl_ThongTinCaNhan.ResumeLayout(false);
             this.Pnl_ThongTinCaNhan.PerformLayout();
+            this.Pnl_ChucNang.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,10 +280,6 @@
         private System.Windows.Forms.PictureBox Ptb_Logo;
         private System.Windows.Forms.Button Btn_DangKy;
         private System.Windows.Forms.Button Btn_DangNhap;
-        private System.Windows.Forms.Panel Pnl_ChucNang;
-        private System.Windows.Forms.Button Btn_TraCuuChuyenBay;
-        private System.Windows.Forms.Button Btn_TraCuuHoaDon;
-        private System.Windows.Forms.Button Btn_MuaVe;
         private System.Windows.Forms.Panel Pnl_ThongTinHoaDon;
         private System.Windows.Forms.Panel Pnl_ThongTinCaNhan;
         private System.Windows.Forms.TextBox Txt_SoDienThoaiTraCuu;
@@ -297,5 +293,9 @@
         private System.Windows.Forms.Panel Pnl_DanhSachHoaDon;
         private System.Windows.Forms.TextBox Txt_MaNguoiDung;
         private System.Windows.Forms.Label Lbl_MaNguoiDung;
+        private System.Windows.Forms.Button Btn_MuaVe;
+        private System.Windows.Forms.Button Btn_TraCuuHoaDon;
+        private System.Windows.Forms.Button Btn_TraCuuChuyenBay;
+        private System.Windows.Forms.Panel Pnl_ChucNang;
     }
 }

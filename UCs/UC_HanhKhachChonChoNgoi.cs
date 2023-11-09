@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanVeMayBay.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace QuanLyBanVeMayBay.UCs
         public UC_HanhKhachChonChoNgoi()
         {
             InitializeComponent();
+           
         }
     }
 }

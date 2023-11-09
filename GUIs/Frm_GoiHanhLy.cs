@@ -176,10 +176,14 @@ namespace QuanLyBanVeMayBay.GUI
                 }
                 else
                 {
-                    this.Close();   
+                    this.Hide();   
+
                     Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi(khachHangNguoiLons, khachHangTreEms, thongTinChuyenBay);
                     frm_ChonChoNgoi.ShowDialog();
-                    this.Hide();
+
+                    if (Frm_ThanhToan.thanhtoanthanhcong == 999) this.Close();
+                    this.Show();
+
                 }
             }
         }

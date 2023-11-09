@@ -36,14 +36,13 @@
             this.Pnl_ChonViTri = new System.Windows.Forms.Panel();
             this.Lbl_HanhKhach = new System.Windows.Forms.Label();
             this.Lbl_GhiChu = new System.Windows.Forms.Label();
-            this.Btn_TiepTuc = new System.Windows.Forms.Button();
             this.Pnl_DanhSachHanhKhach = new System.Windows.Forms.Panel();
-            this.uC_HanhKhachChonChoNgoi = new QuanLyBanVeMayBay.UCs.UC_HanhKhachChonChoNgoi();
             this.panel6 = new System.Windows.Forms.Panel();
             this.Pnl_HanhTrinh = new System.Windows.Forms.Panel();
             this.Pnl_ChiTietChuyenBay = new System.Windows.Forms.Panel();
             this.Lbl_ChiTietChuyenBay = new System.Windows.Forms.Label();
-            this.Pnl_DanhSachHanhKhach.SuspendLayout();
+            this.Btn_XacNhan = new System.Windows.Forms.Button();
+            this.Btn_TiepTuc = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             this.Pnl_ChiTietChuyenBay.SuspendLayout();
             this.SuspendLayout();
@@ -135,34 +134,14 @@
             this.Lbl_GhiChu.TabIndex = 26;
             this.Lbl_GhiChu.Text = "Ghi chú";
             // 
-            // Btn_TiepTuc
-            // 
-            this.Btn_TiepTuc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_TiepTuc.Location = new System.Drawing.Point(1517, 850);
-            this.Btn_TiepTuc.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_TiepTuc.Name = "Btn_TiepTuc";
-            this.Btn_TiepTuc.Size = new System.Drawing.Size(199, 59);
-            this.Btn_TiepTuc.TabIndex = 27;
-            this.Btn_TiepTuc.Text = "Tiếp tục";
-            this.Btn_TiepTuc.UseVisualStyleBackColor = true;
-            // 
             // Pnl_DanhSachHanhKhach
             // 
             this.Pnl_DanhSachHanhKhach.AutoScroll = true;
-            this.Pnl_DanhSachHanhKhach.Controls.Add(this.uC_HanhKhachChonChoNgoi);
+            this.Pnl_DanhSachHanhKhach.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Pnl_DanhSachHanhKhach.Location = new System.Drawing.Point(55, 87);
             this.Pnl_DanhSachHanhKhach.Name = "Pnl_DanhSachHanhKhach";
             this.Pnl_DanhSachHanhKhach.Size = new System.Drawing.Size(455, 186);
             this.Pnl_DanhSachHanhKhach.TabIndex = 28;
-            // 
-            // uC_HanhKhachChonChoNgoi
-            // 
-            this.uC_HanhKhachChonChoNgoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uC_HanhKhachChonChoNgoi.Location = new System.Drawing.Point(6, 4);
-            this.uC_HanhKhachChonChoNgoi.Margin = new System.Windows.Forms.Padding(4);
-            this.uC_HanhKhachChonChoNgoi.Name = "uC_HanhKhachChonChoNgoi";
-            this.uC_HanhKhachChonChoNgoi.Size = new System.Drawing.Size(422, 83);
-            this.uC_HanhKhachChonChoNgoi.TabIndex = 0;
             // 
             // panel6
             // 
@@ -203,11 +182,36 @@
             this.Lbl_ChiTietChuyenBay.TabIndex = 24;
             this.Lbl_ChiTietChuyenBay.Text = "Chi tiết chuyến bay";
             // 
+            // Btn_XacNhan
+            // 
+            this.Btn_XacNhan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_XacNhan.Location = new System.Drawing.Point(539, 230);
+            this.Btn_XacNhan.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_XacNhan.Name = "Btn_XacNhan";
+            this.Btn_XacNhan.Size = new System.Drawing.Size(116, 43);
+            this.Btn_XacNhan.TabIndex = 30;
+            this.Btn_XacNhan.Text = "Xác nhận";
+            this.Btn_XacNhan.UseVisualStyleBackColor = true;
+            this.Btn_XacNhan.Click += new System.EventHandler(this.Btn_XacNhan_Click);
+            // 
+            // Btn_TiepTuc
+            // 
+            this.Btn_TiepTuc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_TiepTuc.Location = new System.Drawing.Point(1104, 613);
+            this.Btn_TiepTuc.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_TiepTuc.Name = "Btn_TiepTuc";
+            this.Btn_TiepTuc.Size = new System.Drawing.Size(145, 43);
+            this.Btn_TiepTuc.TabIndex = 27;
+            this.Btn_TiepTuc.Text = "Tiếp tục";
+            this.Btn_TiepTuc.UseVisualStyleBackColor = true;
+            this.Btn_TiepTuc.Click += new System.EventHandler(this.Btn_TiepTuc_Click);
+            // 
             // Frm_ChonChoNgoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.Btn_XacNhan);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.Pnl_DanhSachHanhKhach);
             this.Controls.Add(this.Btn_TiepTuc);
@@ -225,7 +229,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Frm_ChonChoNgoi";
             this.Load += new System.EventHandler(this.Frm_ChonChoNgoi_Load);
-            this.Pnl_DanhSachHanhKhach.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.Pnl_ChiTietChuyenBay.ResumeLayout(false);
             this.Pnl_ChiTietChuyenBay.PerformLayout();
@@ -241,15 +244,15 @@
         private System.Windows.Forms.Panel Pnl_GhiChu2;
         private System.Windows.Forms.Panel Pnl_GhiChu1;
         private System.Windows.Forms.Label Lbl_TenMayBay;
-        private System.Windows.Forms.Panel Pnl_ChonViTri;
         private System.Windows.Forms.Label Lbl_HanhKhach;
         private System.Windows.Forms.Label Lbl_GhiChu;
-        private System.Windows.Forms.Button Btn_TiepTuc;
         private System.Windows.Forms.Panel Pnl_DanhSachHanhKhach;
-        private UCs.UC_HanhKhachChonChoNgoi uC_HanhKhachChonChoNgoi;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel Pnl_HanhTrinh;
         private System.Windows.Forms.Panel Pnl_ChiTietChuyenBay;
         private System.Windows.Forms.Label Lbl_ChiTietChuyenBay;
+        public System.Windows.Forms.Panel Pnl_ChonViTri;
+        private System.Windows.Forms.Button Btn_XacNhan;
+        private System.Windows.Forms.Button Btn_TiepTuc;
     }
 }
