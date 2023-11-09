@@ -174,6 +174,8 @@ namespace QuanLyBanVeMayBay.GUI
 
             if (DanhSachNguoiLon(ref khachHangNguoiLons) && DanhSachTreEm(ref khachHangTreEms))
             {
+                Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi();
+                frm_ChonChoNgoi.ShowDialog();
                 this.Hide();
                 //todo
                 //this.Show();
