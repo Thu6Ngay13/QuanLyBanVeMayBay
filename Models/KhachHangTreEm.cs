@@ -9,7 +9,9 @@ namespace QuanLyBanVeMayBay.Models
         private string gioitinh;
         private string ngaysinh;
 
-        private int magoihanhly;
+        private int magoihanhlychieudi;
+        private int magoihanhlychieuve;
+
         private int mavechieudi;
         private int mavechieuve;
 
@@ -24,9 +26,9 @@ namespace QuanLyBanVeMayBay.Models
         public string Hoten { get => hoten; set => hoten = value; }
         public string Gioitinh { get => gioitinh; set => gioitinh = value; }
         public string Ngaysinh { get => ngaysinh; set => ngaysinh = value; }
-
-        public int MaGoiHanhLy { get => magoihanhly; set => magoihanhly = value; }
         public int MaVeChieuDi { get => mavechieudi; set => mavechieudi = value; }
         public int MaVeChieuVe { get => mavechieuve; set => mavechieuve = value; }
+        public int Magoihanhlychieudi { get => magoihanhlychieudi; set => magoihanhlychieudi = value; }
+        public int Magoihanhlychieuve { get => magoihanhlychieuve; set => magoihanhlychieuve = value; }
     }
 }

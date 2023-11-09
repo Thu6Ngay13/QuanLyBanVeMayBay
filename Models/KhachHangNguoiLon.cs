@@ -9,7 +9,8 @@
         private string sodienthoai;
         private string email;
         private string diachi;
-        private int magoihanhly;
+        private int magoihanhlychieudi;
+        private int magoihanhlychieuve;
         private int mavechieudi;
         private int mavechieuve;
 
@@ -37,10 +38,10 @@
         public string SoDienThoai { get => sodienthoai; set => sodienthoai = value;}
         public string Email {  get => email; set => email = value;} 
         public string DiaChi { get => diachi; set => diachi = value;}
-
-        public int Magoihanhly { get => magoihanhly; set => magoihanhly = value; }
         public int Mavechieudi { get => mavechieudi; set => mavechieudi = value; }
         public int Mavechieuve { get => mavechieuve; set => mavechieuve = value; }
+        public int Magoihanhlychieudi { get => magoihanhlychieudi; set => magoihanhlychieudi = value; }
+        public int Magoihanhlychieuve { get => magoihanhlychieuve; set => magoihanhlychieuve = value; }
     }
 }
 

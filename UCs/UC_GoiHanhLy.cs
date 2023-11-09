@@ -20,28 +20,5 @@ namespace QuanLyBanVeMayBay.UC
         {
             InitializeComponent();
         }
-
-        private void Btn_Chon_Click(object sender, EventArgs e)
-        {
-            string mave = "6";
-            MuaGoiHanhLy(mave);
-        }
-
-        private void MuaGoiHanhLy(string mave)
-        {
-            try
-            {
-                DialogResult xacnhanmua = MessageBox.Show("Mỗi vé chỉ được mua 01 gói hành lý \n\nXác nhận mua/ thay đổi ?", "Mua gói hành lý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (xacnhanmua == DialogResult.Yes)
-                {
-                    dbGoiHanhLy.them_GoiHanhLy(Lbl_MaGoiHanhLy.Text, mave);
-                    MessageBox.Show("Mua thành công");
-                }
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Lỗi mua gói hành lý");
-            }
-        }
     }
 }

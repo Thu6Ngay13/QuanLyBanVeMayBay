@@ -22,6 +22,8 @@ namespace HeQuanTriDemo01.Models
         private int mamaybaydi;
         private int mamaybayve;
 
+        private bool khuhoi;
+
         public ThongTinChuyenBay() { }  
         public ThongTinChuyenBay(
             string diemdi,
@@ -37,7 +39,9 @@ namespace HeQuanTriDemo01.Models
             int machieuve,
 
             int mamaybaydi,
-            int mamaybayve)
+            int mamaybayve,
+
+            bool khuhoi)
         {
             Diemdi = diemdi;
             Diemden = diemden;
@@ -54,6 +58,7 @@ namespace HeQuanTriDemo01.Models
             Mamaybaydi = mamaybaydi;
             Mamaybayve = mamaybayve;
 
+            this.khuhoi = khuhoi;
         }
 
         public string Diemdi { get => diemdi; set => diemdi = value; }
@@ -66,5 +71,6 @@ namespace HeQuanTriDemo01.Models
         public int Machieuve { get => machieuve; set => machieuve = value; }
         public int Mamaybaydi { get => mamaybaydi; set => mamaybaydi = value; }
         public int Mamaybayve { get => mamaybayve; set => mamaybayve = value; }
+        public bool Khuhoi { get => khuhoi; set => khuhoi = value; }
     }
 }
