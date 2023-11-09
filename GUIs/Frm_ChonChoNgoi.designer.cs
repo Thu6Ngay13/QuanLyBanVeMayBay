@@ -28,337 +28,228 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Tct_ChonChoDi = new System.Windows.Forms.TabControl();
-            this.Tpg_ChoNgoiDi = new System.Windows.Forms.TabPage();
-            this.Pnl_ChiTietChuyenBayDi = new System.Windows.Forms.Panel();
-            this.Lbl_ChiTietChuyenBayDi = new System.Windows.Forms.Label();
             this.Lbl_GhiChu2 = new System.Windows.Forms.Label();
             this.Lbl_GhiChu1 = new System.Windows.Forms.Label();
             this.Pnl_GhiChu2 = new System.Windows.Forms.Panel();
             this.Pnl_GhiChu1 = new System.Windows.Forms.Panel();
-            this.Lbl_GhiChuDi = new System.Windows.Forms.Label();
-            this.Pnl_HanhKhachDi = new System.Windows.Forms.Panel();
-            this.Btn_ChonChoNgoiDi = new System.Windows.Forms.Button();
-            this.Lbl_TenKhachDi = new System.Windows.Forms.Label();
-            this.Lbl_HanhKhachDi = new System.Windows.Forms.Label();
-            this.Tpg_ChoNgoiVe = new System.Windows.Forms.TabPage();
-            this.Lbl_GhiChuVe = new System.Windows.Forms.Label();
-            this.Pnl_HanhKhachVe = new System.Windows.Forms.Panel();
-            this.Pnl_GhiChu3 = new System.Windows.Forms.Panel();
-            this.Btn_ChonChoNgoiVe = new System.Windows.Forms.Button();
-            this.Lbl_TenKhachVe = new System.Windows.Forms.Label();
-            this.Lbl_HanhKhachVe = new System.Windows.Forms.Label();
-            this.Pnl_GhiChu4 = new System.Windows.Forms.Panel();
-            this.Lbl_GhiChu3 = new System.Windows.Forms.Label();
-            this.Lbl_GhiChu4 = new System.Windows.Forms.Label();
-            this.Pnl_ChiTietChuyenBayVe = new System.Windows.Forms.Panel();
-            this.Lbl_ChiTietChuyenBayVe = new System.Windows.Forms.Label();
-            this.Tct_ChonChoDi.SuspendLayout();
-            this.Tpg_ChoNgoiDi.SuspendLayout();
-            this.Pnl_ChiTietChuyenBayDi.SuspendLayout();
-            this.Pnl_HanhKhachDi.SuspendLayout();
-            this.Tpg_ChoNgoiVe.SuspendLayout();
-            this.Pnl_HanhKhachVe.SuspendLayout();
-            this.Pnl_ChiTietChuyenBayVe.SuspendLayout();
+            this.Lbl_TenMayBay = new System.Windows.Forms.Label();
+            this.Pnl_ChonViTri = new System.Windows.Forms.Panel();
+            this.Lbl_HanhKhach = new System.Windows.Forms.Label();
+            this.Lbl_GhiChu = new System.Windows.Forms.Label();
+            this.Btn_TiepTuc = new System.Windows.Forms.Button();
+            this.Pnl_DanhSachHanhKhach = new System.Windows.Forms.Panel();
+            this.uC_HanhKhachChonChoNgoi = new QuanLyBanVeMayBay.UCs.UC_HanhKhachChonChoNgoi();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.Pnl_HanhTrinh = new System.Windows.Forms.Panel();
+            this.Pnl_ChiTietChuyenBay = new System.Windows.Forms.Panel();
+            this.Lbl_ChiTietChuyenBay = new System.Windows.Forms.Label();
+            this.Pnl_DanhSachHanhKhach.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.Pnl_ChiTietChuyenBay.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Tct_ChonChoDi
-            // 
-            this.Tct_ChonChoDi.Controls.Add(this.Tpg_ChoNgoiDi);
-            this.Tct_ChonChoDi.Controls.Add(this.Tpg_ChoNgoiVe);
-            this.Tct_ChonChoDi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Tct_ChonChoDi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tct_ChonChoDi.Location = new System.Drawing.Point(0, 0);
-            this.Tct_ChonChoDi.Name = "Tct_ChonChoDi";
-            this.Tct_ChonChoDi.SelectedIndex = 0;
-            this.Tct_ChonChoDi.Size = new System.Drawing.Size(1263, 670);
-            this.Tct_ChonChoDi.TabIndex = 0;
-            // 
-            // Tpg_ChoNgoiDi
-            // 
-            this.Tpg_ChoNgoiDi.BackColor = System.Drawing.Color.Transparent;
-            this.Tpg_ChoNgoiDi.Controls.Add(this.Pnl_ChiTietChuyenBayDi);
-            this.Tpg_ChoNgoiDi.Controls.Add(this.Lbl_GhiChu2);
-            this.Tpg_ChoNgoiDi.Controls.Add(this.Lbl_GhiChu1);
-            this.Tpg_ChoNgoiDi.Controls.Add(this.Pnl_GhiChu2);
-            this.Tpg_ChoNgoiDi.Controls.Add(this.Pnl_GhiChu1);
-            this.Tpg_ChoNgoiDi.Controls.Add(this.Lbl_GhiChuDi);
-            this.Tpg_ChoNgoiDi.Controls.Add(this.Pnl_HanhKhachDi);
-            this.Tpg_ChoNgoiDi.Controls.Add(this.Lbl_HanhKhachDi);
-            this.Tpg_ChoNgoiDi.Location = new System.Drawing.Point(4, 31);
-            this.Tpg_ChoNgoiDi.Name = "Tpg_ChoNgoiDi";
-            this.Tpg_ChoNgoiDi.Padding = new System.Windows.Forms.Padding(3);
-            this.Tpg_ChoNgoiDi.Size = new System.Drawing.Size(1255, 635);
-            this.Tpg_ChoNgoiDi.TabIndex = 0;
-            this.Tpg_ChoNgoiDi.Text = "Chọn chỗ ngồi đi";
-            // 
-            // Pnl_ChiTietChuyenBayDi
-            // 
-            this.Pnl_ChiTietChuyenBayDi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Pnl_ChiTietChuyenBayDi.Controls.Add(this.Lbl_ChiTietChuyenBayDi);
-            this.Pnl_ChiTietChuyenBayDi.Location = new System.Drawing.Point(814, 3);
-            this.Pnl_ChiTietChuyenBayDi.Name = "Pnl_ChiTietChuyenBayDi";
-            this.Pnl_ChiTietChuyenBayDi.Size = new System.Drawing.Size(438, 629);
-            this.Pnl_ChiTietChuyenBayDi.TabIndex = 6;
-            // 
-            // Lbl_ChiTietChuyenBayDi
-            // 
-            this.Lbl_ChiTietChuyenBayDi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Lbl_ChiTietChuyenBayDi.AutoSize = true;
-            this.Lbl_ChiTietChuyenBayDi.Location = new System.Drawing.Point(144, 15);
-            this.Lbl_ChiTietChuyenBayDi.Name = "Lbl_ChiTietChuyenBayDi";
-            this.Lbl_ChiTietChuyenBayDi.Size = new System.Drawing.Size(160, 22);
-            this.Lbl_ChiTietChuyenBayDi.TabIndex = 7;
-            this.Lbl_ChiTietChuyenBayDi.Text = "Chi tiết chuyến bay";
             // 
             // Lbl_GhiChu2
             // 
             this.Lbl_GhiChu2.AutoSize = true;
-            this.Lbl_GhiChu2.Location = new System.Drawing.Point(572, 169);
+            this.Lbl_GhiChu2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_GhiChu2.Location = new System.Drawing.Point(588, 155);
+            this.Lbl_GhiChu2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_GhiChu2.Name = "Lbl_GhiChu2";
             this.Lbl_GhiChu2.Size = new System.Drawing.Size(120, 22);
-            this.Lbl_GhiChu2.TabIndex = 5;
+            this.Lbl_GhiChu2.TabIndex = 12;
             this.Lbl_GhiChu2.Text = "Chỗ còn trống";
             // 
             // Lbl_GhiChu1
             // 
             this.Lbl_GhiChu1.AutoSize = true;
-            this.Lbl_GhiChu1.Location = new System.Drawing.Point(572, 105);
+            this.Lbl_GhiChu1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_GhiChu1.Location = new System.Drawing.Point(588, 93);
+            this.Lbl_GhiChu1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_GhiChu1.Name = "Lbl_GhiChu1";
             this.Lbl_GhiChu1.Size = new System.Drawing.Size(171, 22);
-            this.Lbl_GhiChu1.TabIndex = 2;
+            this.Lbl_GhiChu1.TabIndex = 8;
             this.Lbl_GhiChu1.Text = "Chỗ không còn trống";
             // 
             // Pnl_GhiChu2
             // 
             this.Pnl_GhiChu2.BackColor = System.Drawing.Color.SkyBlue;
-            this.Pnl_GhiChu2.Location = new System.Drawing.Point(500, 156);
+            this.Pnl_GhiChu2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pnl_GhiChu2.Location = new System.Drawing.Point(539, 146);
+            this.Pnl_GhiChu2.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_GhiChu2.Name = "Pnl_GhiChu2";
-            this.Pnl_GhiChu2.Size = new System.Drawing.Size(44, 35);
-            this.Pnl_GhiChu2.TabIndex = 4;
+            this.Pnl_GhiChu2.Size = new System.Drawing.Size(40, 40);
+            this.Pnl_GhiChu2.TabIndex = 11;
             // 
             // Pnl_GhiChu1
             // 
             this.Pnl_GhiChu1.BackColor = System.Drawing.Color.Silver;
-            this.Pnl_GhiChu1.Location = new System.Drawing.Point(500, 92);
+            this.Pnl_GhiChu1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pnl_GhiChu1.Location = new System.Drawing.Point(539, 84);
+            this.Pnl_GhiChu1.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_GhiChu1.Name = "Pnl_GhiChu1";
-            this.Pnl_GhiChu1.Size = new System.Drawing.Size(44, 35);
-            this.Pnl_GhiChu1.TabIndex = 3;
+            this.Pnl_GhiChu1.Size = new System.Drawing.Size(40, 40);
+            this.Pnl_GhiChu1.TabIndex = 10;
             // 
-            // Lbl_GhiChuDi
+            // Lbl_TenMayBay
             // 
-            this.Lbl_GhiChuDi.AutoSize = true;
-            this.Lbl_GhiChuDi.Location = new System.Drawing.Point(496, 53);
-            this.Lbl_GhiChuDi.Name = "Lbl_GhiChuDi";
-            this.Lbl_GhiChuDi.Size = new System.Drawing.Size(72, 22);
-            this.Lbl_GhiChuDi.TabIndex = 2;
-            this.Lbl_GhiChuDi.Text = "Ghi chú";
+            this.Lbl_TenMayBay.AutoSize = true;
+            this.Lbl_TenMayBay.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_TenMayBay.Location = new System.Drawing.Point(324, 287);
+            this.Lbl_TenMayBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_TenMayBay.Name = "Lbl_TenMayBay";
+            this.Lbl_TenMayBay.Size = new System.Drawing.Size(140, 29);
+            this.Lbl_TenMayBay.TabIndex = 15;
+            this.Lbl_TenMayBay.Text = "Airbus A321";
             // 
-            // Pnl_HanhKhachDi
+            // Pnl_ChonViTri
             // 
-            this.Pnl_HanhKhachDi.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.Pnl_HanhKhachDi.Controls.Add(this.Btn_ChonChoNgoiDi);
-            this.Pnl_HanhKhachDi.Controls.Add(this.Lbl_TenKhachDi);
-            this.Pnl_HanhKhachDi.Location = new System.Drawing.Point(26, 92);
-            this.Pnl_HanhKhachDi.Name = "Pnl_HanhKhachDi";
-            this.Pnl_HanhKhachDi.Size = new System.Drawing.Size(371, 77);
-            this.Pnl_HanhKhachDi.TabIndex = 1;
+            this.Pnl_ChonViTri.AutoScroll = true;
+            this.Pnl_ChonViTri.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Pnl_ChonViTri.Location = new System.Drawing.Point(51, 325);
+            this.Pnl_ChonViTri.Margin = new System.Windows.Forms.Padding(4);
+            this.Pnl_ChonViTri.Name = "Pnl_ChonViTri";
+            this.Pnl_ChonViTri.Size = new System.Drawing.Size(702, 331);
+            this.Pnl_ChonViTri.TabIndex = 16;
             // 
-            // Btn_ChonChoNgoiDi
+            // Lbl_HanhKhach
             // 
-            this.Btn_ChonChoNgoiDi.Location = new System.Drawing.Point(205, 22);
-            this.Btn_ChonChoNgoiDi.Name = "Btn_ChonChoNgoiDi";
-            this.Btn_ChonChoNgoiDi.Size = new System.Drawing.Size(140, 35);
-            this.Btn_ChonChoNgoiDi.TabIndex = 1;
-            this.Btn_ChonChoNgoiDi.Text = "Chọn chỗ ngồi";
-            this.Btn_ChonChoNgoiDi.UseVisualStyleBackColor = true;
+            this.Lbl_HanhKhach.AutoSize = true;
+            this.Lbl_HanhKhach.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_HanhKhach.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_HanhKhach.Location = new System.Drawing.Point(55, 43);
+            this.Lbl_HanhKhach.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_HanhKhach.Name = "Lbl_HanhKhach";
+            this.Lbl_HanhKhach.Size = new System.Drawing.Size(162, 32);
+            this.Lbl_HanhKhach.TabIndex = 25;
+            this.Lbl_HanhKhach.Text = "Hành khách";
             // 
-            // Lbl_TenKhachDi
+            // Lbl_GhiChu
             // 
-            this.Lbl_TenKhachDi.AutoSize = true;
-            this.Lbl_TenKhachDi.Location = new System.Drawing.Point(22, 28);
-            this.Lbl_TenKhachDi.Name = "Lbl_TenKhachDi";
-            this.Lbl_TenKhachDi.Size = new System.Drawing.Size(123, 22);
-            this.Lbl_TenKhachDi.TabIndex = 0;
-            this.Lbl_TenKhachDi.Text = "Nguyễn Văn A";
+            this.Lbl_GhiChu.AutoSize = true;
+            this.Lbl_GhiChu.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_GhiChu.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_GhiChu.Location = new System.Drawing.Point(527, 43);
+            this.Lbl_GhiChu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_GhiChu.Name = "Lbl_GhiChu";
+            this.Lbl_GhiChu.Size = new System.Drawing.Size(111, 32);
+            this.Lbl_GhiChu.TabIndex = 26;
+            this.Lbl_GhiChu.Text = "Ghi chú";
             // 
-            // Lbl_HanhKhachDi
+            // Btn_TiepTuc
             // 
-            this.Lbl_HanhKhachDi.AutoSize = true;
-            this.Lbl_HanhKhachDi.Location = new System.Drawing.Point(65, 53);
-            this.Lbl_HanhKhachDi.Name = "Lbl_HanhKhachDi";
-            this.Lbl_HanhKhachDi.Size = new System.Drawing.Size(101, 22);
-            this.Lbl_HanhKhachDi.TabIndex = 0;
-            this.Lbl_HanhKhachDi.Text = "Hành khách";
+            this.Btn_TiepTuc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_TiepTuc.Location = new System.Drawing.Point(1517, 850);
+            this.Btn_TiepTuc.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_TiepTuc.Name = "Btn_TiepTuc";
+            this.Btn_TiepTuc.Size = new System.Drawing.Size(199, 59);
+            this.Btn_TiepTuc.TabIndex = 27;
+            this.Btn_TiepTuc.Text = "Tiếp tục";
+            this.Btn_TiepTuc.UseVisualStyleBackColor = true;
             // 
-            // Tpg_ChoNgoiVe
+            // Pnl_DanhSachHanhKhach
             // 
-            this.Tpg_ChoNgoiVe.BackColor = System.Drawing.Color.Transparent;
-            this.Tpg_ChoNgoiVe.Controls.Add(this.Pnl_ChiTietChuyenBayVe);
-            this.Tpg_ChoNgoiVe.Controls.Add(this.Lbl_GhiChu4);
-            this.Tpg_ChoNgoiVe.Controls.Add(this.Lbl_GhiChu3);
-            this.Tpg_ChoNgoiVe.Controls.Add(this.Pnl_GhiChu4);
-            this.Tpg_ChoNgoiVe.Controls.Add(this.Pnl_GhiChu3);
-            this.Tpg_ChoNgoiVe.Controls.Add(this.Lbl_GhiChuVe);
-            this.Tpg_ChoNgoiVe.Controls.Add(this.Pnl_HanhKhachVe);
-            this.Tpg_ChoNgoiVe.Controls.Add(this.Lbl_HanhKhachVe);
-            this.Tpg_ChoNgoiVe.Location = new System.Drawing.Point(4, 31);
-            this.Tpg_ChoNgoiVe.Name = "Tpg_ChoNgoiVe";
-            this.Tpg_ChoNgoiVe.Padding = new System.Windows.Forms.Padding(3);
-            this.Tpg_ChoNgoiVe.Size = new System.Drawing.Size(1255, 635);
-            this.Tpg_ChoNgoiVe.TabIndex = 1;
-            this.Tpg_ChoNgoiVe.Text = "Chọn chỗ ngồi về";
+            this.Pnl_DanhSachHanhKhach.AutoScroll = true;
+            this.Pnl_DanhSachHanhKhach.Controls.Add(this.uC_HanhKhachChonChoNgoi);
+            this.Pnl_DanhSachHanhKhach.Location = new System.Drawing.Point(55, 87);
+            this.Pnl_DanhSachHanhKhach.Name = "Pnl_DanhSachHanhKhach";
+            this.Pnl_DanhSachHanhKhach.Size = new System.Drawing.Size(455, 186);
+            this.Pnl_DanhSachHanhKhach.TabIndex = 28;
             // 
-            // Lbl_GhiChuVe
+            // uC_HanhKhachChonChoNgoi
             // 
-            this.Lbl_GhiChuVe.AutoSize = true;
-            this.Lbl_GhiChuVe.Location = new System.Drawing.Point(496, 53);
-            this.Lbl_GhiChuVe.Name = "Lbl_GhiChuVe";
-            this.Lbl_GhiChuVe.Size = new System.Drawing.Size(72, 22);
-            this.Lbl_GhiChuVe.TabIndex = 2;
-            this.Lbl_GhiChuVe.Text = "Ghi chú";
+            this.uC_HanhKhachChonChoNgoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uC_HanhKhachChonChoNgoi.Location = new System.Drawing.Point(6, 4);
+            this.uC_HanhKhachChonChoNgoi.Margin = new System.Windows.Forms.Padding(4);
+            this.uC_HanhKhachChonChoNgoi.Name = "uC_HanhKhachChonChoNgoi";
+            this.uC_HanhKhachChonChoNgoi.Size = new System.Drawing.Size(422, 83);
+            this.uC_HanhKhachChonChoNgoi.TabIndex = 0;
             // 
-            // Pnl_HanhKhachVe
+            // panel6
             // 
-            this.Pnl_HanhKhachVe.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.Pnl_HanhKhachVe.Controls.Add(this.Btn_ChonChoNgoiVe);
-            this.Pnl_HanhKhachVe.Controls.Add(this.Lbl_TenKhachVe);
-            this.Pnl_HanhKhachVe.Location = new System.Drawing.Point(26, 92);
-            this.Pnl_HanhKhachVe.Name = "Pnl_HanhKhachVe";
-            this.Pnl_HanhKhachVe.Size = new System.Drawing.Size(371, 77);
-            this.Pnl_HanhKhachVe.TabIndex = 1;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.Pnl_HanhTrinh);
+            this.panel6.Controls.Add(this.Pnl_ChiTietChuyenBay);
+            this.panel6.Location = new System.Drawing.Point(787, 55);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(462, 532);
+            this.panel6.TabIndex = 29;
             // 
-            // Pnl_GhiChu3
+            // Pnl_HanhTrinh
             // 
-            this.Pnl_GhiChu3.BackColor = System.Drawing.Color.Silver;
-            this.Pnl_GhiChu3.Location = new System.Drawing.Point(500, 92);
-            this.Pnl_GhiChu3.Name = "Pnl_GhiChu3";
-            this.Pnl_GhiChu3.Size = new System.Drawing.Size(44, 35);
-            this.Pnl_GhiChu3.TabIndex = 4;
+            this.Pnl_HanhTrinh.AutoScroll = true;
+            this.Pnl_HanhTrinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pnl_HanhTrinh.Location = new System.Drawing.Point(0, 60);
+            this.Pnl_HanhTrinh.Name = "Pnl_HanhTrinh";
+            this.Pnl_HanhTrinh.Size = new System.Drawing.Size(460, 470);
+            this.Pnl_HanhTrinh.TabIndex = 1;
             // 
-            // Btn_ChonChoNgoiVe
+            // Pnl_ChiTietChuyenBay
             // 
-            this.Btn_ChonChoNgoiVe.Location = new System.Drawing.Point(205, 22);
-            this.Btn_ChonChoNgoiVe.Name = "Btn_ChonChoNgoiVe";
-            this.Btn_ChonChoNgoiVe.Size = new System.Drawing.Size(140, 35);
-            this.Btn_ChonChoNgoiVe.TabIndex = 3;
-            this.Btn_ChonChoNgoiVe.Text = "Chọn chỗ ngồi";
-            this.Btn_ChonChoNgoiVe.UseVisualStyleBackColor = true;
+            this.Pnl_ChiTietChuyenBay.Controls.Add(this.Lbl_ChiTietChuyenBay);
+            this.Pnl_ChiTietChuyenBay.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_ChiTietChuyenBay.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_ChiTietChuyenBay.Name = "Pnl_ChiTietChuyenBay";
+            this.Pnl_ChiTietChuyenBay.Size = new System.Drawing.Size(460, 60);
+            this.Pnl_ChiTietChuyenBay.TabIndex = 0;
             // 
-            // Lbl_TenKhachVe
+            // Lbl_ChiTietChuyenBay
             // 
-            this.Lbl_TenKhachVe.AutoSize = true;
-            this.Lbl_TenKhachVe.Location = new System.Drawing.Point(22, 28);
-            this.Lbl_TenKhachVe.Name = "Lbl_TenKhachVe";
-            this.Lbl_TenKhachVe.Size = new System.Drawing.Size(123, 22);
-            this.Lbl_TenKhachVe.TabIndex = 2;
-            this.Lbl_TenKhachVe.Text = "Nguyễn Văn A";
-            // 
-            // Lbl_HanhKhachVe
-            // 
-            this.Lbl_HanhKhachVe.AutoSize = true;
-            this.Lbl_HanhKhachVe.Location = new System.Drawing.Point(65, 53);
-            this.Lbl_HanhKhachVe.Name = "Lbl_HanhKhachVe";
-            this.Lbl_HanhKhachVe.Size = new System.Drawing.Size(101, 22);
-            this.Lbl_HanhKhachVe.TabIndex = 0;
-            this.Lbl_HanhKhachVe.Text = "Hành khách";
-            // 
-            // Pnl_GhiChu4
-            // 
-            this.Pnl_GhiChu4.BackColor = System.Drawing.Color.SkyBlue;
-            this.Pnl_GhiChu4.Location = new System.Drawing.Point(500, 156);
-            this.Pnl_GhiChu4.Name = "Pnl_GhiChu4";
-            this.Pnl_GhiChu4.Size = new System.Drawing.Size(44, 35);
-            this.Pnl_GhiChu4.TabIndex = 5;
-            // 
-            // Lbl_GhiChu3
-            // 
-            this.Lbl_GhiChu3.AutoSize = true;
-            this.Lbl_GhiChu3.Location = new System.Drawing.Point(572, 105);
-            this.Lbl_GhiChu3.Name = "Lbl_GhiChu3";
-            this.Lbl_GhiChu3.Size = new System.Drawing.Size(171, 22);
-            this.Lbl_GhiChu3.TabIndex = 6;
-            this.Lbl_GhiChu3.Text = "Chỗ không còn trống";
-            // 
-            // Lbl_GhiChu4
-            // 
-            this.Lbl_GhiChu4.AutoSize = true;
-            this.Lbl_GhiChu4.Location = new System.Drawing.Point(572, 169);
-            this.Lbl_GhiChu4.Name = "Lbl_GhiChu4";
-            this.Lbl_GhiChu4.Size = new System.Drawing.Size(120, 22);
-            this.Lbl_GhiChu4.TabIndex = 7;
-            this.Lbl_GhiChu4.Text = "Chỗ còn trống";
-            // 
-            // Pnl_ChiTietChuyenBayVe
-            // 
-            this.Pnl_ChiTietChuyenBayVe.BackColor = System.Drawing.Color.Transparent;
-            this.Pnl_ChiTietChuyenBayVe.Controls.Add(this.Lbl_ChiTietChuyenBayVe);
-            this.Pnl_ChiTietChuyenBayVe.Location = new System.Drawing.Point(814, 3);
-            this.Pnl_ChiTietChuyenBayVe.Name = "Pnl_ChiTietChuyenBayVe";
-            this.Pnl_ChiTietChuyenBayVe.Size = new System.Drawing.Size(438, 629);
-            this.Pnl_ChiTietChuyenBayVe.TabIndex = 5;
-            // 
-            // Lbl_ChiTietChuyenBayVe
-            // 
-            this.Lbl_ChiTietChuyenBayVe.AutoSize = true;
-            this.Lbl_ChiTietChuyenBayVe.Location = new System.Drawing.Point(144, 15);
-            this.Lbl_ChiTietChuyenBayVe.Name = "Lbl_ChiTietChuyenBayVe";
-            this.Lbl_ChiTietChuyenBayVe.Size = new System.Drawing.Size(160, 22);
-            this.Lbl_ChiTietChuyenBayVe.TabIndex = 8;
-            this.Lbl_ChiTietChuyenBayVe.Text = "Chi tiết chuyến bay";
+            this.Lbl_ChiTietChuyenBay.AutoSize = true;
+            this.Lbl_ChiTietChuyenBay.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_ChiTietChuyenBay.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_ChiTietChuyenBay.Location = new System.Drawing.Point(13, 18);
+            this.Lbl_ChiTietChuyenBay.Name = "Lbl_ChiTietChuyenBay";
+            this.Lbl_ChiTietChuyenBay.Size = new System.Drawing.Size(247, 32);
+            this.Lbl_ChiTietChuyenBay.TabIndex = 24;
+            this.Lbl_ChiTietChuyenBay.Text = "Chi tiết chuyến bay";
             // 
             // Frm_ChonChoNgoi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 669);
-            this.Controls.Add(this.Tct_ChonChoDi);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.Pnl_DanhSachHanhKhach);
+            this.Controls.Add(this.Btn_TiepTuc);
+            this.Controls.Add(this.Lbl_GhiChu);
+            this.Controls.Add(this.Lbl_HanhKhach);
+            this.Controls.Add(this.Pnl_ChonViTri);
+            this.Controls.Add(this.Lbl_TenMayBay);
+            this.Controls.Add(this.Lbl_GhiChu2);
+            this.Controls.Add(this.Lbl_GhiChu1);
+            this.Controls.Add(this.Pnl_GhiChu2);
+            this.Controls.Add(this.Pnl_GhiChu1);
+            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_ChonChoNgoi";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Frm_ChonChoNgoi";
-            this.Tct_ChonChoDi.ResumeLayout(false);
-            this.Tpg_ChoNgoiDi.ResumeLayout(false);
-            this.Tpg_ChoNgoiDi.PerformLayout();
-            this.Pnl_ChiTietChuyenBayDi.ResumeLayout(false);
-            this.Pnl_ChiTietChuyenBayDi.PerformLayout();
-            this.Pnl_HanhKhachDi.ResumeLayout(false);
-            this.Pnl_HanhKhachDi.PerformLayout();
-            this.Tpg_ChoNgoiVe.ResumeLayout(false);
-            this.Tpg_ChoNgoiVe.PerformLayout();
-            this.Pnl_HanhKhachVe.ResumeLayout(false);
-            this.Pnl_HanhKhachVe.PerformLayout();
-            this.Pnl_ChiTietChuyenBayVe.ResumeLayout(false);
-            this.Pnl_ChiTietChuyenBayVe.PerformLayout();
+            this.Load += new System.EventHandler(this.Frm_ChonChoNgoi_Load);
+            this.Pnl_DanhSachHanhKhach.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.Pnl_ChiTietChuyenBay.ResumeLayout(false);
+            this.Pnl_ChiTietChuyenBay.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl Tct_ChonChoDi;
-        private System.Windows.Forms.TabPage Tpg_ChoNgoiDi;
-        private System.Windows.Forms.TabPage Tpg_ChoNgoiVe;
-        private System.Windows.Forms.Panel Pnl_ChiTietChuyenBayDi;
-        private System.Windows.Forms.Label Lbl_ChiTietChuyenBayDi;
         private System.Windows.Forms.Label Lbl_GhiChu2;
         private System.Windows.Forms.Label Lbl_GhiChu1;
         private System.Windows.Forms.Panel Pnl_GhiChu2;
         private System.Windows.Forms.Panel Pnl_GhiChu1;
-        private System.Windows.Forms.Label Lbl_GhiChuDi;
-        private System.Windows.Forms.Panel Pnl_HanhKhachDi;
-        private System.Windows.Forms.Button Btn_ChonChoNgoiDi;
-        private System.Windows.Forms.Label Lbl_TenKhachDi;
-        private System.Windows.Forms.Label Lbl_HanhKhachDi;
-        private System.Windows.Forms.Label Lbl_HanhKhachVe;
-        private System.Windows.Forms.Panel Pnl_HanhKhachVe;
-        private System.Windows.Forms.Label Lbl_TenKhachVe;
-        private System.Windows.Forms.Button Btn_ChonChoNgoiVe;
-        private System.Windows.Forms.Label Lbl_GhiChuVe;
-        private System.Windows.Forms.Panel Pnl_GhiChu3;
-        private System.Windows.Forms.Panel Pnl_GhiChu4;
-        private System.Windows.Forms.Panel Pnl_ChiTietChuyenBayVe;
-        private System.Windows.Forms.Label Lbl_ChiTietChuyenBayVe;
-        private System.Windows.Forms.Label Lbl_GhiChu4;
-        private System.Windows.Forms.Label Lbl_GhiChu3;
+        private System.Windows.Forms.Label Lbl_TenMayBay;
+        private System.Windows.Forms.Panel Pnl_ChonViTri;
+        private System.Windows.Forms.Label Lbl_HanhKhach;
+        private System.Windows.Forms.Label Lbl_GhiChu;
+        private System.Windows.Forms.Button Btn_TiepTuc;
+        private System.Windows.Forms.Panel Pnl_DanhSachHanhKhach;
+        private UCs.UC_HanhKhachChonChoNgoi uC_HanhKhachChonChoNgoi;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel Pnl_HanhTrinh;
+        private System.Windows.Forms.Panel Pnl_ChiTietChuyenBay;
+        private System.Windows.Forms.Label Lbl_ChiTietChuyenBay;
     }
 }
