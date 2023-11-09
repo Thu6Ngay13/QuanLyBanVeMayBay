@@ -24,10 +24,12 @@ namespace QuanLyBanVeMayBay.GUI
         bool khuhoi = false;
         int goihanhly_chieudi = 1;
         int goihanhly_chieuve = 0;
+
         public Frm_GoiHanhLy()
         {
             InitializeComponent();
         }
+
         public Frm_GoiHanhLy(
             List<KhachHangNguoiLon> khachHangNguoiLons, 
             List<KhachHangTreEm> khachHangTreEms, 
@@ -49,7 +51,7 @@ namespace QuanLyBanVeMayBay.GUI
             /*MessageBox.Show(thutu.ToString());*/
             if (thututreem == -1)
             {
-                Lbl_TenKhachHang.Text = khachHangNguoiLons[thutu].HoTen;
+                Lbl_TenKhachHang.Text = khachHangNguoiLons[thutu].Hoten;
             }
             else
             {
@@ -174,7 +176,10 @@ namespace QuanLyBanVeMayBay.GUI
                 }
                 else
                 {
-                    MessageBox.Show("Chuyen trang");
+                    this.Close();   
+                    Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi(khachHangNguoiLons, khachHangTreEms, thongTinChuyenBay);
+                    frm_ChonChoNgoi.ShowDialog();
+                    this.Hide();
                 }
             }
         }
