@@ -12,6 +12,7 @@ namespace QuanLyBanVeMayBay.GUI
         private string diemdi = "-1";
         private string diemden = "-1";
         private DateTime ngaydi= new DateTime(2010, 1, 1);
+
         private int sohanhkhach = -1;
         private int machuyenbay = -1;
         private int mamaybay = -1;
@@ -76,6 +77,9 @@ namespace QuanLyBanVeMayBay.GUI
             UC_ThongTinVeMua vemaybay = (UC_ThongTinVeMua)sender;
             int.TryParse(vemaybay.Lbl_MaChuyenBay.Text.ToString(), out machuyenbay);
             int.TryParse(vemaybay.Lbl_MaMayBay.Text.ToString(), out mamaybay);
+
+            string[] temp = vemaybay.Lbl_GioDi.Text.Split(' ');
+            ngaydi = DateTime.Parse(temp[2] + " " + temp[3]);
         }
 
         public int lay_MaChuyenBay()
@@ -86,6 +90,11 @@ namespace QuanLyBanVeMayBay.GUI
         public int lay_MaMayBay()
         {
             return mamaybay;
+        }
+
+        public DateTime lay_NgayDi()
+        {
+            return ngaydi;
         }
     }
 }

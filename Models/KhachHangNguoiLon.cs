@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace QuanLyBanVeMayBay.Models
 {
@@ -12,8 +12,8 @@ namespace QuanLyBanVeMayBay.Models
         private string sodienthoai;
         private string email;
         private string diachi;
-        
-        private int magoihanhly;
+        private int magoihanhlychieudi;
+        private int magoihanhlychieuve;
         private int mavechieudi;
         private int mavechieuve;
 
@@ -41,7 +41,8 @@ namespace QuanLyBanVeMayBay.Models
         public string Sodienthoai { get => sodienthoai; set => sodienthoai = value; }
         public string Email { get => email; set => email = value; }
         public string Diachi { get => diachi; set => diachi = value; }
-        public int Magoihanhly { get => magoihanhly; set => magoihanhly = value; }
+        public int Magoihanhlychieudi { get => magoihanhlychieudi; set => magoihanhlychieudi = value; }
+        public int Magoihanhlychieuve { get => magoihanhlychieuve; set => magoihanhlychieuve = value; }
         public int Mavechieudi { get => mavechieudi; set => mavechieudi = value; }
         public int Mavechieuve { get => mavechieuve; set => mavechieuve = value; }
     }

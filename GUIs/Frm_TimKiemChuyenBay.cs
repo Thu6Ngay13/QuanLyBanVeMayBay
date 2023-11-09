@@ -26,6 +26,8 @@ namespace QuanLyBanVeMayBay.GUI
         private int mamaybaychieudi = -1;
         private int mamaybaychieuve = -1;
 
+        private bool khuhoi = false;
+
         public Frm_TimKiemChuyenBay()
         {
             InitializeComponent();
@@ -35,11 +37,11 @@ namespace QuanLyBanVeMayBay.GUI
         public Frm_TimKiemChuyenBay(string diemdi, string diemden, DateTime ngaydi)
         {
             InitializeComponent();
-            Rdb_MotChieu.Checked = true;
-            chuyenbayduocdexuat = true;
             this.diemdi = diemdi;
             this.diemden = diemden;
             this.ngaydi = ngaydi;
+            this.chuyenbayduocdexuat = true;
+            this.khuhoi = false;
         }
 
         private void Frm_MuaVe1_Load(object sender, EventArgs e)
@@ -69,6 +71,7 @@ namespace QuanLyBanVeMayBay.GUI
 
         private void nhan_ThongTinChuyenBayDeXuat()
         {
+            Rdb_MotChieu.Checked = true;
             Cbb_DiemDi.Text = diemdi;
             Cbb_DiemDen.Text = diemden;
             Dtp_NgayDi.Value = ngaydi;
@@ -125,12 +128,13 @@ namespace QuanLyBanVeMayBay.GUI
 
                 diemdi = Cbb_DiemDi.Text;
                 diemden = Cbb_DiemDen.Text;
-
                 ngaydi = Dtp_NgayDi.Value;
+
                 Frm_MuaVe muavechieudi = new Frm_MuaVe(diemdi, diemden, ngaydi, soluonghanhkhach);
                 muavechieudi.ShowDialog();
                 mavechieudi = muavechieudi.lay_MaChuyenBay();
                 mamaybaychieudi = muavechieudi.lay_MaMayBay();
+                ngaydi = muavechieudi.lay_NgayDi();
 
                 if (mavechieudi == -1 || mamaybaychieudi == -1)
                 {
@@ -141,10 +145,13 @@ namespace QuanLyBanVeMayBay.GUI
                 if (Rdb_KhuHoi.Checked)
                 {
                     ngayve = Dtp_NgayVe.Value;
+
                     Frm_MuaVe muavechieuve = new Frm_MuaVe(diemden, diemdi, ngayve, soluonghanhkhach);
                     muavechieuve.ShowDialog();
                     mavechieuve = muavechieuve.lay_MaChuyenBay();
                     mamaybaychieuve = muavechieuve.lay_MaMayBay();
+                    ngayve = muavechieuve.lay_NgayDi();
+                    khuhoi = true;
 
                     if (mavechieuve == -1 || mamaybaychieuve == -1)
                     {
@@ -158,7 +165,8 @@ namespace QuanLyBanVeMayBay.GUI
                     ngaydi, ngayve, 
                     sokhachnguoilon, sokhachtreem, 
                     mavechieudi, mavechieuve,
-                    mamaybaychieudi, mamaybaychieuve);
+                    mamaybaychieudi, mamaybaychieuve,
+                    khuhoi);
 
                 Frm_ThongTinKhachHang khachhang = new Frm_ThongTinKhachHang(thongtinchuyenbay);
                 khachhang.ShowDialog();
