@@ -128,12 +128,13 @@ namespace QuanLyBanVeMayBay.GUI
 
                 diemdi = Cbb_DiemDi.Text;
                 diemden = Cbb_DiemDen.Text;
-
                 ngaydi = Dtp_NgayDi.Value;
+
                 Frm_MuaVe muavechieudi = new Frm_MuaVe(diemdi, diemden, ngaydi, soluonghanhkhach);
                 muavechieudi.ShowDialog();
                 mavechieudi = muavechieudi.lay_MaChuyenBay();
                 mamaybaychieudi = muavechieudi.lay_MaMayBay();
+                ngaydi = muavechieudi.lay_NgayDi();
 
                 if (mavechieudi == -1 || mamaybaychieudi == -1)
                 {
@@ -144,11 +145,12 @@ namespace QuanLyBanVeMayBay.GUI
                 if (Rdb_KhuHoi.Checked)
                 {
                     ngayve = Dtp_NgayVe.Value;
+
                     Frm_MuaVe muavechieuve = new Frm_MuaVe(diemden, diemdi, ngayve, soluonghanhkhach);
                     muavechieuve.ShowDialog();
                     mavechieuve = muavechieuve.lay_MaChuyenBay();
                     mamaybaychieuve = muavechieuve.lay_MaMayBay();
-
+                    ngayve = muavechieuve.lay_NgayDi();
                     khuhoi = true;
 
                     if (mavechieuve == -1 || mamaybaychieuve == -1)
@@ -169,9 +171,11 @@ namespace QuanLyBanVeMayBay.GUI
                 Frm_ThongTinKhachHang khachhang = new Frm_ThongTinKhachHang(thongtinchuyenbay);
                 khachhang.ShowDialog();
 
+                if (Frm_ThanhToan.thanhtoanthanhcong == 999) this.Close();
                 this.Show();
             }
         }
+
     }
 }
 

@@ -94,5 +94,15 @@ namespace QuanLyBanVeMayBay.GUI
             string FormattedDate = ParsedDate.ToString("yyyy/MM/dd");
             return FormattedDate;
         }
+
+        private void Btn_TraCuuChuyenBay_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
+            Frm_QuanLyNguoiDung quanlynguoidung = new Frm_QuanLyNguoiDung();
+            quanlynguoidung.Show();
+            
+            this.Show();
+        }
     }
 }

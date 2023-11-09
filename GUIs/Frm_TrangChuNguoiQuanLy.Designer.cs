@@ -326,6 +326,7 @@
             this.Btn_TraCuuChuyenBay.TabIndex = 2;
             this.Btn_TraCuuChuyenBay.Text = "Tra cứu chuyến bay";
             this.Btn_TraCuuChuyenBay.UseVisualStyleBackColor = true;
+            this.Btn_TraCuuChuyenBay.Click += new System.EventHandler(this.Btn_TraCuuChuyenBay_Click);
             // 
             // Btn_TraCuuHoaDon
             // 

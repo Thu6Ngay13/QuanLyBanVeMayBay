@@ -40,6 +40,20 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, null, ref error);
         }
 
+        public DataSet lay_DanhSachChoNgoi_PROC(int machuyenbay,ref string error)
+        {
+            string sql =
+                "SELECT * " +
+                "FROM lay_DanhSachChoNgoi_PROC(@MaChuyenBay)";
+            SqlParameter[] sqlParameter = new SqlParameter[1];
+            sqlParameter[0] = new SqlParameter()
+            {
+                ParameterName = "@MaChuyenBay",
+                Value = machuyenbay
+            };
+            return db.executeQuery(sql, CommandType.Text, sqlParameter, ref error);
+        }
+
         public DataSet lay_DeXuatChuyenBay(
             int soluongdexuat, 
             string diemdi,

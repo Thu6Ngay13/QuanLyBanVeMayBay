@@ -147,6 +147,18 @@
     <Compile Include="Models\ThongTinChuyenBay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCs\UC_ButtonChonViTriChuaMua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UC_ButtonChonViTriChuaMua.Designer.cs">
+      <DependentUpon>UC_ButtonChonViTriChuaMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UC_ButtonChonViTriDaMua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UC_ButtonChonViTriDaMua.Designer.cs">
+      <DependentUpon>UC_ButtonChonViTriDaMua.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCs\UC_DonViTien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,6 +170,12 @@
     </Compile>
     <Compile Include="UCs\UC_GoiHanhLy.Designer.cs">
       <DependentUpon>UC_GoiHanhLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UC_HanhKhachChonChoNgoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UC_HanhKhachChonChoNgoi.Designer.cs">
+      <DependentUpon>UC_HanhKhachChonChoNgoi.cs</DependentUpon>
     </Compile>
     <Compile Include="UCs\UC_ThongTinChieuBay.cs">
       <SubType>UserControl</SubType>
@@ -219,11 +237,17 @@
     <Compile Include="UCs\UC_TraCuuChuyenBay.Designer.cs">
       <DependentUpon>UC_TraCuuChuyenBay.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUIs\Frm_ChonChoNgoi.resx">
+      <DependentUpon>Frm_ChonChoNgoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_GoiHanhLy.resx">
       <DependentUpon>Frm_GoiHanhLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_HanhKhach.resx">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_QuanLyNguoiDung.resx">
+      <DependentUpon>Frm_QuanLyNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_ThongTinKhachHang.resx">
       <DependentUpon>Frm_ThongTinKhachHang.cs</DependentUpon>
@@ -253,8 +277,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UCs\UC_ButtonChonViTriChuaMua.resx">
+      <DependentUpon>UC_ButtonChonViTriChuaMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ButtonChonViTriDaMua.resx">
+      <DependentUpon>UC_ButtonChonViTriDaMua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_GoiHanhLy.resx">
       <DependentUpon>UC_GoiHanhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_HanhKhachChonChoNgoi.resx">
+      <DependentUpon>UC_HanhKhachChonChoNgoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinChieuBay.resx">
       <DependentUpon>UC_ThongTinChieuBay.cs</DependentUpon>
@@ -267,6 +300,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinHoaDon.resx">
       <DependentUpon>UC_ThongTinHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinNguoiLon.resx">
+      <DependentUpon>UC_ThongTinNguoiLon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinTreEm.resx">
+      <DependentUpon>UC_ThongTinTreEm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinVeMua.resx">
       <DependentUpon>UC_ThongTinVeMua.cs</DependentUpon>
