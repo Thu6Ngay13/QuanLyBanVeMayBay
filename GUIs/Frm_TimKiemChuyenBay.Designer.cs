@@ -240,10 +240,12 @@
             // 
             this.Dtp_NgayDi.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_NgayDi.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_NgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_NgayDi.Location = new System.Drawing.Point(91, 6);
             this.Dtp_NgayDi.Name = "Dtp_NgayDi";
             this.Dtp_NgayDi.Size = new System.Drawing.Size(302, 25);
             this.Dtp_NgayDi.TabIndex = 17;
+            this.Dtp_NgayDi.CustomFormat = "yyyy-MM-dd";
             // 
             // Lbl_NgayDi
             // 
@@ -268,10 +270,12 @@
             // 
             this.Dtp_NgayVe.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_NgayVe.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_NgayVe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_NgayVe.Location = new System.Drawing.Point(92, 6);
             this.Dtp_NgayVe.Name = "Dtp_NgayVe";
             this.Dtp_NgayVe.Size = new System.Drawing.Size(302, 25);
             this.Dtp_NgayVe.TabIndex = 18;
+            this.Dtp_NgayVe.CustomFormat = "yyyy-MM-dd";
             // 
             // Lbl_NgayVe
             // 

@@ -70,7 +70,6 @@
             this.Btn_Chon.TabIndex = 3;
             this.Btn_Chon.Text = "Chọn";
             this.Btn_Chon.UseVisualStyleBackColor = true;
-            this.Btn_Chon.Click += new System.EventHandler(this.Btn_Chon_Click);
             // 
             // label1
             // 

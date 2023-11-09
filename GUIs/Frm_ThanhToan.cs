@@ -18,7 +18,9 @@ namespace QuanLyBanVeMayBay.GUI
             InitializeComponent();
         }
 
-        public Frm_ThanhToan(List<KhachHangNguoiLon> khachHangNguoiLons, List<KhachHangTreEm> khachHangTreEms)
+        public Frm_ThanhToan(
+            List<KhachHangNguoiLon> khachHangNguoiLons, 
+            List<KhachHangTreEm> khachHangTreEms)
         {
             InitializeComponent();
             this.khachHangNguoiLons = khachHangNguoiLons;
@@ -55,7 +57,7 @@ namespace QuanLyBanVeMayBay.GUI
                     khachHangNguoiLons[i].Sodienthoai,
                     khachHangNguoiLons[i].Email,
                     khachHangNguoiLons[i].Diachi,
-                    khachHangNguoiLons[i].Magoihanhly,
+                    khachHangNguoiLons[i].Magoihanhlychieudi,
                     khachHangNguoiLons[i].Mavechieudi,
                     mahoadon);
 
@@ -70,7 +72,7 @@ namespace QuanLyBanVeMayBay.GUI
                     khachHangTreEms[i].Hoten,
                     khachHangTreEms[i].Gioitinh,
                     khachHangTreEms[i].Ngaysinh,
-                    khachHangTreEms[i].Magoihanhly,
+                    khachHangTreEms[i].Magoihanhlychieudi,
                     khachHangTreEms[i].Mavechieudi,
                     mahoadon);
 

@@ -1,7 +1,9 @@
 ﻿using HeQuanTriDemo01.Models;
 using QuanLyBanVeMayBay.BLL;
+using QuanLyBanVeMayBay.Models;
 using QuanLyBanVeMayBay.UC;
 using QuanLyBanVeMayBay.UCs;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Drawing;
@@ -12,24 +14,39 @@ namespace QuanLyBanVeMayBay.GUI
 {
     public partial class Frm_ChonChoNgoi : Form
     {
-        
+        ThongTinChuyenBay thongTinChuyenBay = null;
+        List<KhachHangNguoiLon> khachHangNguoiLons = new List<KhachHangNguoiLon>();
+        List<KhachHangTreEm> khachHangTreEms = new List<KhachHangTreEm>();
+
         private int sokhachlon = -1;
         private int sokhachnho = -1;    
         private int sohanhkhach = -1;
         
-        private ThongTinChuyenBay thongtinchuyenbay;
         public Frm_ChonChoNgoi()
         {
             InitializeComponent();
         }
-        //Demo 
+
+        public Frm_ChonChoNgoi(
+            List<KhachHangNguoiLon> khachHangNguoiLons,
+            List<KhachHangTreEm> khachHangTreEms,
+            ThongTinChuyenBay thongTinChuyenBay)
+        {
+            InitializeComponent();
+            this.khachHangNguoiLons = khachHangNguoiLons;
+            this.khachHangTreEms = khachHangTreEms;
+            this.thongTinChuyenBay = thongTinChuyenBay;
+            
+        }
+
         public void LayDanhSachKhachHang()
         {
-            Frm_HanhKhach hk = new Frm_HanhKhach();
-            sokhachlon = (int)hk.Nud_NguoiLon.Value;
-            sokhachnho = (int)hk.Nud_TreEm.Value;
+            //Frm_HanhKhach hk = new Frm_HanhKhach();
+            //sokhachlon = (int)hk.Nud_NguoiLon.Value;
+            //sokhachnho = (int)hk.Nud_TreEm.Value;
+
             sohanhkhach = sokhachlon + sokhachnho;
-            if (sohanhkhach > 1)
+            if (thongTinChuyenBay.Sokhachnguoilon != -1)
             {
                 UC_HanhKhachChonChoNgoi hanhKhachChonChoNgoi = new UC_HanhKhachChonChoNgoi();
                 Pnl_DanhSachHanhKhach.Controls.Add(hanhKhachChonChoNgoi);
