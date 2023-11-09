@@ -111,6 +111,26 @@ namespace QuanLyBanVeMayBay.GUI
 
             this.Show();
         }
+
+        private void Btn_TraCuuHoaDon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Frm_TraCuuHoaDon form1 = new Frm_TraCuuHoaDon();
+            form1.ShowDialog();
+
+            this.Show();
+        }
+
+        private void Btn_TraCuuChuyenBay_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Frm_TraCuuChuyenBay form1 = new Frm_TraCuuChuyenBay();
+            form1.ShowDialog();
+
+            this.Show();
+        }
     }
 }
  
