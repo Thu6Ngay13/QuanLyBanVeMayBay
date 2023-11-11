@@ -180,14 +180,12 @@ namespace QuanLyBanVeMayBay.GUI
                 khachHangNguoiLons[i].Mavechieudi = mave;
                 mavedachons.Add(mave);
                 i = i + 1;
-                MessageBox.Show(i.ToString() + "lon");
             }
             else if (j < thongTinChuyenBay.Sokhachtreem)
             {
                 khachHangTreEms[j].Mavechieudi = mave;
                 mavedachons.Add(mave);
                 j = j + 1;
-                MessageBox.Show(j.ToString() + "em");
             }
             else
             {
