@@ -263,6 +263,7 @@ namespace QuanLyBanVeMayBay.GUI
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_TraCuuChuyenBay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra Cứu Chuyến Bay";
             this.Load += new System.EventHandler(this.Frm_TraCuuChuyenBay_Load);
             this.Pnl_Body.ResumeLayout(false);

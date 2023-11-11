@@ -150,7 +150,7 @@ namespace QuanLyBanVeMayBay.GUI
             Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
 
             // Thong tin ve chieu ve
-            if (thongTinChuyenBay.Machieuve != 0)
+            if (thongTinChuyenBay.Machieuve != -1)
             {
                 thongTinChieuBay = new UC_ThongTinChieuBay();
                 thongTinChieuBay.Location = new Point(2, 145);

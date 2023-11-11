@@ -261,6 +261,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_QuanLyNguoiDung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_QuanLyNguoiDung";
             this.Load += new System.EventHandler(this.Frm_QuanLyNguoiDung_Load);
             this.Pnl_Header.ResumeLayout(false);

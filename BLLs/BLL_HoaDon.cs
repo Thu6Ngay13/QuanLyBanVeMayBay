@@ -1,4 +1,4 @@
-using QuanLyBanVeMayBay.DAL;
+﻿using QuanLyBanVeMayBay.DAL;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,6 +13,7 @@ namespace QuanLyBanVeMayBay.BLL
             db = new DBConnectionSQlServer();   
         }
 
+        // Hàm nhận tham số mã hóa đơn và trả về danh sách chi tiết vé máy bay
         public DataSet ThongTinHoaDon(string MaHoaDon, ref string error)
         {
             string sql = "SELECT * FROM tracuu_HoaDon_FUNC(@MaHoaDon)";
@@ -25,6 +26,7 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, sqlParameters, ref error); ;
         }
 
+        // Hàm nhận tham số mã vé máy bay và thực hiện hủy vé trong cơ sở dữ liệu
         public bool HuyVe(string MaVe, ref string error)
         {
             string sql = "EXEC huy_Ve_PROC @MaVe";
@@ -37,6 +39,7 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeNonQuery(sql, CommandType.Text, sqlParameters, ref error);
         }
 
+        // Hàm khởi tạo hóa đơn mới và trả về mã hóa đơn vừa tạo
         public int khoitao_HoaDon(ref string error)
         {
             string sql = 
@@ -57,6 +60,10 @@ namespace QuanLyBanVeMayBay.BLL
             if (success) return mahoadon;
             return -1;
         }
+
+        // Hàm nhận vào 2 tham số: mã người dùng, mã hóa đơn
+        // Trả về thông tin lịch sử giao dịch của người dùng bao gồm: 
+        // số điện thoại, mã hóa đơn, tổng tiền thanh toán, thời gian thanh toán
         public DataSet timkiem_LichSuGiaoDich(int manguoidung, int mahoadon, ref string error)
         {
             string sql =

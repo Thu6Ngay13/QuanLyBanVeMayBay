@@ -243,14 +243,23 @@
     <EmbeddedResource Include="GUIs\Frm_ChonChoNgoi.resx">
       <DependentUpon>Frm_ChonChoNgoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_DoanhThu.resx">
+      <DependentUpon>Frm_DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_GoiHanhLy.resx">
       <DependentUpon>Frm_GoiHanhLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_HanhKhach.resx">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_MuaVe.resx">
+      <DependentUpon>Frm_MuaVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_QuanLyNguoiDung.resx">
       <DependentUpon>Frm_QuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_ThanhToan.resx">
+      <DependentUpon>Frm_ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_ThongTinKhachHang.resx">
       <DependentUpon>Frm_ThongTinKhachHang.cs</DependentUpon>

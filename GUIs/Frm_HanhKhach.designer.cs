@@ -137,6 +137,7 @@
             this.MinimizeBox = false;
             this.Name = "Frm_HanhKhach";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hành Khách";
             this.Pnl_TreEm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Nud_TreEm)).EndInit();
