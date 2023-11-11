@@ -237,6 +237,9 @@
     <Compile Include="UCs\UC_TraCuuChuyenBay.Designer.cs">
       <DependentUpon>UC_TraCuuChuyenBay.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUIs\Frm_CapNhat.resx">
+      <DependentUpon>Frm_CapNhat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_ChonChoNgoi.resx">
       <DependentUpon>Frm_ChonChoNgoi.cs</DependentUpon>
     </EmbeddedResource>
