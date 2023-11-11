@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
@@ -15,7 +16,7 @@ namespace QuanLyBanVeMayBay.GUI
     public partial class Frm_GoiHanhLy : Form
     {
         BLL_GoiHanhLy GoiHanhLy = new BLL_GoiHanhLy();
-        ThongTinChuyenBay thongTinChuyenBay = null;
+        ThongTinChuyenBay thongtinchuyenbay;
         List<KhachHangNguoiLon> khachHangNguoiLons = new List<KhachHangNguoiLon>();
         List<KhachHangTreEm> khachHangTreEms = new List<KhachHangTreEm>();
         
@@ -38,35 +39,38 @@ namespace QuanLyBanVeMayBay.GUI
             InitializeComponent();
             this.khachHangNguoiLons = khachHangNguoiLons;
             this.khachHangTreEms = khachHangTreEms;
-            this.thongTinChuyenBay = thongTinChuyenBay;
+            this.thongtinchuyenbay = thongTinChuyenBay;
             khuhoi = thongTinChuyenBay.Khuhoi;
         }
 
         private void Frm_GoiHanhLy_Load(object sender, System.EventArgs e)
         {
             LayGoiHanhLy(thutunguoilon);
+            LayThongTinChuyenBay();
         }
         private void LayGoiHanhLy(int thutu)
         {
             /*MessageBox.Show(thutu.ToString());*/
             if (thututreem == -1)
             {
-                Lbl_TenKhachHang.Text = khachHangNguoiLons[thutu].Hoten;
+                Lbl_TenKhachHang.Text = string.Concat("Khách hàng: ",khachHangNguoiLons[thutu].Hoten);
             }
             else
             {
-                Lbl_TenKhachHang.Text = khachHangTreEms[thutu].Hoten;
+                Lbl_TenKhachHang.Text = string.Concat("Khách hàng: ", khachHangTreEms[thutu].Hoten);
             }
             if (khuhoi)
             {
                 Cmb_Chieu.Items.Clear();
                 Cmb_Chieu.Items.Add("Chiều đi");
                 Cmb_Chieu.Items.Add("Chiều về");
+                Cmb_Chieu.Text = "Chiều đi";
             }
             else
             {
                 Cmb_Chieu.Items.Clear();
                 Cmb_Chieu.Items.Add("Chiều đi");
+                Cmb_Chieu.Text = "Chiều đi";
             }
             Pnl_GoiHanhLy.Controls.Clear();
             DataSet ds = GoiHanhLy.LayGoiHanhLy();
@@ -178,13 +182,40 @@ namespace QuanLyBanVeMayBay.GUI
                 {
                     this.Hide();   
 
-                    Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi(khachHangNguoiLons, khachHangTreEms, thongTinChuyenBay);
+                    Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi(khachHangNguoiLons, khachHangTreEms, thongtinchuyenbay);
                     frm_ChonChoNgoi.ShowDialog();
 
                     if (Frm_ThanhToan.thanhtoanthanhcong == 999) this.Close();
                     this.Show();
 
                 }
+            }
+        }
+
+        private void LayThongTinChuyenBay()
+        {
+            // Thong tin chieu di
+            UC_ThongTinChieuBay thongTinChieuBay = new UC_ThongTinChieuBay();
+            thongTinChieuBay.Location = new Point(2, 3);
+            thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongtinchuyenbay.Machieudi);
+            thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongtinchuyenbay.Mamaybaydi);
+            thongTinChieuBay.Lbl_DiemDi.Text = thongtinchuyenbay.Diemdi;
+            thongTinChieuBay.Lbl_DiemDen.Text = thongtinchuyenbay.Diemden;
+            thongTinChieuBay.Lbl_GioDi.Text = thongtinchuyenbay.Thoigiandi.ToString();
+            Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
+
+            // Thong tin ve chieu ve
+            if (thongtinchuyenbay.Machieuve != -1)
+            {
+                thongTinChieuBay = new UC_ThongTinChieuBay();
+                thongTinChieuBay.Location = new Point(2, 145);
+                thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongtinchuyenbay.Machieuve);
+                thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongtinchuyenbay.Mamaybayve);
+                thongTinChieuBay.Lbl_DiemDi.Text = thongtinchuyenbay.Diemden;
+                thongTinChieuBay.Lbl_DiemDen.Text = thongtinchuyenbay.Diemdi;
+                thongTinChieuBay.Lbl_ChieuBay.Text = "Chiều về";
+                thongTinChieuBay.Lbl_GioDi.Text = thongtinchuyenbay.Thoigianve.ToString();
+                Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
             }
         }
     }

@@ -14,10 +14,14 @@ namespace QuanLyBanVeMayBay.BLL
         {
             db = new DBConnectionSQlServer();
         }
+        
+        // Hàm này trả về 1 DataSet chứa các gói hành lý được lấy cơ sở dữ liệu
         public DataSet LayGoiHanhLy()
         {
             return db.executeQuery("select * from lay_GoiHanhLy", CommandType.Text, parameters, ref err);
         }
+
+        // Hàm này thực hiện việc thêm gói hành lý vào mã vé và trả về kết quả thực hiện kiểu bool
         public bool them_GoiHanhLy(string MaGoiHanhLy, string MaVe)
         {
             string sql = "EXEC them_GoiHanhLy_PROC @MaGoiHanhLy = " + MaGoiHanhLy + " , @MaVe = " + MaVe + ";";

@@ -19,6 +19,12 @@ namespace QuanLyBanVeMayBay.DAL
             cmd = conn.CreateCommand();
         }
 
+        //Hàm này nhận vào
+        //câu lệnh sql,
+        //loại commandtype,
+        //các tham số,
+        //biến lấy về giá trị lỗi
+        //thực hiện việc truy vấn có dữ liệu trả về
         public DataSet executeQuery(string sql, CommandType ct, SqlParameter[] sqlParameter, ref string error)
         {
             try
@@ -48,6 +54,12 @@ namespace QuanLyBanVeMayBay.DAL
             return null;
         }
 
+        //Hàm này nhận vào
+        //câu lệnh sql,
+        //loại commandtype,
+        //các tham số,
+        //biến lấy về giá trị lỗi
+        //thực hiện việc truy vấn có không có dữ liệu trả về
         public bool executeNonQuery(string sql, CommandType ct, SqlParameter[] sqlParameter, ref string error)
         {
             bool flag = false;

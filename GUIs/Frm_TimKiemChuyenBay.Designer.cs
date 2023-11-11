@@ -376,6 +376,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Frm_TimKiemChuyenBay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_TimKiemChuyenBay";
             this.Load += new System.EventHandler(this.Frm_MuaVe1_Load);
             this.Pnl_Header.ResumeLayout(false);
