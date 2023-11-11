@@ -307,6 +307,7 @@
             this.Controls.Add(this.Btn_CapNhat);
             this.Controls.Add(this.Btn_Them);
             this.Name = "Frm_CapNhat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_CapNhat";
             this.Load += new System.EventHandler(this.Frm_CapNhat_Load);
             this.Pnl_NgayDi.ResumeLayout(false);

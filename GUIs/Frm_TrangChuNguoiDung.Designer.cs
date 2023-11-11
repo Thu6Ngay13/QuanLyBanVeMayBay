@@ -69,6 +69,7 @@
             this.Btn_TraCuuChuyenBay.TabIndex = 2;
             this.Btn_TraCuuChuyenBay.Text = "Tra cứu chuyến bay";
             this.Btn_TraCuuChuyenBay.UseVisualStyleBackColor = true;
+            this.Btn_TraCuuChuyenBay.Click += new System.EventHandler(this.Btn_TraCuuChuyenBay_Click);
             // 
             // Btn_TraCuuHoaDon
             // 
@@ -78,6 +79,7 @@
             this.Btn_TraCuuHoaDon.TabIndex = 1;
             this.Btn_TraCuuHoaDon.Text = "Tra cứu hóa đơn";
             this.Btn_TraCuuHoaDon.UseVisualStyleBackColor = true;
+            this.Btn_TraCuuHoaDon.Click += new System.EventHandler(this.Btn_TraCuuHoaDon_Click);
             // 
             // Btn_MuaVe
             // 
@@ -215,6 +217,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_TrangChuNguoiDung";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ người dùng";
             this.Load += new System.EventHandler(this.Frm_TrangChuNguoiDung_Load);
             this.Pnl_ChucNang.ResumeLayout(false);

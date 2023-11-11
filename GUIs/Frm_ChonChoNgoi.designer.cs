@@ -227,6 +227,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_ChonChoNgoi";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_ChonChoNgoi";
             this.Load += new System.EventHandler(this.Frm_ChonChoNgoi_Load);
             this.panel6.ResumeLayout(false);

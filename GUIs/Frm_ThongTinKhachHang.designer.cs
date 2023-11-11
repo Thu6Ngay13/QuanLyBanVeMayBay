@@ -34,6 +34,7 @@ namespace QuanLyBanVeMayBay.GUI
             this.Pnl_ThongTinKhachHang = new System.Windows.Forms.Panel();
             this.Pnl_HanhTrinh = new System.Windows.Forms.Panel();
             this.Pnl_ChiTietChuyenBay = new System.Windows.Forms.Panel();
+            this.Lbl_ChiTietChuyenBay = new System.Windows.Forms.Label();
             this.Btn_TiepTuc = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,7 +51,6 @@ namespace QuanLyBanVeMayBay.GUI
             this.Lbl_NguoiLon = new System.Windows.Forms.Label();
             this.Lbl_GiaVeNL = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.Lbl_ChiTietChuyenBay = new System.Windows.Forms.Label();
             this.usc_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.usc_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.uC_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
@@ -99,6 +99,17 @@ namespace QuanLyBanVeMayBay.GUI
             this.Pnl_ChiTietChuyenBay.Name = "Pnl_ChiTietChuyenBay";
             this.Pnl_ChiTietChuyenBay.Size = new System.Drawing.Size(460, 60);
             this.Pnl_ChiTietChuyenBay.TabIndex = 0;
+            // 
+            // Lbl_ChiTietChuyenBay
+            // 
+            this.Lbl_ChiTietChuyenBay.AutoSize = true;
+            this.Lbl_ChiTietChuyenBay.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_ChiTietChuyenBay.ForeColor = System.Drawing.Color.Teal;
+            this.Lbl_ChiTietChuyenBay.Location = new System.Drawing.Point(13, 18);
+            this.Lbl_ChiTietChuyenBay.Name = "Lbl_ChiTietChuyenBay";
+            this.Lbl_ChiTietChuyenBay.Size = new System.Drawing.Size(247, 32);
+            this.Lbl_ChiTietChuyenBay.TabIndex = 24;
+            this.Lbl_ChiTietChuyenBay.Text = "Chi tiết chuyến bay";
             // 
             // Btn_TiepTuc
             // 
@@ -278,17 +289,6 @@ namespace QuanLyBanVeMayBay.GUI
             this.panel5.Size = new System.Drawing.Size(460, 96);
             this.panel5.TabIndex = 17;
             // 
-            // Lbl_ChiTietChuyenBay
-            // 
-            this.Lbl_ChiTietChuyenBay.AutoSize = true;
-            this.Lbl_ChiTietChuyenBay.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_ChiTietChuyenBay.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_ChiTietChuyenBay.Location = new System.Drawing.Point(13, 18);
-            this.Lbl_ChiTietChuyenBay.Name = "Lbl_ChiTietChuyenBay";
-            this.Lbl_ChiTietChuyenBay.Size = new System.Drawing.Size(247, 32);
-            this.Lbl_ChiTietChuyenBay.TabIndex = 24;
-            this.Lbl_ChiTietChuyenBay.Text = "Chi tiết chuyến bay";
-            // 
             // usc_DonViTien2
             // 
             this.usc_DonViTien2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -337,6 +337,7 @@ namespace QuanLyBanVeMayBay.GUI
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_ThongTinKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_ThongTinKhachHang";
             this.Load += new System.EventHandler(this.Frm_ThongTinKhachHang_Load);
             this.Pnl_ChiTietChuyenBay.ResumeLayout(false);
