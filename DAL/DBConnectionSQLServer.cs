@@ -6,7 +6,8 @@ namespace QuanLyBanVeMayBay.DAL
 {
     public class DBConnectionSQlServer
     {
-        private readonly string stringconnection = "Data Source = localhost;"
+        private readonly string stringconnection = 
+            "Data Source = localhost;"
             + "Initial Catalog = QuanLyBanVeMayBay;"
             + "Integrated Security=True;";
 

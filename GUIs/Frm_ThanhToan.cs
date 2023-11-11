@@ -61,8 +61,8 @@ namespace QuanLyBanVeMayBay.GUI
                     khachHangNguoiLons[i].Mavechieudi,
                     mahoadon);
 
-                success1 = them_ThongTinNguoiDungMuaVe(1, khachHangNguoiLons[i].Mavechieudi) && success1;
                 khachHangNguoiLons[i].Makhachhangnguoilon = manguoilon;
+                success1 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieudi, manguoilon) && success1;
             }
 
             // Chieu di
@@ -76,14 +76,59 @@ namespace QuanLyBanVeMayBay.GUI
                     khachHangTreEms[i].Mavechieudi,
                     mahoadon);
 
-                success1 = them_ThongTinNguoiDungMuaVe(1, khachHangTreEms[i].Mavechieudi) && success1;
                 khachHangTreEms[i].Makhachhangtreem = matreem;
+                success1 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieudi, matreem) && success1;
             }
 
             // Chieu di
             for (int i = 0; i < khachHangNguoiLons.Count; ++i)
             {
                 for(int j = 0; j < khachHangTreEms.Count; ++j)
+                {
+                    success2 = them_NguoiLonQuanLyTreEm(khachHangNguoiLons[i].Makhachhangnguoilon, khachHangTreEms[j].Makhachhangtreem) && success2;
+                }
+            }
+
+            /*---------------------------------------------------------------------------------------*/
+
+            // Chieu ve
+            for (int i = 0; i < khachHangNguoiLons.Count; ++i)
+            {
+                int manguoilon = them_KhachHangNguoiLon(
+                    khachHangNguoiLons[i].Hoten,
+                    khachHangNguoiLons[i].Gioitinh,
+                    khachHangNguoiLons[i].Ngaysinh,
+                    khachHangNguoiLons[i].Sodienthoai,
+                    khachHangNguoiLons[i].Email,
+                    khachHangNguoiLons[i].Diachi,
+                    khachHangNguoiLons[i].Magoihanhlychieuve,
+                    khachHangNguoiLons[i].Mavechieuve,
+                    mahoadon);
+
+                khachHangNguoiLons[i].Makhachhangnguoilon = manguoilon;
+                success1 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieuve, manguoilon) && success1;
+                
+            }
+
+            // Chieu ve
+            for (int i = 0; i < khachHangTreEms.Count; ++i)
+            {
+                int matreem = them_KhachHangTreEm(
+                    khachHangTreEms[i].Hoten,
+                    khachHangTreEms[i].Gioitinh,
+                    khachHangTreEms[i].Ngaysinh,
+                    khachHangTreEms[i].Magoihanhlychieuve,
+                    khachHangTreEms[i].Mavechieuve,
+                    mahoadon);
+
+                khachHangTreEms[i].Makhachhangtreem = matreem;
+                success1 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieuve, matreem) && success1;
+            }
+
+            // Chieu ve
+            for (int i = 0; i < khachHangNguoiLons.Count; ++i)
+            {
+                for (int j = 0; j < khachHangTreEms.Count; ++j)
                 {
                     success2 = them_NguoiLonQuanLyTreEm(khachHangNguoiLons[i].Makhachhangnguoilon, khachHangTreEms[j].Makhachhangtreem) && success2;
                 }
