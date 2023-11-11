@@ -16,7 +16,7 @@ namespace QuanLyBanVeMayBay
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_CapNhat());
+            Application.Run(new Frm_TrangChuNguoiDung());
         }
     }
 }
