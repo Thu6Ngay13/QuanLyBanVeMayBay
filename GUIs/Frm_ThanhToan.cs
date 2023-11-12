@@ -273,6 +273,7 @@ namespace QuanLyBanVeMayBay.GUI
 
         private void LayThongTinHanhKhach()
         {
+<<<<<<< HEAD
             UC_ThongTinVeChieuBay thongtinvechieubaydi = new UC_ThongTinVeChieuBay();
             thongtinvechieubaydi.Location = new Point(X, Y);
 
@@ -374,6 +375,9 @@ namespace QuanLyBanVeMayBay.GUI
             thongtinthanhtoan.Lbl_TongTienThue.Text = tongtienthue.ToString();
             thongtinthanhtoan.Lbl_TongTienHoaDon.Text = (tongtienthue + tongtienvehanhly).ToString();
             this.Pnl_HanhTrinh.Controls.Add(thongtinthanhtoan);
+=======
+            UC_ThongTinTongTien thongtintongtien = new UC_ThongTinTongTien();
+>>>>>>> Nghia
         }
     }
 }
