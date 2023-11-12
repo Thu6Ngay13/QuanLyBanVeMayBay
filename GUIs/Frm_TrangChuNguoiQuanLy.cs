@@ -1,20 +1,25 @@
 ﻿using QuanLyBanVeMayBay.BLL;
+using QuanLyBanVeMayBay.BLLs;
 using System;
+using System.Data;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyBanVeMayBay.GUI
 {
     public partial class Frm_TrangChuNguoiQuanLy : Form
     {
         BLL_ChuyenBay themChuyenBay = null;
+        BLL_MayBay bLLMayBay = null;
+        DataTable dt = null; 
+        
         string error = null;
         string MaMaybay = null;
         string LoaiChuyenBay = null;
         string DiemDi = null;
         string DiemDen = null;
-        string NgayDi = null;
-        string ThoiGianDi = null;
-        string ThoiGianDuKienDen = null;
+        DateTime ThoiGianDi;
+        DateTime ThoiGianDuKienDen;
         string ChiPhi = null;
         string GiaVePhoThong = null;
         string GiaVeThuongGia = null;
@@ -24,20 +29,15 @@ namespace QuanLyBanVeMayBay.GUI
         {
             InitializeComponent();
         }
-        private void Init()
-        {
-            themChuyenBay = new BLL_ChuyenBay();
-        }
-
+       
         private void LayThongTinChuyenBay()
         {
-            MaMaybay = Txt_MaMayBay.Text.Trim();
+            MaMaybay = Cbb_MaMayBay.Text.Trim();
             LoaiChuyenBay = Cmb_LoaiChuyenBay.Text.Trim();
             DiemDi = Txt_DiemDi.Text.Trim();
             DiemDen = Txt_DiemDen.Text.Trim();
-            NgayDi = Mtb_NgayDi.Text.Trim();
-            ThoiGianDi = Mtb_ThoiGianDi.Text.Trim();
-            ThoiGianDuKienDen = Mtb_ThoiGianDuKienDen.Text.Trim();
+            ThoiGianDi = Dtp_ThoiGianDi.Value;
+            ThoiGianDuKienDen = Dtp_ThoiGianDuKienDen.Value;
             ChiPhi = Txt_ChiPhi.Text.Trim();
             GiaVePhoThong = Txt_GiaVePhoThong.Text.Trim();
             GiaVeThuongGia = Txt_GiaVeThuongGia.Text.Trim();
@@ -51,9 +51,6 @@ namespace QuanLyBanVeMayBay.GUI
                 || string.IsNullOrEmpty(LoaiChuyenBay)
                 || string.IsNullOrEmpty(DiemDi)
                 || string.IsNullOrEmpty(DiemDen)
-                || string.IsNullOrEmpty(NgayDi)
-                || string.IsNullOrEmpty(ThoiGianDi)
-                || string.IsNullOrEmpty(ThoiGianDuKienDen)
                 || string.IsNullOrEmpty(ChiPhi)
                 || string.IsNullOrEmpty(GiaVePhoThong)
                 || !int.TryParse(GiaVePhoThong, out _)
@@ -65,34 +62,29 @@ namespace QuanLyBanVeMayBay.GUI
         }
         private void Btn_Them_Click(object sender, EventArgs e)
         {
-            Init();
+            themChuyenBay = new BLL_ChuyenBay();
+
             LayThongTinChuyenBay();
             if (KiemTraThongTin())
             {
-                themChuyenBay.ThemChuyenBay(MaMaybay,
+                themChuyenBay.ThemChuyenBay(int.Parse(MaMaybay),
                                             LoaiChuyenBay,
                                             DiemDi,
                                             DiemDen,
-                                            string.Concat(FormatDate(NgayDi), " ", ThoiGianDi),
-                                            string.Concat(FormatDate(NgayDi), " ", ThoiGianDuKienDen),
+                                            ThoiGianDi,
+                                            ThoiGianDuKienDen,
                                             ChiPhi,
                                             GiaVePhoThong,
                                             GiaVeThuongGia,
                                             KhoiLuongHanhLy,
                                             ref error);
-
+                MessageBox.Show("Thêm chuyến bay thành công!");
             }
             else
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin chuyến bay!");
             }
             
-        }
-        private string FormatDate(string date)
-        {
-            DateTime ParsedDate = DateTime.ParseExact(date, "dd/MM/yyyy", null);
-            string FormattedDate = ParsedDate.ToString("yyyy/MM/dd");
-            return FormattedDate;
         }
 
         private void Btn_TraCuuChuyenBay_Click(object sender, EventArgs e)
@@ -103,6 +95,14 @@ namespace QuanLyBanVeMayBay.GUI
             quanlynguoidung.Show();
             
             this.Show();
+        }
+
+        private void Frm_TrangChuNguoiQuanLy_Load(object sender, EventArgs e)
+        {
+            bLLMayBay = new BLL_MayBay();
+            dt = bLLMayBay.DanhSachMayBay().Tables[0];
+            Cbb_MaMayBay.DataSource = dt;
+            Cbb_MaMayBay.DisplayMember = "MaMaybay";
         }
     }
 }

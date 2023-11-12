@@ -213,12 +213,12 @@ namespace QuanLyBanVeMayBay.BLL
         // Hàm này nhận vào các thông tin của 1 chuyến bay 
         // sau đó thêm chuyến bay này vào trong cơ sở dữ liệu
         public void ThemChuyenBay(
-            string MaMayMay,
+            int MaMayMay,
             string LoaiChuyenBay,
             string DiemDi,
             string DiemDen,
-            string ThoiGiandi,
-            string ThoiGianDuKienDen,
+            DateTime ThoiGiandi,
+            DateTime ThoiGianDuKienDen,
             string ChiPhi,
             string GiaVePhoThong,
             string GiaVeThuongGia,
