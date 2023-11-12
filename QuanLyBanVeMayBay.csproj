@@ -50,6 +50,7 @@
     <Compile Include="BLLs\BLL_GoiHanhLy.cs" />
     <Compile Include="BLLs\BLL_HoaDon.cs" />
     <Compile Include="BLLs\BLL_Khachhang.cs" />
+    <Compile Include="BLLs\BLL_MayBay.cs" />
     <Compile Include="BLLs\BLL_NguoiDung.cs" />
     <Compile Include="DAL\DBConnectionSQLServer.cs" />
     <Compile Include="GUIs\Frm_CapNhat.cs">

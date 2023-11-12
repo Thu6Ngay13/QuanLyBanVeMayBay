@@ -188,12 +188,12 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, sqlParameter, ref error);
         }
         public void ThemChuyenBay(
-            string MaMayMay,
+            int MaMayMay,
             string LoaiChuyenBay,
             string DiemDi,
             string DiemDen,
-            string ThoiGiandi,
-            string ThoiGianDuKienDen,
+            DateTime ThoiGiandi,
+            DateTime ThoiGianDuKienDen,
             string ChiPhi,
             string GiaVePhoThong,
             string GiaVeThuongGia,
@@ -230,7 +230,7 @@ namespace QuanLyBanVeMayBay.BLL
             ThemChuyenBayPhatHanhVeMayBay(GiaVeThuongGia, GiaVePhoThong, KhoiLuongHanhLy, MaChuyenBay, ref error);
         }
 
-        private bool ThemMayBayKhoiTaoChuyenBay(string MaMayBay, string MaChuyenBay, ref string error)
+        private bool ThemMayBayKhoiTaoChuyenBay(int MaMayBay, string MaChuyenBay, ref string error)
         {
             string sql = "EXEC khoitao_ChuyenBay_PROC " +
                          "@MaMayBay, " +
