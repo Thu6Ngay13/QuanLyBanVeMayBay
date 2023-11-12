@@ -267,7 +267,6 @@ namespace QuanLyBanVeMayBay.GUI
         private void LayThongTinHanhKhach()
         {
             UC_ThongTinTongTien thongtintongtien = new UC_ThongTinTongTien();
-            thongtintongtien.Lbl
         }
     }
 }
