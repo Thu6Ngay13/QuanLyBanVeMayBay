@@ -303,18 +303,18 @@
         private System.Windows.Forms.Label Lbl_Thue;
         private UC_DonViTien UC_DonViTien2;
         private UC_DonViTien UC_DonViTien1;
-        private System.Windows.Forms.Label Lbl_TongTienNguoiLon;
         private System.Windows.Forms.Label Lbl_NguoiLon;
-        private System.Windows.Forms.Label Lbl_SoLuongVeNguoiLon;
         private System.Windows.Forms.Label Lbl_TreEm;
-        private System.Windows.Forms.Label Lbl_SoLuongVeTreEm;
-        private System.Windows.Forms.Label Lbl_TongTienTreEm;
         private System.Windows.Forms.Label Lbl_HoaDon;
-        private System.Windows.Forms.Label Lbl_TongTienThue;
-        private System.Windows.Forms.Label Lbl_TongTienHanhLy;
-        private System.Windows.Forms.Label Lbl_SoLuongGoiHanhLy;
-        private System.Windows.Forms.Label Lbl_PhanTramThue;
         private UC_DonViTien UC_DonViTien5;
-        private System.Windows.Forms.Label Lbl_TongTienHoaDon;
+        public System.Windows.Forms.Label Lbl_TongTienNguoiLon;
+        public System.Windows.Forms.Label Lbl_TongTienTreEm;
+        public System.Windows.Forms.Label Lbl_TongTienThue;
+        public System.Windows.Forms.Label Lbl_TongTienHanhLy;
+        public System.Windows.Forms.Label Lbl_TongTienHoaDon;
+        public System.Windows.Forms.Label Lbl_SoLuongVeNguoiLon;
+        public System.Windows.Forms.Label Lbl_SoLuongVeTreEm;
+        public System.Windows.Forms.Label Lbl_SoLuongGoiHanhLy;
+        public System.Windows.Forms.Label Lbl_PhanTramThue;
     }
 }

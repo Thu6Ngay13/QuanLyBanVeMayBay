@@ -6,10 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace QuanLyBanVeMayBay.GUI
 {
@@ -23,6 +21,7 @@ namespace QuanLyBanVeMayBay.GUI
         int thutunguoilon = 0;
         int thututreem = -1;
         bool khuhoi = false;
+
         int goihanhly_chieudi = 1;
         int goihanhly_chieuve = 0;
 
@@ -82,9 +81,7 @@ namespace QuanLyBanVeMayBay.GUI
                 goihanhly.Lbl_MaGoiHanhLy.Text = dt.Rows[i]["MaGoi"].ToString();
                 goihanhly.Lbl_KhoiLuongMuaThem.Text = dt.Rows[i]["KhoiLuongMuaThem"].ToString();
                 goihanhly.Lbl_Gia.Text = dt.Rows[i]["GiaTien"].ToString();
-
-                goihanhly.Location = new System.Drawing.Point(10, 40 * i + 3);
-
+                goihanhly.Location = new Point(10, 40 * i + 3);
                 goihanhly.Btn_Chon.Click += Btn_Chon_Click;
                 this.Pnl_GoiHanhLy.Controls.Add(goihanhly);
             }
