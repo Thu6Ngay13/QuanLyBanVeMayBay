@@ -12,8 +12,9 @@ namespace QuanLyBanVeMayBay.BLL
         public BLL_ChuyenBay() 
         {
             db = new DBConnectionSQlServer();
-        }  
+        }
 
+        // Hàm này trả về một DataSet chứa các điểm đi có trong cơ sở dữ liệu
         public DataSet lay_DiemDi(ref string error)
         {
             string sql =
@@ -23,6 +24,7 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, null, ref error);
         }
 
+        // Hàm này trả về một DataSet chứa các điểm đến có trong cơ sở dữ liệu
         public DataSet lay_DiemDen(ref string error)
         {
             string sql =
@@ -32,6 +34,7 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, null, ref error);
         }
 
+        // Hàm này trả về một DataSet chứa các tình trạng của 1 chuyến bay có trong cơ sở dữ liệu
         public DataSet lay_TinhTrang(ref string error)
         {
             string sql =
@@ -40,7 +43,8 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, null, ref error);
         }
 
-        public DataSet lay_DanhSachChoNgoi_PROC(int machuyenbay,ref string error)
+        // Hàm này nhận vào 1 mã chuyến bay và trả về một DataSet chứa danh sách chỗ ngồi của 1 chuyến bay nào đó cơ sở dữ liệu
+        public DataSet lay_DanhSachChoNgoi_PROC(int machuyenbay, ref string error)
         {
             string sql =
                 "SELECT * " +
@@ -54,6 +58,12 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, sqlParameter, ref error);
         }
 
+        // Hàm này nhận vào
+        // số lượng đề xuất,
+        // điểm đi đi,
+        // điểm đếnn,
+        // ngân sách
+        // và trả về một DataSet chứa danh sách các chuyến bay được đề xuất trong cơ sở dữ liệu
         public DataSet lay_DeXuatChuyenBay(
             int soluongdexuat, 
             string diemdi,
@@ -99,6 +109,12 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, sqlParameter, ref error);
         }
 
+        // Hàm này nhận vào
+        // điểm đi,
+        // điểm đến,
+        // ngày đi, 
+        // số hành khách
+        // và trả về một DataSet chứa danh sách các chuyến bay được tìm thấy trong cơ sở dữ liệu
         public DataSet timkiem_VeMayBay(
             string diemdi,
             string diemden,
@@ -144,6 +160,12 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeQuery(sql, CommandType.Text, sqlParameter, ref error);
         }
 
+        // Hàm này nhận vào
+        // điểm đi,
+        // điểm đến,
+        // ngày đi, 
+        // tình trạng chuyến bay
+        // và trả về một DataSet chứa danh sách các chuyến bay được tìm thấy trong cơ sở dữ liệu
         public DataSet timkiem_ChuyenBay(
             string DiemDi, 
             string DiemDen,
@@ -187,6 +209,9 @@ namespace QuanLyBanVeMayBay.BLL
 
             return db.executeQuery(sql, CommandType.Text, sqlParameter, ref error);
         }
+
+        // Hàm này nhận vào các thông tin của 1 chuyến bay 
+        // sau đó thêm chuyến bay này vào trong cơ sở dữ liệu
         public void ThemChuyenBay(
             string MaMayMay,
             string LoaiChuyenBay,
@@ -230,6 +255,8 @@ namespace QuanLyBanVeMayBay.BLL
             ThemChuyenBayPhatHanhVeMayBay(GiaVeThuongGia, GiaVePhoThong, KhoiLuongHanhLy, MaChuyenBay, ref error);
         }
 
+        // Hàm này nhận vào 
+        // mã máy bay và mã chuyến bay để thêm vào bảng quan hệ khởi tạo 
         private bool ThemMayBayKhoiTaoChuyenBay(string MaMayBay, string MaChuyenBay, ref string error)
         {
             string sql = "EXEC khoitao_ChuyenBay_PROC " +
@@ -243,6 +270,12 @@ namespace QuanLyBanVeMayBay.BLL
             return db.executeNonQuery(sql, CommandType.Text, sqlParameters, ref error);
         }
 
+        //Hàm này nhận vào thông tin về chuyến bay như
+        // giá vé thương gia
+        // giá vé phổ thông
+        // khối lượng hành lý mặc định
+        // mã chuyến bay 
+        // để thực hiện phát hành vé máy bay
         private bool ThemChuyenBayPhatHanhVeMayBay(string GiaVeThuongGia, string GiaVePhoThong, string KhoiLuongHanhLy, string MaChuyenMay, ref string error)
         {
             string sql = "EXEC phathanh_VeMayBay_PROC " +

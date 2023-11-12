@@ -85,7 +85,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Teal;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(455, 47);
+            this.panel1.Size = new System.Drawing.Size(445, 47);
             this.panel1.TabIndex = 15;
             // 
             // Lbl_ChieuBay
@@ -133,7 +133,7 @@
             this.panel3.ForeColor = System.Drawing.Color.Teal;
             this.panel3.Location = new System.Drawing.Point(3, 51);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(455, 94);
+            this.panel3.Size = new System.Drawing.Size(445, 94);
             this.panel3.TabIndex = 17;
             // 
             // Lbl_MaChuyenBay
@@ -165,7 +165,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_ThongTinChieuBay";
-            this.Size = new System.Drawing.Size(461, 147);
+            this.Size = new System.Drawing.Size(451, 147);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
