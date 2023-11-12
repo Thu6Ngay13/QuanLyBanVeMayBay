@@ -199,8 +199,12 @@ namespace QuanLyBanVeMayBay.GUI
         {
             if (mavedachons.IndexOf(mave) != -1 || idx == -1)
                 return;
-            if (i1 >= thongTinChuyenBay.Sokhachnguoilon && j1 >= thongTinChuyenBay.Sokhachtreem &&
-                i2 >= thongTinChuyenBay.Sokhachnguoilon && j2 >= thongTinChuyenBay.Sokhachtreem)
+            if (i1 >= thongTinChuyenBay.Sokhachnguoilon 
+                && j1 >= thongTinChuyenBay.Sokhachtreem 
+                && thongTinChuyenBay.Machieuve <= 0)
+                return;
+            if (i2 >= thongTinChuyenBay.Sokhachnguoilon
+               && j2 >= thongTinChuyenBay.Sokhachtreem)
                 return;
 
             mavedachons.Add(mave);
@@ -236,9 +240,20 @@ namespace QuanLyBanVeMayBay.GUI
             buttons[idx].Text = "";
             buttons[idx].Click -= chonGhe;
             buttons[idx].Enabled = false;
-            
+
+            if (i1 >= thongTinChuyenBay.Sokhachnguoilon
+                && j1 >= thongTinChuyenBay.Sokhachtreem
+                && thongTinChuyenBay.Machieuve <= 0)
+                return;
+            if (i2 >= thongTinChuyenBay.Sokhachnguoilon
+               && j2 >= thongTinChuyenBay.Sokhachtreem)
+                return;
+
             LayDanhSachKhachHang();
-            if (i1 >= thongTinChuyenBay.Sokhachnguoilon && j1 >= thongTinChuyenBay.Sokhachtreem && currentSelect != 10)
+            if (i1 >= thongTinChuyenBay.Sokhachnguoilon 
+                && j1 >= thongTinChuyenBay.Sokhachtreem
+                && thongTinChuyenBay.Machieuve > 0
+                && currentSelect != 10)
             {
                 currentSelect = 10;
                 LayThongTinChoNgoi(thongTinChuyenBay.Machieuve);
