@@ -2,9 +2,9 @@
 
 namespace QuanLyBanVeMayBay.UC
 {
-    public partial class UC_ThongTinTongTien : UserControl
+    public partial class UC_ThongTinVeChieuBay : UserControl
     {
-        public UC_ThongTinTongTien()
+        public UC_ThongTinVeChieuBay()
         {
             InitializeComponent();
         }

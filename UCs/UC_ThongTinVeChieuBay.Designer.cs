@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanVeMayBay.UC
 {
-    partial class UC_ThongTinTongTien
+    partial class UC_ThongTinVeChieuBay
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,23 +29,16 @@
         private void InitializeComponent()
         {
             this.Lbl_GoiHanhLy = new System.Windows.Forms.Label();
-            this.Lbl_Thue = new System.Windows.Forms.Label();
             this.Lbl_TongTienNguoiLon = new System.Windows.Forms.Label();
             this.Lbl_NguoiLon = new System.Windows.Forms.Label();
             this.Lbl_SoLuongVeNguoiLon = new System.Windows.Forms.Label();
             this.Lbl_TreEm = new System.Windows.Forms.Label();
             this.Lbl_SoLuongVeTreEm = new System.Windows.Forms.Label();
             this.Lbl_TongTienTreEm = new System.Windows.Forms.Label();
-            this.Lbl_HoaDon = new System.Windows.Forms.Label();
-            this.Lbl_TongTienThue = new System.Windows.Forms.Label();
             this.Lbl_TongTienHanhLy = new System.Windows.Forms.Label();
             this.Lbl_SoLuongGoiHanhLy = new System.Windows.Forms.Label();
-            this.Lbl_PhanTramThue = new System.Windows.Forms.Label();
-            this.Lbl_TongTienHoaDon = new System.Windows.Forms.Label();
-            this.UC_DonViTien5 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.UC_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.UC_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
-            this.UC_DonViTien4 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.UC_DonViTien3 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
             this.SuspendLayout();
             // 
@@ -60,18 +53,6 @@
             this.Lbl_GoiHanhLy.Size = new System.Drawing.Size(108, 22);
             this.Lbl_GoiHanhLy.TabIndex = 25;
             this.Lbl_GoiHanhLy.Text = "Gói hành lý:";
-            // 
-            // Lbl_Thue
-            // 
-            this.Lbl_Thue.AutoSize = true;
-            this.Lbl_Thue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Thue.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_Thue.Location = new System.Drawing.Point(7, 121);
-            this.Lbl_Thue.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Lbl_Thue.Name = "Lbl_Thue";
-            this.Lbl_Thue.Size = new System.Drawing.Size(55, 22);
-            this.Lbl_Thue.TabIndex = 28;
-            this.Lbl_Thue.Text = "Thuế:";
             // 
             // Lbl_TongTienNguoiLon
             // 
@@ -145,30 +126,6 @@
             this.Lbl_TongTienTreEm.TabIndex = 36;
             this.Lbl_TongTienTreEm.Text = "1,740,000";
             // 
-            // Lbl_HoaDon
-            // 
-            this.Lbl_HoaDon.AutoSize = true;
-            this.Lbl_HoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_HoaDon.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_HoaDon.Location = new System.Drawing.Point(6, 158);
-            this.Lbl_HoaDon.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Lbl_HoaDon.Name = "Lbl_HoaDon";
-            this.Lbl_HoaDon.Size = new System.Drawing.Size(163, 22);
-            this.Lbl_HoaDon.TabIndex = 39;
-            this.Lbl_HoaDon.Text = "Tổng tiền hóa đơn: ";
-            // 
-            // Lbl_TongTienThue
-            // 
-            this.Lbl_TongTienThue.AutoSize = true;
-            this.Lbl_TongTienThue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_TongTienThue.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_TongTienThue.Location = new System.Drawing.Point(224, 121);
-            this.Lbl_TongTienThue.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Lbl_TongTienThue.Name = "Lbl_TongTienThue";
-            this.Lbl_TongTienThue.Size = new System.Drawing.Size(100, 22);
-            this.Lbl_TongTienThue.TabIndex = 40;
-            this.Lbl_TongTienThue.Text = "10 000 000";
-            // 
             // Lbl_TongTienHanhLy
             // 
             this.Lbl_TongTienHanhLy.AutoSize = true;
@@ -193,39 +150,6 @@
             this.Lbl_SoLuongGoiHanhLy.TabIndex = 42;
             this.Lbl_SoLuongGoiHanhLy.Text = "1";
             // 
-            // Lbl_PhanTramThue
-            // 
-            this.Lbl_PhanTramThue.AutoSize = true;
-            this.Lbl_PhanTramThue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_PhanTramThue.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_PhanTramThue.Location = new System.Drawing.Point(132, 121);
-            this.Lbl_PhanTramThue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_PhanTramThue.Name = "Lbl_PhanTramThue";
-            this.Lbl_PhanTramThue.Size = new System.Drawing.Size(37, 22);
-            this.Lbl_PhanTramThue.TabIndex = 44;
-            this.Lbl_PhanTramThue.Text = "5%";
-            // 
-            // Lbl_TongTienHoaDon
-            // 
-            this.Lbl_TongTienHoaDon.AutoSize = true;
-            this.Lbl_TongTienHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_TongTienHoaDon.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_TongTienHoaDon.Location = new System.Drawing.Point(224, 158);
-            this.Lbl_TongTienHoaDon.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Lbl_TongTienHoaDon.Name = "Lbl_TongTienHoaDon";
-            this.Lbl_TongTienHoaDon.Size = new System.Drawing.Size(135, 22);
-            this.Lbl_TongTienHoaDon.TabIndex = 46;
-            this.Lbl_TongTienHoaDon.Text = "10 000 000 000";
-            // 
-            // UC_DonViTien5
-            // 
-            this.UC_DonViTien5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UC_DonViTien5.Location = new System.Drawing.Point(406, 158);
-            this.UC_DonViTien5.Margin = new System.Windows.Forms.Padding(6);
-            this.UC_DonViTien5.Name = "UC_DonViTien5";
-            this.UC_DonViTien5.Size = new System.Drawing.Size(45, 22);
-            this.UC_DonViTien5.TabIndex = 45;
-            // 
             // UC_DonViTien2
             // 
             this.UC_DonViTien2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,15 +168,6 @@
             this.UC_DonViTien1.Size = new System.Drawing.Size(45, 22);
             this.UC_DonViTien1.TabIndex = 37;
             // 
-            // UC_DonViTien4
-            // 
-            this.UC_DonViTien4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UC_DonViTien4.Location = new System.Drawing.Point(406, 121);
-            this.UC_DonViTien4.Margin = new System.Windows.Forms.Padding(6);
-            this.UC_DonViTien4.Name = "UC_DonViTien4";
-            this.UC_DonViTien4.Size = new System.Drawing.Size(45, 22);
-            this.UC_DonViTien4.TabIndex = 30;
-            // 
             // UC_DonViTien3
             // 
             this.UC_DonViTien3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,18 +177,13 @@
             this.UC_DonViTien3.Size = new System.Drawing.Size(45, 22);
             this.UC_DonViTien3.TabIndex = 27;
             // 
-            // UC_ThongTinTongTien
+            // UC_ThongTinVeChieuBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.Controls.Add(this.Lbl_TongTienHoaDon);
-            this.Controls.Add(this.UC_DonViTien5);
-            this.Controls.Add(this.Lbl_PhanTramThue);
             this.Controls.Add(this.Lbl_SoLuongGoiHanhLy);
             this.Controls.Add(this.Lbl_TongTienHanhLy);
-            this.Controls.Add(this.Lbl_TongTienThue);
-            this.Controls.Add(this.Lbl_HoaDon);
             this.Controls.Add(this.UC_DonViTien2);
             this.Controls.Add(this.UC_DonViTien1);
             this.Controls.Add(this.Lbl_TongTienNguoiLon);
@@ -282,14 +192,12 @@
             this.Controls.Add(this.Lbl_TreEm);
             this.Controls.Add(this.Lbl_SoLuongVeTreEm);
             this.Controls.Add(this.Lbl_TongTienTreEm);
-            this.Controls.Add(this.UC_DonViTien4);
-            this.Controls.Add(this.Lbl_Thue);
             this.Controls.Add(this.UC_DonViTien3);
             this.Controls.Add(this.Lbl_GoiHanhLy);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UC_ThongTinTongTien";
-            this.Size = new System.Drawing.Size(461, 196);
+            this.Name = "UC_ThongTinVeChieuBay";
+            this.Size = new System.Drawing.Size(455, 126);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,22 +207,15 @@
 
         private UC_DonViTien UC_DonViTien3;
         private System.Windows.Forms.Label Lbl_GoiHanhLy;
-        private UC_DonViTien UC_DonViTien4;
-        private System.Windows.Forms.Label Lbl_Thue;
         private UC_DonViTien UC_DonViTien2;
         private UC_DonViTien UC_DonViTien1;
         private System.Windows.Forms.Label Lbl_NguoiLon;
         private System.Windows.Forms.Label Lbl_TreEm;
-        private System.Windows.Forms.Label Lbl_HoaDon;
-        private UC_DonViTien UC_DonViTien5;
         public System.Windows.Forms.Label Lbl_TongTienNguoiLon;
         public System.Windows.Forms.Label Lbl_TongTienTreEm;
-        public System.Windows.Forms.Label Lbl_TongTienThue;
         public System.Windows.Forms.Label Lbl_TongTienHanhLy;
-        public System.Windows.Forms.Label Lbl_TongTienHoaDon;
         public System.Windows.Forms.Label Lbl_SoLuongVeNguoiLon;
         public System.Windows.Forms.Label Lbl_SoLuongVeTreEm;
         public System.Windows.Forms.Label Lbl_SoLuongGoiHanhLy;
-        public System.Windows.Forms.Label Lbl_PhanTramThue;
     }
 }
