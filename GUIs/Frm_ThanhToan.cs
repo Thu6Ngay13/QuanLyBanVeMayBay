@@ -1,7 +1,8 @@
-﻿using HeQuanTriDemo01.Models;
+using HeQuanTriDemo01.Models;
 using QuanLyBanVeMayBay.BLL;
 using QuanLyBanVeMayBay.Models;
 using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -16,6 +17,10 @@ namespace QuanLyBanVeMayBay.GUI
         private ThongTinChuyenBay thongTinChuyenBay = null;
         private List<KhachHangNguoiLon> khachHangNguoiLons = null;
         private List<KhachHangTreEm> khachHangTreEms = null;
+        private Pair thongtinhoadon = null;
+
+        private int X = 2;
+        private int Y = 3;  
 
         public Frm_ThanhToan()
         {
@@ -35,6 +40,7 @@ namespace QuanLyBanVeMayBay.GUI
 
         private void Frm_ThanhToan_Load(object sender, EventArgs e)
         {
+            this.thongtinhoadon = khoitao_HoaDon();
             LayThongTinChuyenBay();
             LayThongTinHanhKhach();
         }
@@ -55,7 +61,6 @@ namespace QuanLyBanVeMayBay.GUI
 
         private void Btn_Xong_Click(object sender, EventArgs e)
         {
-            int mahoadon = khoitao_HoaDon();
             bool success1 = true;
             bool success2 = true;
 
@@ -71,7 +76,7 @@ namespace QuanLyBanVeMayBay.GUI
                     khachHangNguoiLons[i].Diachi,
                     khachHangNguoiLons[i].Magoihanhlychieudi,
                     khachHangNguoiLons[i].Mavechieudi,
-                    mahoadon);
+                    (int)thongtinhoadon.first);
 
                 khachHangNguoiLons[i].Makhachhangnguoilon = manguoilon;
                 success1 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieudi, manguoilon) && success1;
@@ -86,7 +91,7 @@ namespace QuanLyBanVeMayBay.GUI
                     khachHangTreEms[i].Ngaysinh,
                     khachHangTreEms[i].Magoihanhlychieudi,
                     khachHangTreEms[i].Mavechieudi,
-                    mahoadon);
+                    (int)thongtinhoadon.first);
 
                 khachHangTreEms[i].Makhachhangtreem = matreem;
                 success1 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieudi, matreem) && success1;
@@ -103,7 +108,7 @@ namespace QuanLyBanVeMayBay.GUI
 
             /*---------------------------------------------------------------------------------------*/
 
-            if(thongTinChuyenBay.Machieuve > 0)
+            if (thongTinChuyenBay.Machieuve > 0)
             {
                 // Chieu ve
                 for (int i = 0; i < khachHangNguoiLons.Count; ++i)
@@ -117,7 +122,7 @@ namespace QuanLyBanVeMayBay.GUI
                         khachHangNguoiLons[i].Diachi,
                         khachHangNguoiLons[i].Magoihanhlychieuve,
                         khachHangNguoiLons[i].Mavechieuve,
-                        mahoadon);
+                        (int)thongtinhoadon.first);
 
                     khachHangNguoiLons[i].Makhachhangnguoilon = manguoilon;
                     success1 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieuve, manguoilon) && success1;
@@ -133,7 +138,7 @@ namespace QuanLyBanVeMayBay.GUI
                         khachHangTreEms[i].Ngaysinh,
                         khachHangTreEms[i].Magoihanhlychieuve,
                         khachHangTreEms[i].Mavechieuve,
-                        mahoadon);
+                        (int)thongtinhoadon.first);
 
                     khachHangTreEms[i].Makhachhangtreem = matreem;
                     success1 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieuve, matreem) && success1;
@@ -153,12 +158,12 @@ namespace QuanLyBanVeMayBay.GUI
             this.Close();
         }
 
-        public int khoitao_HoaDon()
+        public Pair khoitao_HoaDon()
         {
             BLL_HoaDon bll = new BLL_HoaDon();
             string error = "";
 
-            int mahoadon = bll.khoitao_HoaDon(ref error);
+            Pair mahoadon = bll.khoitao_HoaDon(ref error);
             return mahoadon;
         }
 
@@ -241,16 +246,17 @@ namespace QuanLyBanVeMayBay.GUI
         {
             // Thong tin chieu di
             UC_ThongTinChieuBay thongTinChieuBay = new UC_ThongTinChieuBay();
-            thongTinChieuBay.Location = new Point(2, 3);
+            thongTinChieuBay.Location = new Point(X, Y);
             thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongTinChuyenBay.Machieudi);
             thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongTinChuyenBay.Mamaybaydi);
             thongTinChieuBay.Lbl_DiemDi.Text = thongTinChuyenBay.Diemdi;
             thongTinChieuBay.Lbl_DiemDen.Text = thongTinChuyenBay.Diemden;
             thongTinChieuBay.Lbl_GioDi.Text = thongTinChuyenBay.Thoigiandi.ToString();
             Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
+            Y = Y + 142;
 
             // Thong tin ve chieu ve
-            if (thongTinChuyenBay.Machieuve != -1)
+            if (thongTinChuyenBay.Machieuve > 0)
             {
                 thongTinChieuBay = new UC_ThongTinChieuBay();
                 thongTinChieuBay.Location = new Point(2, 145);
@@ -261,12 +267,116 @@ namespace QuanLyBanVeMayBay.GUI
                 thongTinChieuBay.Lbl_ChieuBay.Text = "Chiều về";
                 thongTinChieuBay.Lbl_GioDi.Text = thongTinChuyenBay.Thoigianve.ToString();
                 Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
+                Y = Y + 142;
             }
         }
 
         private void LayThongTinHanhKhach()
         {
-            UC_ThongTinTongTien thongtintongtien = new UC_ThongTinTongTien();
+
+            UC_ThongTinVeChieuBay thongtinvechieubaydi = new UC_ThongTinVeChieuBay();
+            thongtinvechieubaydi.Location = new Point(X, Y);
+
+            double tongtiennguoilonchieudi = 0;
+            double tongtientreemchieudi = 0;
+            double tongtienhanhlychieudi = 0;
+            int soluonggoihanhlychieudi = 0;
+
+            for (int i = 0; i < khachHangNguoiLons.Count; ++i)
+                tongtiennguoilonchieudi += khachHangNguoiLons[i].Giatienvechieudi;
+
+            for (int i = 0; i < khachHangTreEms.Count; ++i)
+                tongtientreemchieudi += khachHangTreEms[i].Giatienvechieudi;
+
+            for (int i = 0; i < khachHangNguoiLons.Count; ++i)
+            {
+                if (khachHangNguoiLons[i].Magoihanhlychieudi > 0)
+                {
+                    tongtienhanhlychieudi += khachHangNguoiLons[i].Giatiengoihanhlychieudi;
+                    soluonggoihanhlychieudi++;
+                }
+            }
+
+            for (int i = 0; i < khachHangTreEms.Count; ++i)
+            {
+                if (khachHangTreEms[i].Magoihanhlychieudi > 0)
+                {
+                    tongtienhanhlychieudi += khachHangTreEms[i].Giatiengoihanhlychieudi;
+                    soluonggoihanhlychieudi++;
+                }
+            }
+            thongtinvechieubaydi.Lbl_ChieuBay.Text = "Chiều đi";
+
+            thongtinvechieubaydi.Lbl_SoLuongVeNguoiLon.Text = thongTinChuyenBay.Sokhachnguoilon.ToString();
+            thongtinvechieubaydi.Lbl_SoLuongVeTreEm.Text = thongTinChuyenBay.Sokhachtreem.ToString();
+            thongtinvechieubaydi.Lbl_SoLuongGoiHanhLy.Text = soluonggoihanhlychieudi.ToString();
+
+            thongtinvechieubaydi.Lbl_TongTienNguoiLon.Text = tongtiennguoilonchieudi.ToString();
+            thongtinvechieubaydi.Lbl_TongTienTreEm.Text = tongtientreemchieudi.ToString();
+            thongtinvechieubaydi.Lbl_TongTienHanhLy.Text = tongtienhanhlychieudi.ToString();
+
+            this.Pnl_HanhTrinh.Controls.Add(thongtinvechieubaydi);
+            Y = Y + 156;
+
+            double tongtiennguoilonchieuve = 0;
+            double tongtientreemchieuve = 0;
+            double tongtienhanhlychieuve = 0;
+            int soluonggoihanhlychieuve = 0;
+
+            if (thongTinChuyenBay.Machieuve > 0)
+            {
+                UC_ThongTinVeChieuBay thongtinvechieubayve = new UC_ThongTinVeChieuBay();
+                thongtinvechieubayve.Location = new Point(X, Y);
+
+                for (int i = 0; i < khachHangNguoiLons.Count; ++i)
+                    tongtiennguoilonchieuve += khachHangNguoiLons[i].Giatienvechieuve;
+
+                for (int i = 0; i < khachHangTreEms.Count; ++i)
+                    tongtientreemchieuve += khachHangTreEms[i].Giatienvechieuve;
+
+                for (int i = 0; i < khachHangNguoiLons.Count; ++i)
+                {
+                    if (khachHangNguoiLons[i].Magoihanhlychieuve > 0)
+                    {
+                        tongtienhanhlychieuve += khachHangNguoiLons[i].Giatiengoihanhlychieuve;
+                        soluonggoihanhlychieuve++;
+                    }
+                }
+
+                for (int i = 0; i < khachHangTreEms.Count; ++i)
+                {
+                    if (khachHangTreEms[i].Magoihanhlychieuve > 0)
+                    {
+                        tongtienhanhlychieuve += khachHangTreEms[i].Giatiengoihanhlychieuve;
+                        soluonggoihanhlychieuve++;
+                    }
+                }
+                thongtinvechieubayve.Lbl_ChieuBay.Text = "Chiều về";
+
+                thongtinvechieubayve.Lbl_SoLuongVeNguoiLon.Text = thongTinChuyenBay.Sokhachnguoilon.ToString();
+                thongtinvechieubayve.Lbl_SoLuongVeTreEm.Text = thongTinChuyenBay.Sokhachtreem.ToString();
+                thongtinvechieubayve.Lbl_SoLuongGoiHanhLy.Text = soluonggoihanhlychieuve.ToString();
+
+                thongtinvechieubayve.Lbl_TongTienNguoiLon.Text = tongtiennguoilonchieuve.ToString();
+                thongtinvechieubayve.Lbl_TongTienTreEm.Text = tongtientreemchieuve.ToString();
+                thongtinvechieubayve.Lbl_TongTienHanhLy.Text = tongtienhanhlychieuve.ToString();
+
+                this.Pnl_HanhTrinh.Controls.Add(thongtinvechieubayve);
+                Y = Y + 156;
+            }
+
+            double thue = (double)thongtinhoadon.second;
+            double tongtienvehanhly =
+                tongtiennguoilonchieudi + tongtientreemchieudi + tongtienhanhlychieudi
+                + tongtiennguoilonchieuve + tongtientreemchieuve + tongtienhanhlychieuve;
+            double tongtienthue = tongtienvehanhly * thue;
+
+            UC_ThongTinThanhToan thongtinthanhtoan = new UC_ThongTinThanhToan();
+            thongtinthanhtoan.Location = new Point(X, Y);
+            thongtinthanhtoan.Lbl_PhanTramThue.Text = (100 * thue).ToString() + "%";
+            thongtinthanhtoan.Lbl_TongTienThue.Text = tongtienthue.ToString();
+            thongtinthanhtoan.Lbl_TongTienHoaDon.Text = (tongtienthue + tongtienvehanhly).ToString();
+            this.Pnl_HanhTrinh.Controls.Add(thongtinthanhtoan);
         }
     }
 }

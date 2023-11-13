@@ -40,13 +40,14 @@ namespace QuanLyBanVeMayBay.BLL
         }
 
         // Hàm khởi tạo hóa đơn mới và trả về mã hóa đơn vừa tạo
-        public int khoitao_HoaDon(ref string error)
+        public Pair khoitao_HoaDon(ref string error)
         {
             string sql = 
                 "EXEC dbo.khoitao_HoaDon_PROC " +
-                "@MaHoaDon OUTPUT";
+                "@MaHoaDon OUTPUT, " +
+                "@Thue OUTPUT";
 
-            SqlParameter[] sqlParameter = new SqlParameter[1];
+            SqlParameter[] sqlParameter = new SqlParameter[2];
             sqlParameter[0] = new SqlParameter()
             {
                 ParameterName = "@MaHoaDon",
@@ -54,11 +55,21 @@ namespace QuanLyBanVeMayBay.BLL
                 Direction = ParameterDirection.Output
             };
 
+            sqlParameter[1] = new SqlParameter()
+            {
+                ParameterName = "@Thue",
+                SqlDbType = SqlDbType.Float,
+                Direction = ParameterDirection.Output
+            };
+
             bool success = db.executeNonQuery(sql, CommandType.Text, sqlParameter, ref error);
             int mahoadon = (int)sqlParameter[0].Value;
+            double thue = (double)sqlParameter[1].Value;
 
-            if (success) return mahoadon;
-            return -1;
+            Pair pair = new Pair(mahoadon, thue);
+
+            if (success) return pair;
+            return null;
         }
 
         // Hàm nhận vào 2 tham số: mã người dùng, mã hóa đơn

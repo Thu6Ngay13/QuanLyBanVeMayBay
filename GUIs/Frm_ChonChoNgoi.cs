@@ -30,6 +30,7 @@ namespace QuanLyBanVeMayBay.GUI
         private int Y = 10;
 
         private int mave = -1;
+        private double giave = -1;
         private int idx = -1;
 
         private int currentSelect = 5;
@@ -39,6 +40,7 @@ namespace QuanLyBanVeMayBay.GUI
 
         private List<int> mavedachons = new List<int>();
         private List<int> maves = new List<int>();
+        private List<double> giaves = new List<double>();
 
         public Frm_ChonChoNgoi()
         {
@@ -137,6 +139,7 @@ namespace QuanLyBanVeMayBay.GUI
                         btn_ChuaMua.Click += chonGhe;
                         buttons.Add(btn_ChuaMua);
                         maves.Add(Convert.ToInt32(datatable.Rows[numCols * row + col]["MaVe"].ToString()));
+                        giaves.Add(Convert.ToDouble(datatable.Rows[numCols * row + col]["GiaVe"].ToString()));
                         Pnl_ChonViTri.Controls.Add(btn_ChuaMua);
 
                     }
@@ -189,14 +192,19 @@ namespace QuanLyBanVeMayBay.GUI
             Button temp = sender as Button;
             idx = buttons.IndexOf(temp);
             mave = maves[idx];
+            giave = giaves[idx];
         }
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)
         {
             if (mavedachons.IndexOf(mave) != -1 || idx == -1)
                 return;
-            if (i1 >= thongTinChuyenBay.Sokhachnguoilon && j1 >= thongTinChuyenBay.Sokhachtreem &&
-                i2 >= thongTinChuyenBay.Sokhachnguoilon && j2 >= thongTinChuyenBay.Sokhachtreem)
+            if (i1 >= thongTinChuyenBay.Sokhachnguoilon 
+                && j1 >= thongTinChuyenBay.Sokhachtreem 
+                && thongTinChuyenBay.Machieuve <= 0)
+                return;
+            if (i2 >= thongTinChuyenBay.Sokhachnguoilon
+               && j2 >= thongTinChuyenBay.Sokhachtreem)
                 return;
 
             mavedachons.Add(mave);
@@ -206,31 +214,46 @@ namespace QuanLyBanVeMayBay.GUI
             if (i1 < thongTinChuyenBay.Sokhachnguoilon && currentSelect == 5)
             {
                 khachHangNguoiLons[i1].Mavechieudi = mave;
+                khachHangNguoiLons[i1].Giatienvechieudi = giave;
                 i1 = i1 + 1;
             }
             else if (j1 < thongTinChuyenBay.Sokhachtreem && currentSelect == 5)
             {
                 khachHangTreEms[j1].Mavechieudi = mave;
+                khachHangTreEms[j1].Giatienvechieudi = giave;
                 j1 = j1 + 1;
 
             }
             else if (i2 < thongTinChuyenBay.Sokhachnguoilon && currentSelect == 10)
             {
                 khachHangNguoiLons[i2].Mavechieuve = mave;
+                khachHangNguoiLons[i2].Giatienvechieuve = giave;
                 i2 = i2 + 1;
             }
             else if (currentSelect == 10 && j2 < thongTinChuyenBay.Sokhachtreem)
             {
                 khachHangTreEms[j2].Mavechieuve = mave;
+                khachHangTreEms[j2].Giatienvechieuve = giave;
                 j2 = j2 + 1;
             }
 
             buttons[idx].Text = "";
             buttons[idx].Click -= chonGhe;
             buttons[idx].Enabled = false;
-            
+
+            if (i1 >= thongTinChuyenBay.Sokhachnguoilon
+                && j1 >= thongTinChuyenBay.Sokhachtreem
+                && thongTinChuyenBay.Machieuve <= 0)
+                return;
+            if (i2 >= thongTinChuyenBay.Sokhachnguoilon
+               && j2 >= thongTinChuyenBay.Sokhachtreem)
+                return;
+
             LayDanhSachKhachHang();
-            if (i1 >= thongTinChuyenBay.Sokhachnguoilon && j1 >= thongTinChuyenBay.Sokhachtreem && currentSelect != 10)
+            if (i1 >= thongTinChuyenBay.Sokhachnguoilon 
+                && j1 >= thongTinChuyenBay.Sokhachtreem
+                && thongTinChuyenBay.Machieuve > 0
+                && currentSelect != 10)
             {
                 currentSelect = 10;
                 LayThongTinChoNgoi(thongTinChuyenBay.Machieuve);

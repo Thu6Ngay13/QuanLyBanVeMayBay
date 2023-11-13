@@ -46,7 +46,6 @@ namespace QuanLyBanVeMayBay.GUI
         }
         private void LayGoiHanhLy(int thutu)
         {
-            /*MessageBox.Show(thutu.ToString());*/
             if (thututreem == -1)
             {
                 Lbl_TenKhachHang.Text = string.Concat("Khách hàng: ",khachHangNguoiLons[thutu].Hoten);
@@ -99,12 +98,12 @@ namespace QuanLyBanVeMayBay.GUI
                             if (thututreem != -1)
                             {
                                 khachHangTreEms[thututreem].Magoihanhlychieudi = Convert.ToInt32(goihanhly.Lbl_MaGoiHanhLy.Text);
-                                khachHangTreEms[thututreem].Giatiengoihanhlychieudi = float.Parse(goihanhly.Lbl_Gia.Text);
+                                khachHangTreEms[thututreem].Giatiengoihanhlychieudi = Convert.ToDouble(goihanhly.Lbl_Gia.Text);
                             }
                             else
                             {
                                 khachHangNguoiLons[thutunguoilon].Magoihanhlychieudi = Convert.ToInt32(goihanhly.Lbl_MaGoiHanhLy.Text);
-                                khachHangNguoiLons[thutunguoilon].Giatiengoihanhlychieudi= float.Parse(goihanhly.Lbl_Gia.Text);
+                                khachHangNguoiLons[thutunguoilon].Giatiengoihanhlychieudi= Convert.ToDouble(goihanhly.Lbl_Gia.Text);
                             }
                         }
                         else if (Cmb_Chieu.Text == "Chiều về")
@@ -112,12 +111,12 @@ namespace QuanLyBanVeMayBay.GUI
                             if (thututreem != -1)
                             {
                                 khachHangTreEms[thututreem].Magoihanhlychieuve = Convert.ToInt32(goihanhly.Lbl_MaGoiHanhLy.Text);
-                                khachHangTreEms[thututreem].Giatiengoihanhlychieuve = float.Parse(goihanhly.Lbl_Gia.Text);
+                                khachHangTreEms[thututreem].Giatiengoihanhlychieuve = Convert.ToDouble(goihanhly.Lbl_Gia.Text);
                             }
                             else
                             {
                                 khachHangNguoiLons[thutunguoilon].Magoihanhlychieuve = Convert.ToInt32(goihanhly.Lbl_MaGoiHanhLy.Text);
-                                khachHangNguoiLons[thutunguoilon].Giatiengoihanhlychieuve = float.Parse(goihanhly.Lbl_Gia.Text);
+                                khachHangNguoiLons[thutunguoilon].Giatiengoihanhlychieuve = Convert.ToDouble(goihanhly.Lbl_Gia.Text);
                             }
                         }
                         else
@@ -192,15 +191,6 @@ namespace QuanLyBanVeMayBay.GUI
                 }
                 else
                 {
-                    foreach (KhachHangNguoiLon khachHangNguoiLon in khachHangNguoiLons)
-                    {
-                        MessageBox.Show(khachHangNguoiLon.Giatiengoihanhlychieudi.ToString() + "   " + khachHangNguoiLon.Giatiengoihanhlychieuve.ToString());
-                    }
-                    foreach (KhachHangTreEm khachHangTreEm in khachHangTreEms)
-                    {
-                        MessageBox.Show(khachHangTreEm.Giatiengoihanhlychieudi.ToString() + "   " + khachHangTreEm.Giatiengoihanhlychieuve.ToString());
-                    }
-
                     this.Hide();   
 
                     Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi(khachHangNguoiLons, khachHangTreEms, thongtinchuyenbay);
