@@ -154,8 +154,8 @@ namespace QuanLyBanVeMayBay.GUI
                 }
             }
 
-            if (success1 && success2) MessageBox.Show("Thành công !");
-            else MessageBox.Show("Thất bại !");
+            if (success1 && success2) MessageBox.Show("Thành công!");
+            else MessageBox.Show("Thất bại!");
 
             thanhtoanthanhcong = 999;
             this.Close();

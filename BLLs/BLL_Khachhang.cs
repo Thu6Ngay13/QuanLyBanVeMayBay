@@ -80,14 +80,14 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[6] = new SqlParameter()
             {
                 ParameterName = "@MaVe",
-                Value = ((mave > 0) ? DBNull.Value : (object)mave)
+                Value = ((mave <= 0) ? DBNull.Value : (object)mave)
 
             };
 
             sqlParameter[7] = new SqlParameter()
             {
                 ParameterName = "@MaGoi",
-                Value = ((magoi > 0) ? DBNull.Value : (object)magoi)
+                Value = ((magoi <= 0) ? DBNull.Value : (object)magoi)
 
             };
 
@@ -154,14 +154,14 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[3] = new SqlParameter()
             {
                 ParameterName = "@MaVe",
-                Value = ((mave > 0) ? DBNull.Value : (object)mave)
+                Value = ((mave <= 0) ? DBNull.Value : (object)mave)
 
             };
 
             sqlParameter[4] = new SqlParameter()
             {
                 ParameterName = "@MaGoi",
-                Value = ((magoi > 0) ? DBNull.Value : (object)magoi)
+                Value = ((magoi <= 0) ? DBNull.Value : (object)magoi)
 
             };
 

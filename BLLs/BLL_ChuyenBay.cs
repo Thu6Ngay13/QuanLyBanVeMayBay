@@ -102,7 +102,7 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[3] = new SqlParameter()
             {
                 ParameterName = "@NganSach",
-                Value = ((ngansach == -1) ? DBNull.Value : (object)ngansach)
+                Value = ((ngansach <= 0) ? DBNull.Value : (object)ngansach)
 
             };
 
@@ -153,7 +153,7 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[3] = new SqlParameter()
             {
                 ParameterName = "@SoHanhKhach",
-                Value = ((sohanhkhach > 0) ? DBNull.Value : (object)sohanhkhach)
+                Value = ((sohanhkhach <= 0) ? DBNull.Value : (object)sohanhkhach)
 
             };
 
