@@ -20,7 +20,7 @@ namespace QuanLyBanVeMayBay.BLLs
         }
         public DataSet DanhSachMayBay()
         {
-            return db.executeQuery("select MaMaybay from view_ThongTinMayBay", CommandType.Text, parameters, ref err);
+            return db.executeQuery("SELECT * FROM lay_MaMayBay_FUNC()", CommandType.Text, parameters, ref err);
         }
     }
 }
