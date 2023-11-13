@@ -191,7 +191,7 @@ namespace QuanLyBanVeMayBay.GUI
                 }
                 else
                 {
-                    this.Hide();   
+                    this.Hide();
 
                     Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi(khachHangNguoiLons, khachHangTreEms, thongtinchuyenbay);
                     frm_ChonChoNgoi.ShowDialog();

@@ -94,7 +94,7 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[1] = new SqlParameter()
             {
                 ParameterName = "@MaHoaDon",
-                Value = ((mahoadon == -1) ? DBNull.Value : (object)mahoadon)
+                Value = ((mahoadon > 0) ? DBNull.Value : (object)mahoadon)
             };
 
             return db.executeQuery(sql, CommandType.Text, sqlParameter, ref error);
