@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Cbb_MaMayBay = new System.Windows.Forms.ComboBox();
             this.Dtp_ThoiGianDuKienDen = new System.Windows.Forms.DateTimePicker();
             this.Dtp_ThoiGianDi = new System.Windows.Forms.DateTimePicker();
             this.Txt_KhoiLuongHanhLy = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Btn_CapNhatChuyenBay = new System.Windows.Forms.Button();
             this.Btn_ThemChuyenBay = new System.Windows.Forms.Button();
-            this.Cbb_MaMayBay = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.Pnl_ChucNang.SuspendLayout();
             this.Pnl_Header.SuspendLayout();
@@ -96,6 +96,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1237, 420);
             this.panel4.TabIndex = 22;
+            // 
+            // Cbb_MaMayBay
+            // 
+            this.Cbb_MaMayBay.FormattingEnabled = true;
+            this.Cbb_MaMayBay.Location = new System.Drawing.Point(201, 32);
+            this.Cbb_MaMayBay.Name = "Cbb_MaMayBay";
+            this.Cbb_MaMayBay.Size = new System.Drawing.Size(360, 30);
+            this.Cbb_MaMayBay.TabIndex = 41;
             // 
             // Dtp_ThoiGianDuKienDen
             // 
@@ -371,14 +379,6 @@
             this.Btn_ThemChuyenBay.TabIndex = 0;
             this.Btn_ThemChuyenBay.Text = "Thêm chuyến bay";
             this.Btn_ThemChuyenBay.UseVisualStyleBackColor = true;
-            // 
-            // Cbb_MaMayBay
-            // 
-            this.Cbb_MaMayBay.FormattingEnabled = true;
-            this.Cbb_MaMayBay.Location = new System.Drawing.Point(201, 32);
-            this.Cbb_MaMayBay.Name = "Cbb_MaMayBay";
-            this.Cbb_MaMayBay.Size = new System.Drawing.Size(360, 30);
-            this.Cbb_MaMayBay.TabIndex = 41;
             // 
             // Frm_TrangChuNguoiQuanLy
             // 

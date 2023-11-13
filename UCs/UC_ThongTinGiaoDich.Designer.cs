@@ -110,7 +110,7 @@
             this.Lbl_SoLuongVe.TabIndex = 7;
             this.Lbl_SoLuongVe.Text = "2";
             // 
-            // UC_ThongTinHoaDon
+            // UC_ThongTinGiaoDich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +127,7 @@
             this.Controls.Add(this.Lbl_ThongTinMaHoaDon);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UC_ThongTinHoaDon";
+            this.Name = "UC_ThongTinGiaoDich";
             this.Size = new System.Drawing.Size(822, 80);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,9 +140,9 @@
         private System.Windows.Forms.Label Lbl_ThongTinTongTien;
         private System.Windows.Forms.Label Lbl_ThongTinThoiGianThanhToan;
         private System.Windows.Forms.Label Lbl_ThongTinSoLuongVe;
-        private System.Windows.Forms.Label Lbl_MaHoaDon;
-        private System.Windows.Forms.Label Lbl_ThoiGianThanhToan;
-        private System.Windows.Forms.Label Lbl_TongTien;
-        private System.Windows.Forms.Label Lbl_SoLuongVe;
+        public System.Windows.Forms.Label Lbl_MaHoaDon;
+        public System.Windows.Forms.Label Lbl_ThoiGianThanhToan;
+        public System.Windows.Forms.Label Lbl_TongTien;
+        public System.Windows.Forms.Label Lbl_SoLuongVe;
     }
 }
