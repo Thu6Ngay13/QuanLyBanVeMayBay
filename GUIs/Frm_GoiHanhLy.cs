@@ -1,7 +1,7 @@
 ﻿using HeQuanTriDemo01.Models;
-using QuanLyBanVeMayBay.BLL;
+using QuanLyBanVeMayBay.BLLs;
 using QuanLyBanVeMayBay.Models;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_GoiHanhLy : Form
     {
@@ -37,6 +37,16 @@ namespace QuanLyBanVeMayBay.GUI
             this.khachHangTreEms = khachHangTreEms;
             this.thongtinchuyenbay = thongTinChuyenBay;
             khuhoi = thongTinChuyenBay.Khuhoi;
+            foreach (KhachHangNguoiLon khachHangNguoiLon in khachHangNguoiLons)
+            {
+                khachHangNguoiLon.Magoihanhlychieudi = -1;
+                khachHangNguoiLon.Magoihanhlychieuve = -1;
+            }
+            foreach (KhachHangTreEm KhachHangTreEm in khachHangTreEms)
+            {
+                KhachHangTreEm.Magoihanhlychieudi = -1;
+                KhachHangTreEm.Magoihanhlychieuve = -1;
+            }
         }
 
         private void Frm_GoiHanhLy_Load(object sender, System.EventArgs e)

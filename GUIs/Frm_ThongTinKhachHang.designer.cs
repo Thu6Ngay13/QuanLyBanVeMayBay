@@ -1,6 +1,6 @@
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.UCs;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     partial class Frm_ThongTinKhachHang
     {
@@ -51,10 +51,10 @@ namespace QuanLyBanVeMayBay.GUI
             this.Lbl_NguoiLon = new System.Windows.Forms.Label();
             this.Lbl_GiaVeNL = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.usc_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
-            this.usc_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
-            this.uC_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
-            this.uC_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.usc_DonViTien2 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
+            this.usc_DonViTien1 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
+            this.uC_DonViTien1 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
+            this.uC_DonViTien2 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
             this.Pnl_ChiTietChuyenBay.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();

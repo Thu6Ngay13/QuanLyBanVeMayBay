@@ -3,14 +3,14 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace QuanLyBanVeMayBay.BLL
+namespace QuanLyBanVeMayBay.BLLs
 {
     public class BLL_KhachHang
     {
         DBConnectionSQlServer db = null;
         public BLL_KhachHang()
         {
-            db = new DBConnectionSQlServer();
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
         public int them_KhachHangNguoiLon(
             string hoten,

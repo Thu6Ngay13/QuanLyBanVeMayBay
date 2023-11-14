@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-namespace QuanLyBanVeMayBay.BLL
+namespace QuanLyBanVeMayBay.BLLs
 {
     public class BLL_GoiHanhLy
     {
@@ -12,13 +12,13 @@ namespace QuanLyBanVeMayBay.BLL
         string err = "";
         public BLL_GoiHanhLy()
         {
-            db = new DBConnectionSQlServer();
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
         
         // Hàm này trả về 1 DataSet chứa các gói hành lý được lấy cơ sở dữ liệu
         public DataSet LayGoiHanhLy()
         {
-            return db.executeQuery("select * from lay_GoiHanhLy", CommandType.Text, parameters, ref err);
+            return db.executeQuery("select * from lay_GoiHanhLy()", CommandType.Text, parameters, ref err);
         }
 
         // Hàm này thực hiện việc thêm gói hành lý vào mã vé và trả về kết quả thực hiện kiểu bool

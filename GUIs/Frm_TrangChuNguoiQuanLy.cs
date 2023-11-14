@@ -1,11 +1,9 @@
-﻿using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.BLLs;
+﻿using QuanLyBanVeMayBay.BLLs;
 using System;
 using System.Data;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_TrangChuNguoiQuanLy : Form
     {

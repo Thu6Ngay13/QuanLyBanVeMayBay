@@ -1,16 +1,15 @@
 ﻿using QuanLyBanVeMayBay.DAL;
-using System;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace QuanLyBanVeMayBay.BLL
+namespace QuanLyBanVeMayBay.BLLs
 {
     public class BLL_HoaDon
     {
         DBConnectionSQlServer db = null;
         public BLL_HoaDon()
         {
-            db = new DBConnectionSQlServer();   
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
 
         // Hàm nhận tham số mã hóa đơn và trả về danh sách chi tiết vé máy bay

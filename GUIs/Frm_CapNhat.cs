@@ -1,11 +1,11 @@
-﻿using QuanLyBanVeMayBay.BLL;
+using QuanLyBanVeMayBay.BLL;
 using QuanLyBanVeMayBay.GUIs;
 using QuanLyBanVeMayBay.UC;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_CapNhat : Form
     {

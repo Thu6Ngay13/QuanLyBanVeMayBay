@@ -1,11 +1,10 @@
 using System;
-using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
-using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.BLLs;
+using QuanLyBanVeMayBay.UCs;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_MuaVe : Form
     {

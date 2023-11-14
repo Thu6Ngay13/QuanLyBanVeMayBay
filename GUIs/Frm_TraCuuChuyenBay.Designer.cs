@@ -1,6 +1,4 @@
-﻿using QuanLyBanVeMayBay.UC;
-
-namespace QuanLyBanVeMayBay.GUI
+﻿namespace QuanLyBanVeMayBay.GUIs
 {
     partial class Frm_TraCuuChuyenBay
     {

@@ -1,10 +1,10 @@
-﻿using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.UC;
+﻿using QuanLyBanVeMayBay.BLLs;
+using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_QuanLyNguoiDung : Form
     {
