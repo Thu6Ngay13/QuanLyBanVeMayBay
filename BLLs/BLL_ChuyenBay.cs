@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using QuanLyBanVeMayBay.DAL;
 
-namespace QuanLyBanVeMayBay.BLL
+namespace QuanLyBanVeMayBay.BLLs
 {
     public class BLL_ChuyenBay
     {
@@ -11,7 +11,7 @@ namespace QuanLyBanVeMayBay.BLL
 
         public BLL_ChuyenBay() 
         {
-            db = new DBConnectionSQlServer();
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
 
         // Hàm này trả về một DataSet chứa các điểm đi có trong cơ sở dữ liệu

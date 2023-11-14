@@ -1,11 +1,10 @@
 ﻿using HeQuanTriDemo01.Models;
-using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.BLLs;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_TimKiemChuyenBay : Form
     {

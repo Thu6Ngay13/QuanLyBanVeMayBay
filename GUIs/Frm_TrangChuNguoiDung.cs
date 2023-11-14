@@ -2,15 +2,13 @@
 using System.Data;
 using System.Windows.Forms;
 using HeQuanTriDemo01.Models;
-using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.BLLs;
+using QuanLyBanVeMayBay.UCs;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_TrangChuNguoiDung : Form
     {
-        private ThongTinChuyenBay thongtinchuyenbaydaluachon = null;
-
         public Frm_TrangChuNguoiDung()
         {
             InitializeComponent();

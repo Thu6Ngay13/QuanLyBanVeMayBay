@@ -1,22 +1,17 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
-using System.Windows;
 
 namespace QuanLyBanVeMayBay.DAL
 {
     public class DBConnectionSQlServer
     {
-        private readonly string stringconnection = 
-            "Data Source = localhost;"
-            + "Initial Catalog = QuanLyBanVeMayBay;"
-            + "Integrated Security=True;";
+        private SqlConnection conn = null;
+        private SqlCommand cmd = null;
 
-        private readonly SqlConnection conn = null;
-        private readonly SqlCommand cmd = null;
-
-        public DBConnectionSQlServer() 
+        public DBConnectionSQlServer() {}
+        public DBConnectionSQlServer(string stringConnection)
         {
-            conn = new SqlConnection(stringconnection);
+            conn = new SqlConnection(stringConnection);
             cmd = conn.CreateCommand();
         }
 

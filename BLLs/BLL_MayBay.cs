@@ -11,7 +11,7 @@ namespace QuanLyBanVeMayBay.BLLs
         string err = "";
         public BLL_MayBay()
         {
-            db = new DBConnectionSQlServer();
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
         public DataSet DanhSachMayBay()
         {

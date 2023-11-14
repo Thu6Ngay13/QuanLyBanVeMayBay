@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.UC
+namespace QuanLyBanVeMayBay.UCs
 {
     public partial class UC_ThongTinGiaoDich : UserControl
     {

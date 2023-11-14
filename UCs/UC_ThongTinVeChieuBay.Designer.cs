@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.UC
+﻿namespace QuanLyBanVeMayBay.UCs
 {
     partial class UC_ThongTinVeChieuBay
     {
@@ -32,15 +32,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Lbl_SoLuongGoiHanhLy = new System.Windows.Forms.Label();
             this.Lbl_TongTienHanhLy = new System.Windows.Forms.Label();
-            this.UC_DonViTien2 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
-            this.UC_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.UC_DonViTien2 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
+            this.UC_DonViTien1 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
             this.Lbl_TongTienNguoiLon = new System.Windows.Forms.Label();
             this.Lbl_NguoiLon = new System.Windows.Forms.Label();
             this.Lbl_SoLuongVeNguoiLon = new System.Windows.Forms.Label();
             this.Lbl_TreEm = new System.Windows.Forms.Label();
             this.Lbl_SoLuongVeTreEm = new System.Windows.Forms.Label();
             this.Lbl_TongTienTreEm = new System.Windows.Forms.Label();
-            this.UC_DonViTien3 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.UC_DonViTien3 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
             this.Lbl_GoiHanhLy = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
