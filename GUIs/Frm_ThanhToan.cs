@@ -78,7 +78,7 @@ namespace QuanLyBanVeMayBay.GUIs
                     (int)thongtinhoadon.first);
 
                 khachHangNguoiLons[i].Makhachhangnguoilon = manguoilon;
-                success1 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieudi, manguoilon) && success1;
+                success1 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieudi, ConstantDATA.maNguoiDung) && success1;
             }
 
             // Chieu di
@@ -93,7 +93,7 @@ namespace QuanLyBanVeMayBay.GUIs
                     (int)thongtinhoadon.first);
 
                 khachHangTreEms[i].Makhachhangtreem = matreem;
-                success1 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieudi, matreem) && success1;
+                success1 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieudi, ConstantDATA.maNguoiDung) && success1;
             }
 
             // Chieu di
@@ -124,7 +124,7 @@ namespace QuanLyBanVeMayBay.GUIs
                         (int)thongtinhoadon.first);
 
                     khachHangNguoiLons[i].Makhachhangnguoilon = manguoilon;
-                    success2 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieuve, manguoilon) && success2;
+                    success2 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieuve, ConstantDATA.maNguoiDung) && success2;
 
                 }
 
@@ -140,7 +140,7 @@ namespace QuanLyBanVeMayBay.GUIs
                         (int)thongtinhoadon.first);
 
                     khachHangTreEms[i].Makhachhangtreem = matreem;
-                    success2 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieuve, matreem) && success2;
+                    success2 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieuve, ConstantDATA.maNguoiDung) && success2;
                 }
 
                 // Chieu ve

@@ -27,6 +27,8 @@ namespace QuanLyBanVeMayBay.GUIs
 
             string stringconnection = datatable.Rows[0]["stringConnection"].ToString();
             string numofrole = datatable.Rows[0]["NumOfRole"].ToString();
+            int manguoidung = Convert.ToInt32(datatable.Rows[0]["MaNguoiDung"]);
+
 
             if (error != "") MessageBox.Show("Hệ thống gặp sự cố vui lòng quay lại sau");
             else if (stringconnection == "0") MessageBox.Show("Tài khoản mật khẩu không chính xác");
@@ -34,6 +36,9 @@ namespace QuanLyBanVeMayBay.GUIs
             {
                 MessageBox.Show("Đăng nhập thành công");
                 ConstantDATA.stringConnection = stringconnection;
+                ConstantDATA.numOfRole = numofrole;
+                ConstantDATA.maNguoiDung = manguoidung;
+
                 this.Hide();
                 if (numofrole == "5")
                 {

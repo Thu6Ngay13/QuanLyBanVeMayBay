@@ -1,6 +1,5 @@
-using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.GUIs;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.BLLs;
+using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Data;
 using System.Windows.Forms;

@@ -37,6 +37,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_DangNhap = new System.Windows.Forms.Button();
             this.Tab_SignUp = new System.Windows.Forms.TabPage();
+            this.Txt_Email_DKy = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Txt_HoTen_DKy = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Txt_NhapLaiMatKhau_DKy = new System.Windows.Forms.TextBox();
@@ -46,10 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Img_HinhNen = new System.Windows.Forms.Panel();
-            this.Txt_HoTen_DKy = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Txt_Email_DKy = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.Tab_Login_Register.SuspendLayout();
             this.Tab_SignIn.SuspendLayout();
             this.Tab_SignUp.SuspendLayout();
@@ -87,6 +87,7 @@
             // 
             this.Txt_MatKhau_DNhap.Location = new System.Drawing.Point(172, 185);
             this.Txt_MatKhau_DNhap.Name = "Txt_MatKhau_DNhap";
+            this.Txt_MatKhau_DNhap.PasswordChar = '*';
             this.Txt_MatKhau_DNhap.Size = new System.Drawing.Size(249, 30);
             this.Txt_MatKhau_DNhap.TabIndex = 5;
             // 
@@ -157,6 +158,38 @@
             this.Tab_SignUp.TabIndex = 1;
             this.Tab_SignUp.Text = "SIGN UP";
             this.Tab_SignUp.UseVisualStyleBackColor = true;
+            // 
+            // Txt_Email_DKy
+            // 
+            this.Txt_Email_DKy.Location = new System.Drawing.Point(202, 220);
+            this.Txt_Email_DKy.Name = "Txt_Email_DKy";
+            this.Txt_Email_DKy.Size = new System.Drawing.Size(260, 30);
+            this.Txt_Email_DKy.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(30, 228);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 22);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Email: ";
+            // 
+            // Txt_HoTen_DKy
+            // 
+            this.Txt_HoTen_DKy.Location = new System.Drawing.Point(202, 158);
+            this.Txt_HoTen_DKy.Name = "Txt_HoTen_DKy";
+            this.Txt_HoTen_DKy.Size = new System.Drawing.Size(260, 30);
+            this.Txt_HoTen_DKy.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 22);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Họ tên: ";
             // 
             // label7
             // 
@@ -235,38 +268,6 @@
             this.Img_HinhNen.Name = "Img_HinhNen";
             this.Img_HinhNen.Size = new System.Drawing.Size(756, 675);
             this.Img_HinhNen.TabIndex = 1;
-            // 
-            // Txt_HoTen_DKy
-            // 
-            this.Txt_HoTen_DKy.Location = new System.Drawing.Point(202, 158);
-            this.Txt_HoTen_DKy.Name = "Txt_HoTen_DKy";
-            this.Txt_HoTen_DKy.Size = new System.Drawing.Size(260, 30);
-            this.Txt_HoTen_DKy.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 166);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 22);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Họ tên: ";
-            // 
-            // Txt_Email_DKy
-            // 
-            this.Txt_Email_DKy.Location = new System.Drawing.Point(202, 220);
-            this.Txt_Email_DKy.Name = "Txt_Email_DKy";
-            this.Txt_Email_DKy.Size = new System.Drawing.Size(260, 30);
-            this.Txt_Email_DKy.TabIndex = 13;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(30, 228);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 22);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Email: ";
             // 
             // Frm_Login
             // 
