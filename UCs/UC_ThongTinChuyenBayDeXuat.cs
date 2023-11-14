@@ -1,8 +1,8 @@
-﻿using QuanLyBanVeMayBay.GUI;
+﻿using QuanLyBanVeMayBay.GUIs;
 using System;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.UC
+namespace QuanLyBanVeMayBay.UCs
 {
     public partial class UC_ThongTinChuyenBayDeXuat : UserControl
     {

@@ -1,7 +1,7 @@
 ﻿using HeQuanTriDemo01.Models;
-using QuanLyBanVeMayBay.BLL;
+using QuanLyBanVeMayBay.BLLs;
 using QuanLyBanVeMayBay.Models;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_GoiHanhLy : Form
     {
@@ -201,7 +201,7 @@ namespace QuanLyBanVeMayBay.GUI
                 }
                 else
                 {
-                    this.Hide();   
+                    this.Hide();
 
                     Frm_ChonChoNgoi frm_ChonChoNgoi = new Frm_ChonChoNgoi(khachHangNguoiLons, khachHangTreEms, thongtinchuyenbay);
                     frm_ChonChoNgoi.ShowDialog();

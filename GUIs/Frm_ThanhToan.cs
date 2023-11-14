@@ -1,14 +1,13 @@
 using HeQuanTriDemo01.Models;
-using QuanLyBanVeMayBay.BLL;
+using QuanLyBanVeMayBay.BLLs;
 using QuanLyBanVeMayBay.Models;
-using QuanLyBanVeMayBay.UC;
 using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_ThanhToan : Form
     {
@@ -53,7 +52,7 @@ namespace QuanLyBanVeMayBay.GUI
             if (ThoiGianConLai == 0)
             {
                 this.Tmr_ThoiGianConLai.Stop();
-                thanhtoanthanhcong = 0;
+                thanhtoanthanhcong = 999;
                 DialogResult rs = MessageBox.Show("Hết thời gian thanh toán", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 if (rs == DialogResult.OK) this.Close();
             }
@@ -74,8 +73,8 @@ namespace QuanLyBanVeMayBay.GUI
                     khachHangNguoiLons[i].Sodienthoai,
                     khachHangNguoiLons[i].Email,
                     khachHangNguoiLons[i].Diachi,
-                    khachHangNguoiLons[i].Magoihanhlychieudi,
                     khachHangNguoiLons[i].Mavechieudi,
+                    khachHangNguoiLons[i].Magoihanhlychieudi,
                     (int)thongtinhoadon.first);
 
                 khachHangNguoiLons[i].Makhachhangnguoilon = manguoilon;
@@ -89,8 +88,8 @@ namespace QuanLyBanVeMayBay.GUI
                     khachHangTreEms[i].Hoten,
                     khachHangTreEms[i].Gioitinh,
                     khachHangTreEms[i].Ngaysinh,
-                    khachHangTreEms[i].Magoihanhlychieudi,
                     khachHangTreEms[i].Mavechieudi,
+                    khachHangTreEms[i].Magoihanhlychieudi,
                     (int)thongtinhoadon.first);
 
                 khachHangTreEms[i].Makhachhangtreem = matreem;
@@ -102,7 +101,7 @@ namespace QuanLyBanVeMayBay.GUI
             {
                 for(int j = 0; j < khachHangTreEms.Count; ++j)
                 {
-                    success2 = them_NguoiLonQuanLyTreEm(khachHangNguoiLons[i].Makhachhangnguoilon, khachHangTreEms[j].Makhachhangtreem) && success2;
+                    success1 = them_NguoiLonQuanLyTreEm(khachHangNguoiLons[i].Makhachhangnguoilon, khachHangTreEms[j].Makhachhangtreem) && success1;
                 }
             }
 
@@ -120,12 +119,12 @@ namespace QuanLyBanVeMayBay.GUI
                         khachHangNguoiLons[i].Sodienthoai,
                         khachHangNguoiLons[i].Email,
                         khachHangNguoiLons[i].Diachi,
-                        khachHangNguoiLons[i].Magoihanhlychieuve,
                         khachHangNguoiLons[i].Mavechieuve,
+                        khachHangNguoiLons[i].Magoihanhlychieuve,
                         (int)thongtinhoadon.first);
 
                     khachHangNguoiLons[i].Makhachhangnguoilon = manguoilon;
-                    success1 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieuve, manguoilon) && success1;
+                    success2 = them_ThongTinNguoiDungMuaVe(khachHangNguoiLons[i].Mavechieuve, manguoilon) && success2;
 
                 }
 
@@ -136,12 +135,12 @@ namespace QuanLyBanVeMayBay.GUI
                         khachHangTreEms[i].Hoten,
                         khachHangTreEms[i].Gioitinh,
                         khachHangTreEms[i].Ngaysinh,
-                        khachHangTreEms[i].Magoihanhlychieuve,
                         khachHangTreEms[i].Mavechieuve,
+                        khachHangTreEms[i].Magoihanhlychieuve,
                         (int)thongtinhoadon.first);
 
                     khachHangTreEms[i].Makhachhangtreem = matreem;
-                    success1 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieuve, matreem) && success1;
+                    success2 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieuve, matreem) && success2;
                 }
 
                 // Chieu ve
@@ -153,6 +152,9 @@ namespace QuanLyBanVeMayBay.GUI
                     }
                 }
             }
+
+            if (success1 && success2) MessageBox.Show("Thành công!");
+            else MessageBox.Show("Thất bại!");
 
             thanhtoanthanhcong = 999;
             this.Close();

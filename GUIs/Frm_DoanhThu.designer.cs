@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.GUI
+﻿namespace QuanLyBanVeMayBay.GUIs
 {
     partial class Frm_DoanhThu
     {

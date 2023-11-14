@@ -31,9 +31,9 @@
             this.Lbl_PhanTramThue = new System.Windows.Forms.Label();
             this.Lbl_Thue = new System.Windows.Forms.Label();
             this.Lbl_TongTienHoaDon = new System.Windows.Forms.Label();
-            this.uC_DonViTien1 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.uC_DonViTien1 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
             this.Lbl_TongTien = new System.Windows.Forms.Label();
-            this.UC_DonViTien4 = new QuanLyBanVeMayBay.UC.UC_DonViTien();
+            this.UC_DonViTien4 = new QuanLyBanVeMayBay.UCs.UC_DonViTien();
             this.Lbl_TongTienThue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -141,9 +141,9 @@
         public System.Windows.Forms.Label Lbl_PhanTramThue;
         private System.Windows.Forms.Label Lbl_Thue;
         public System.Windows.Forms.Label Lbl_TongTienHoaDon;
-        private UC.UC_DonViTien uC_DonViTien1;
+        private UC_DonViTien uC_DonViTien1;
         private System.Windows.Forms.Label Lbl_TongTien;
-        private UC.UC_DonViTien UC_DonViTien4;
+        private UC_DonViTien UC_DonViTien4;
         public System.Windows.Forms.Label Lbl_TongTienThue;
     }
 }

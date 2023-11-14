@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.UC
+﻿namespace QuanLyBanVeMayBay.UCs
 {
     partial class UC_ThongTinChuyenBayDeXuat
     {

@@ -50,8 +50,10 @@
     <Compile Include="BLLs\BLL_GoiHanhLy.cs" />
     <Compile Include="BLLs\BLL_HoaDon.cs" />
     <Compile Include="BLLs\BLL_Khachhang.cs" />
+    <Compile Include="BLLs\BLL_Login.cs" />
     <Compile Include="BLLs\BLL_MayBay.cs" />
     <Compile Include="BLLs\BLL_NguoiDung.cs" />
+    <Compile Include="ConstantDATA.cs" />
     <Compile Include="DAL\DBConnectionSQLServer.cs" />
     <Compile Include="GUIs\Frm_CapNhat.cs">
       <SubType>Form</SubType>
@@ -82,6 +84,12 @@
     </Compile>
     <Compile Include="GUIs\Frm_HanhKhach.designer.cs">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="GUIs\Frm_TimKiemChuyenBay.cs">
       <SubType>Form</SubType>
@@ -260,6 +268,9 @@
     <EmbeddedResource Include="GUIs\Frm_HanhKhach.resx">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_MuaVe.resx">
       <DependentUpon>Frm_MuaVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +329,9 @@
     <EmbeddedResource Include="UCs\UC_ThongTinChuyenBayDeXuat.resx">
       <DependentUpon>UC_ThongTinChuyenBayDeXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinGiaoDich.resx">
+      <DependentUpon>UC_ThongTinGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinHoaDon.resx">
       <DependentUpon>UC_ThongTinHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +368,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ImageDeXuatChuyenBay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HinhNen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
