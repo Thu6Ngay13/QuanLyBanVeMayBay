@@ -17,8 +17,8 @@ namespace QuanLyBanVeMayBay.GUIs
             BLL_Login bll = new BLL_Login();
             string error = "";
 
-            string sodienthoai = Txt_Username_DNhap.Text.Trim();
-            string matkhau = Txt_Password_DNhap.Text.Trim();
+            string sodienthoai = Txt_SoDienThoai_DNhap.Text.Trim();
+            string matkhau = Txt_MatKhau_DNhap.Text.Trim();
 
             DataSet dataset = bll.kiemtra_DangNhap(sodienthoai, matkhau, ref error);
             DataTable datatable = new DataTable();
@@ -57,15 +57,25 @@ namespace QuanLyBanVeMayBay.GUIs
             BLL_Login bll = new BLL_Login();
             string error = "";
 
-            string hoten = "";
-            string sodienthoai = "";
-            string email = "";
-            string matkhau = "";
+            string hoten = Txt_HoTen_DKy.Text.Trim();
+            string sodienthoai = Txt_SoDienThoai_DKy.Text.Trim();
+            string email = Txt_Email_DKy.Text.Trim();
+            string matkhau = Txt_MatKhau_DKy.Text.Trim();
+            string nhaplaimatkhau = Txt_NhapLaiMatKhau_DKy.Text.Trim();
 
-            bool dangkythanhcong = bll.dangky_TaiKhoan(hoten, sodienthoai, email, matkhau, ref error);
+            if (matkhau != nhaplaimatkhau)
+            {
+                MessageBox.Show("Kiểm tra lại mật khẩu");
+            }
+            else
+            {
+                bool dangkythanhcong = bll.dangky_TaiKhoan(hoten, sodienthoai, email, matkhau, ref error);
 
-            if (error != "" || dangkythanhcong == false) MessageBox.Show("Số điện thoại hoặc email đã được sử dụng");
-            else MessageBox.Show("Đăng ký thành công");
+                if (error != "" || dangkythanhcong == false) MessageBox.Show("Số điện thoại hoặc email đã được sử dụng");
+                else MessageBox.Show("Đăng ký thành công");
+            }
+
+            
         }
     }
 }

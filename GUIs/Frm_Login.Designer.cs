@@ -30,8 +30,8 @@
         {
             this.Tab_Login_Register = new System.Windows.Forms.TabControl();
             this.Tab_SignIn = new System.Windows.Forms.TabPage();
-            this.Txt_Password_DNhap = new System.Windows.Forms.TextBox();
-            this.Txt_Username_DNhap = new System.Windows.Forms.TextBox();
+            this.Txt_MatKhau_DNhap = new System.Windows.Forms.TextBox();
+            this.Txt_SoDienThoai_DNhap = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,13 +39,17 @@
             this.Tab_SignUp = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.Txt_RePassword_DKy = new System.Windows.Forms.TextBox();
-            this.Txt_Password_DKy = new System.Windows.Forms.TextBox();
+            this.Txt_NhapLaiMatKhau_DKy = new System.Windows.Forms.TextBox();
+            this.Txt_MatKhau_DKy = new System.Windows.Forms.TextBox();
             this.Btn_DangKy = new System.Windows.Forms.Button();
-            this.Txt_Username_DKy = new System.Windows.Forms.TextBox();
+            this.Txt_SoDienThoai_DKy = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Img_HinhNen = new System.Windows.Forms.Panel();
+            this.Txt_HoTen_DKy = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Txt_Email_DKy = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.Tab_Login_Register.SuspendLayout();
             this.Tab_SignIn.SuspendLayout();
             this.Tab_SignUp.SuspendLayout();
@@ -65,8 +69,8 @@
             // 
             // Tab_SignIn
             // 
-            this.Tab_SignIn.Controls.Add(this.Txt_Password_DNhap);
-            this.Tab_SignIn.Controls.Add(this.Txt_Username_DNhap);
+            this.Tab_SignIn.Controls.Add(this.Txt_MatKhau_DNhap);
+            this.Tab_SignIn.Controls.Add(this.Txt_SoDienThoai_DNhap);
             this.Tab_SignIn.Controls.Add(this.label3);
             this.Tab_SignIn.Controls.Add(this.label2);
             this.Tab_SignIn.Controls.Add(this.label1);
@@ -79,19 +83,19 @@
             this.Tab_SignIn.Text = "SIGN IN";
             this.Tab_SignIn.UseVisualStyleBackColor = true;
             // 
-            // Txt_Password_DNhap
+            // Txt_MatKhau_DNhap
             // 
-            this.Txt_Password_DNhap.Location = new System.Drawing.Point(172, 185);
-            this.Txt_Password_DNhap.Name = "Txt_Password_DNhap";
-            this.Txt_Password_DNhap.Size = new System.Drawing.Size(249, 30);
-            this.Txt_Password_DNhap.TabIndex = 5;
+            this.Txt_MatKhau_DNhap.Location = new System.Drawing.Point(172, 185);
+            this.Txt_MatKhau_DNhap.Name = "Txt_MatKhau_DNhap";
+            this.Txt_MatKhau_DNhap.Size = new System.Drawing.Size(249, 30);
+            this.Txt_MatKhau_DNhap.TabIndex = 5;
             // 
-            // Txt_Username_DNhap
+            // Txt_SoDienThoai_DNhap
             // 
-            this.Txt_Username_DNhap.Location = new System.Drawing.Point(172, 109);
-            this.Txt_Username_DNhap.Name = "Txt_Username_DNhap";
-            this.Txt_Username_DNhap.Size = new System.Drawing.Size(249, 30);
-            this.Txt_Username_DNhap.TabIndex = 4;
+            this.Txt_SoDienThoai_DNhap.Location = new System.Drawing.Point(172, 109);
+            this.Txt_SoDienThoai_DNhap.Name = "Txt_SoDienThoai_DNhap";
+            this.Txt_SoDienThoai_DNhap.Size = new System.Drawing.Size(249, 30);
+            this.Txt_SoDienThoai_DNhap.TabIndex = 4;
             // 
             // label3
             // 
@@ -134,12 +138,16 @@
             // 
             // Tab_SignUp
             // 
+            this.Tab_SignUp.Controls.Add(this.Txt_Email_DKy);
+            this.Tab_SignUp.Controls.Add(this.label9);
+            this.Tab_SignUp.Controls.Add(this.Txt_HoTen_DKy);
+            this.Tab_SignUp.Controls.Add(this.label8);
             this.Tab_SignUp.Controls.Add(this.label7);
             this.Tab_SignUp.Controls.Add(this.label6);
-            this.Tab_SignUp.Controls.Add(this.Txt_RePassword_DKy);
-            this.Tab_SignUp.Controls.Add(this.Txt_Password_DKy);
+            this.Tab_SignUp.Controls.Add(this.Txt_NhapLaiMatKhau_DKy);
+            this.Tab_SignUp.Controls.Add(this.Txt_MatKhau_DKy);
             this.Tab_SignUp.Controls.Add(this.Btn_DangKy);
-            this.Tab_SignUp.Controls.Add(this.Txt_Username_DKy);
+            this.Tab_SignUp.Controls.Add(this.Txt_SoDienThoai_DKy);
             this.Tab_SignUp.Controls.Add(this.label5);
             this.Tab_SignUp.Controls.Add(this.label4);
             this.Tab_SignUp.Location = new System.Drawing.Point(4, 31);
@@ -153,39 +161,39 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 235);
+            this.label7.Location = new System.Drawing.Point(30, 356);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 22);
+            this.label7.Size = new System.Drawing.Size(163, 22);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Retype password: ";
+            this.label7.Text = "Nhập lại mật khẩu: ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 172);
+            this.label6.Location = new System.Drawing.Point(30, 293);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 22);
+            this.label6.Size = new System.Drawing.Size(93, 22);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Password: ";
+            this.label6.Text = "Mật khẩu: ";
             // 
-            // Txt_RePassword_DKy
+            // Txt_NhapLaiMatKhau_DKy
             // 
-            this.Txt_RePassword_DKy.Location = new System.Drawing.Point(202, 227);
-            this.Txt_RePassword_DKy.Name = "Txt_RePassword_DKy";
-            this.Txt_RePassword_DKy.Size = new System.Drawing.Size(260, 30);
-            this.Txt_RePassword_DKy.TabIndex = 7;
+            this.Txt_NhapLaiMatKhau_DKy.Location = new System.Drawing.Point(202, 348);
+            this.Txt_NhapLaiMatKhau_DKy.Name = "Txt_NhapLaiMatKhau_DKy";
+            this.Txt_NhapLaiMatKhau_DKy.Size = new System.Drawing.Size(260, 30);
+            this.Txt_NhapLaiMatKhau_DKy.TabIndex = 7;
             // 
-            // Txt_Password_DKy
+            // Txt_MatKhau_DKy
             // 
-            this.Txt_Password_DKy.Location = new System.Drawing.Point(202, 164);
-            this.Txt_Password_DKy.Name = "Txt_Password_DKy";
-            this.Txt_Password_DKy.Size = new System.Drawing.Size(260, 30);
-            this.Txt_Password_DKy.TabIndex = 6;
+            this.Txt_MatKhau_DKy.Location = new System.Drawing.Point(202, 285);
+            this.Txt_MatKhau_DKy.Name = "Txt_MatKhau_DKy";
+            this.Txt_MatKhau_DKy.Size = new System.Drawing.Size(260, 30);
+            this.Txt_MatKhau_DKy.TabIndex = 6;
             // 
             // Btn_DangKy
             // 
             this.Btn_DangKy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_DangKy.Location = new System.Drawing.Point(347, 289);
+            this.Btn_DangKy.Location = new System.Drawing.Point(347, 410);
             this.Btn_DangKy.Name = "Btn_DangKy";
             this.Btn_DangKy.Size = new System.Drawing.Size(115, 44);
             this.Btn_DangKy.TabIndex = 5;
@@ -193,21 +201,21 @@
             this.Btn_DangKy.UseVisualStyleBackColor = true;
             this.Btn_DangKy.Click += new System.EventHandler(this.Btn_DangKy_Click);
             // 
-            // Txt_Username_DKy
+            // Txt_SoDienThoai_DKy
             // 
-            this.Txt_Username_DKy.Location = new System.Drawing.Point(202, 101);
-            this.Txt_Username_DKy.Name = "Txt_Username_DKy";
-            this.Txt_Username_DKy.Size = new System.Drawing.Size(260, 30);
-            this.Txt_Username_DKy.TabIndex = 4;
+            this.Txt_SoDienThoai_DKy.Location = new System.Drawing.Point(202, 101);
+            this.Txt_SoDienThoai_DKy.Name = "Txt_SoDienThoai_DKy";
+            this.Txt_SoDienThoai_DKy.Size = new System.Drawing.Size(260, 30);
+            this.Txt_SoDienThoai_DKy.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(30, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 22);
+            this.label5.Size = new System.Drawing.Size(125, 22);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Username: ";
+            this.label5.Text = "Số điện thoại: ";
             // 
             // label4
             // 
@@ -227,6 +235,38 @@
             this.Img_HinhNen.Name = "Img_HinhNen";
             this.Img_HinhNen.Size = new System.Drawing.Size(756, 675);
             this.Img_HinhNen.TabIndex = 1;
+            // 
+            // Txt_HoTen_DKy
+            // 
+            this.Txt_HoTen_DKy.Location = new System.Drawing.Point(202, 158);
+            this.Txt_HoTen_DKy.Name = "Txt_HoTen_DKy";
+            this.Txt_HoTen_DKy.Size = new System.Drawing.Size(260, 30);
+            this.Txt_HoTen_DKy.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 22);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Họ tên: ";
+            // 
+            // Txt_Email_DKy
+            // 
+            this.Txt_Email_DKy.Location = new System.Drawing.Point(202, 220);
+            this.Txt_Email_DKy.Name = "Txt_Email_DKy";
+            this.Txt_Email_DKy.Size = new System.Drawing.Size(260, 30);
+            this.Txt_Email_DKy.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(30, 228);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 22);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Email: ";
             // 
             // Frm_Login
             // 
@@ -255,19 +295,23 @@
         private System.Windows.Forms.TabPage Tab_SignIn;
         private System.Windows.Forms.Button Btn_DangNhap;
         private System.Windows.Forms.TabPage Tab_SignUp;
-        private System.Windows.Forms.TextBox Txt_Password_DNhap;
-        private System.Windows.Forms.TextBox Txt_Username_DNhap;
+        private System.Windows.Forms.TextBox Txt_MatKhau_DNhap;
+        private System.Windows.Forms.TextBox Txt_SoDienThoai_DNhap;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Txt_RePassword_DKy;
-        private System.Windows.Forms.TextBox Txt_Password_DKy;
+        private System.Windows.Forms.TextBox Txt_NhapLaiMatKhau_DKy;
+        private System.Windows.Forms.TextBox Txt_MatKhau_DKy;
         private System.Windows.Forms.Button Btn_DangKy;
-        private System.Windows.Forms.TextBox Txt_Username_DKy;
+        private System.Windows.Forms.TextBox Txt_SoDienThoai_DKy;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel Img_HinhNen;
+        private System.Windows.Forms.TextBox Txt_Email_DKy;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Txt_HoTen_DKy;
+        private System.Windows.Forms.Label label8;
     }
 }

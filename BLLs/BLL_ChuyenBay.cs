@@ -44,11 +44,11 @@ namespace QuanLyBanVeMayBay.BLLs
         }
 
         // Hàm này nhận vào 1 mã chuyến bay và trả về một DataSet chứa danh sách chỗ ngồi của 1 chuyến bay nào đó cơ sở dữ liệu
-        public DataSet lay_DanhSachChoNgoi_PROC(int machuyenbay, ref string error)
+        public DataSet lay_DanhSachChoNgoi(int machuyenbay, ref string error)
         {
             string sql =
                 "SELECT * " +
-                "FROM lay_DanhSachChoNgoi_PROC(@MaChuyenBay)";
+                "FROM lay_DanhSachChoNgoi_FUNC(@MaChuyenBay)";
             SqlParameter[] sqlParameter = new SqlParameter[1];
             sqlParameter[0] = new SqlParameter()
             {
