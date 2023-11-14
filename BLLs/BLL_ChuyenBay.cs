@@ -291,5 +291,35 @@ namespace QuanLyBanVeMayBay.BLLs
             };
             return db.executeNonQuery(sql, CommandType.Text, sqlParameters, ref error);
         }
+
+        public bool CapNhatChuyenBay(
+                    int MaChuyenBay,
+                    string TinhTrangChuyenBay,
+                    DateTime ThoiGianDi,
+                    DateTime ThoiGianDuKienDen,
+                    float GiaVePhoThong,
+                    float GiaVeThuongGia,
+                    ref string error)
+        {
+            string sql =
+                         "EXEC capnhat_ThongTinChuyenBay_PROC " +
+                         "@MaChuyenBay, " +
+                         "@TinhTrangChuyenBay, " +
+                         "@ThoiGianDi, " +
+                         "@ThoiGianDuKienDen, " +
+                         "@GiaVePhoThong, " +
+                         "@GiaVeThuongGia ";
+               
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaChuyenBay", MaChuyenBay),
+                new SqlParameter("@TinhTrangChuyenBay", TinhTrangChuyenBay),
+                new SqlParameter("@ThoiGianDi", ThoiGianDi),
+                new SqlParameter("@ThoiGianDuKienDen", ThoiGianDuKienDen),
+                new SqlParameter("@GiaVePhoThong", GiaVePhoThong),
+                new SqlParameter("GiaVeThuongGia", GiaVeThuongGia)
+            };
+            return db.executeNonQuery(sql, CommandType.Text, sqlParameters, ref error);
+        }
     }
 }

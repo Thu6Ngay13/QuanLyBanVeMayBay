@@ -1,4 +1,4 @@
-﻿using HeQuanTriDemo01.Models;
+using HeQuanTriDemo01.Models;
 using QuanLyBanVeMayBay.BLLs;
 using QuanLyBanVeMayBay.Models;
 using QuanLyBanVeMayBay.UCs;
@@ -246,6 +246,7 @@ namespace QuanLyBanVeMayBay.GUIs
                 return;
 
             LayDanhSachKhachHang();
+            buttons[idx].BackColor = Color.Silver;
             if (i1 >= thongTinChuyenBay.Sokhachnguoilon 
                 && j1 >= thongTinChuyenBay.Sokhachtreem
                 && thongTinChuyenBay.Machieuve > 0

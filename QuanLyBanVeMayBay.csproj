@@ -61,6 +61,12 @@
     <Compile Include="GUIs\Frm_CapNhat.designer.cs">
       <DependentUpon>Frm_CapNhat.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUIs\Frm_CapNhatThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\Frm_CapNhatThongTin.Designer.cs">
+      <DependentUpon>Frm_CapNhatThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUIs\Frm_ChonChoNgoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </Compile>
     <EmbeddedResource Include="GUIs\Frm_CapNhat.resx">
       <DependentUpon>Frm_CapNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_CapNhatThongTin.resx">
+      <DependentUpon>Frm_CapNhatThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_ChonChoNgoi.resx">
       <DependentUpon>Frm_ChonChoNgoi.cs</DependentUpon>

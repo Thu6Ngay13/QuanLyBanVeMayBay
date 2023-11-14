@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
 
 namespace QuanLyBanVeMayBay.UCs
 {
@@ -8,6 +8,5 @@ namespace QuanLyBanVeMayBay.UCs
         {
             InitializeComponent();
         }
-
     }
 }
