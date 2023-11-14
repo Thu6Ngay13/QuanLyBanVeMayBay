@@ -37,6 +37,16 @@ namespace QuanLyBanVeMayBay.GUI
             this.khachHangTreEms = khachHangTreEms;
             this.thongtinchuyenbay = thongTinChuyenBay;
             khuhoi = thongTinChuyenBay.Khuhoi;
+            foreach (KhachHangNguoiLon khachHangNguoiLon in khachHangNguoiLons)
+            {
+                khachHangNguoiLon.Magoihanhlychieudi = -1;
+                khachHangNguoiLon.Magoihanhlychieuve = -1;
+            }
+            foreach (KhachHangTreEm KhachHangTreEm in khachHangTreEms)
+            {
+                KhachHangTreEm.Magoihanhlychieudi = -1;
+                KhachHangTreEm.Magoihanhlychieuve = -1;
+            }
         }
 
         private void Frm_GoiHanhLy_Load(object sender, System.EventArgs e)
