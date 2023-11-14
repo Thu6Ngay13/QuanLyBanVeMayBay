@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyBanVeMayBay.GUI;
+using QuanLyBanVeMayBay.GUIs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,5 @@ namespace QuanLyBanVeMayBay.UC
         {
             InitializeComponent();
         }
-
     }
 }
