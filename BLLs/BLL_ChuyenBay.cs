@@ -102,7 +102,7 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[3] = new SqlParameter()
             {
                 ParameterName = "@NganSach",
-                Value = ((ngansach == -1) ? DBNull.Value : (object)ngansach)
+                Value = ((ngansach <= 0) ? DBNull.Value : (object)ngansach)
 
             };
 
@@ -153,7 +153,7 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[3] = new SqlParameter()
             {
                 ParameterName = "@SoHanhKhach",
-                Value = ((sohanhkhach == -1) ? DBNull.Value : (object)sohanhkhach)
+                Value = ((sohanhkhach <= 0) ? DBNull.Value : (object)sohanhkhach)
 
             };
 
@@ -213,19 +213,19 @@ namespace QuanLyBanVeMayBay.BLL
         // Hàm này nhận vào các thông tin của 1 chuyến bay 
         // sau đó thêm chuyến bay này vào trong cơ sở dữ liệu
         public void ThemChuyenBay(
-            string MaMayMay,
+            int MaMayMay,
             string LoaiChuyenBay,
             string DiemDi,
             string DiemDen,
-            string ThoiGiandi,
-            string ThoiGianDuKienDen,
+            DateTime ThoiGiandi,
+            DateTime ThoiGianDuKienDen,
             string ChiPhi,
             string GiaVePhoThong,
             string GiaVeThuongGia,
             string KhoiLuongHanhLy,
             ref string error)
         {
-            string sql = "DECLARE @MaChuyenBay INT\r\n" +
+            string sql = "DECLARE @MaChuyenBay INT " +
                          "EXEC them_ChuyenBay_PROC " +
                          "@MaChuyenBay OUTPUT, " +
                          "@LoaiChuyenBay, " +
@@ -234,7 +234,7 @@ namespace QuanLyBanVeMayBay.BLL
                          "@ThoiGiandi, " +
                          "@ThoiGianDuKienDen, " +
                          "N'Chưa cất cánh', " +
-                         "@ChiPhi\r\n" +
+                         "@ChiPhi " +
                          "SELECT @MaChuyenBay";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
@@ -244,14 +244,13 @@ namespace QuanLyBanVeMayBay.BLL
                 new SqlParameter("@ThoiGiandi", ThoiGiandi),
                 new SqlParameter("@ThoiGianDuKienDen", ThoiGianDuKienDen),
                 new SqlParameter("@ChiPhi", ChiPhi)
-            
             };
 
             DataSet ds = new DataSet();
             ds = db.executeQuery(sql, CommandType.Text, sqlParameters, ref error);
             string MaChuyenBay = ds.Tables[0].Rows[0][0].ToString();
 
-            ThemMayBayKhoiTaoChuyenBay(MaMayMay, MaChuyenBay, ref error);
+            ThemMayBayKhoiTaoChuyenBay(MaMayMay.ToString(), MaChuyenBay, ref error);
             ThemChuyenBayPhatHanhVeMayBay(GiaVeThuongGia, GiaVePhoThong, KhoiLuongHanhLy, MaChuyenBay, ref error);
         }
 

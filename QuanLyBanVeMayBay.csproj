@@ -50,6 +50,7 @@
     <Compile Include="BLLs\BLL_GoiHanhLy.cs" />
     <Compile Include="BLLs\BLL_HoaDon.cs" />
     <Compile Include="BLLs\BLL_Khachhang.cs" />
+    <Compile Include="BLLs\BLL_MayBay.cs" />
     <Compile Include="BLLs\BLL_NguoiDung.cs" />
     <Compile Include="DAL\DBConnectionSQLServer.cs" />
     <Compile Include="GUIs\Frm_CapNhat.cs">
@@ -145,6 +146,7 @@
     <Compile Include="Models\KhachHangNguoiLon.cs" />
     <Compile Include="Models\KhachHangTreEm.cs" />
     <Compile Include="Models\ThongTinChuyenBay.cs" />
+    <Compile Include="Pair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UCs\UC_ButtonChonViTriChuaMua.cs">
@@ -213,11 +215,17 @@
     <Compile Include="UCs\UC_ThongTinNguoiLon.designer.cs">
       <DependentUpon>UC_ThongTinNguoiLon.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCs\UC_ThongTinTongTien.cs">
+    <Compile Include="UCs\UC_ThongTinThanhToan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCs\UC_ThongTinTongTien.Designer.cs">
-      <DependentUpon>UC_ThongTinTongTien.cs</DependentUpon>
+    <Compile Include="UCs\UC_ThongTinThanhToan.Designer.cs">
+      <DependentUpon>UC_ThongTinThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UC_ThongTinVeChieuBay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UC_ThongTinVeChieuBay.Designer.cs">
+      <DependentUpon>UC_ThongTinVeChieuBay.cs</DependentUpon>
     </Compile>
     <Compile Include="UCs\UC_ThongTinTreEm.cs">
       <SubType>UserControl</SubType>
@@ -310,11 +318,20 @@
     <EmbeddedResource Include="UCs\UC_ThongTinChuyenBayDeXuat.resx">
       <DependentUpon>UC_ThongTinChuyenBayDeXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinGiaoDich.resx">
+      <DependentUpon>UC_ThongTinGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinHoaDon.resx">
       <DependentUpon>UC_ThongTinHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinNguoiLon.resx">
       <DependentUpon>UC_ThongTinNguoiLon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinThanhToan.resx">
+      <DependentUpon>UC_ThongTinThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinVeChieuBay.resx">
+      <DependentUpon>UC_ThongTinVeChieuBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinTreEm.resx">
       <DependentUpon>UC_ThongTinTreEm.cs</DependentUpon>

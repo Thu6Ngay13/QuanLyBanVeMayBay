@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.Pnl_HanhKhach = new System.Windows.Forms.Panel();
+            this.Lbl_Ve = new System.Windows.Forms.Label();
             this.Lbl_Ghe = new System.Windows.Forms.Label();
             this.Lbl_MaVe = new System.Windows.Forms.Label();
             this.Lbl_MaGhe = new System.Windows.Forms.Label();
             this.Lbl_TenKhach = new System.Windows.Forms.Label();
-            this.Lbl_Ve = new System.Windows.Forms.Label();
+            this.Lbl_ChieuDi = new System.Windows.Forms.Label();
             this.Pnl_HanhKhach.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pnl_HanhKhach
             // 
             this.Pnl_HanhKhach.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Pnl_HanhKhach.Controls.Add(this.Lbl_ChieuDi);
             this.Pnl_HanhKhach.Controls.Add(this.Lbl_Ve);
             this.Pnl_HanhKhach.Controls.Add(this.Lbl_Ghe);
             this.Pnl_HanhKhach.Controls.Add(this.Lbl_MaVe);
@@ -52,10 +54,20 @@
             this.Pnl_HanhKhach.Size = new System.Drawing.Size(422, 83);
             this.Pnl_HanhKhach.TabIndex = 8;
             // 
+            // Lbl_Ve
+            // 
+            this.Lbl_Ve.AutoSize = true;
+            this.Lbl_Ve.Location = new System.Drawing.Point(235, 48);
+            this.Lbl_Ve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_Ve.Name = "Lbl_Ve";
+            this.Lbl_Ve.Size = new System.Drawing.Size(66, 22);
+            this.Lbl_Ve.TabIndex = 4;
+            this.Lbl_Ve.Text = "Mã vé:";
+            // 
             // Lbl_Ghe
             // 
             this.Lbl_Ghe.AutoSize = true;
-            this.Lbl_Ghe.Location = new System.Drawing.Point(154, 30);
+            this.Lbl_Ghe.Location = new System.Drawing.Point(23, 48);
             this.Lbl_Ghe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Ghe.Name = "Lbl_Ghe";
             this.Lbl_Ghe.Size = new System.Drawing.Size(74, 22);
@@ -65,7 +77,7 @@
             // Lbl_MaVe
             // 
             this.Lbl_MaVe.AutoSize = true;
-            this.Lbl_MaVe.Location = new System.Drawing.Point(348, 30);
+            this.Lbl_MaVe.Location = new System.Drawing.Point(309, 48);
             this.Lbl_MaVe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_MaVe.Name = "Lbl_MaVe";
             this.Lbl_MaVe.Size = new System.Drawing.Size(25, 22);
@@ -75,7 +87,7 @@
             // Lbl_MaGhe
             // 
             this.Lbl_MaGhe.AutoSize = true;
-            this.Lbl_MaGhe.Location = new System.Drawing.Point(223, 30);
+            this.Lbl_MaGhe.Location = new System.Drawing.Point(103, 48);
             this.Lbl_MaGhe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_MaGhe.Name = "Lbl_MaGhe";
             this.Lbl_MaGhe.Size = new System.Drawing.Size(25, 22);
@@ -85,22 +97,22 @@
             // Lbl_TenKhach
             // 
             this.Lbl_TenKhach.AutoSize = true;
-            this.Lbl_TenKhach.Location = new System.Drawing.Point(15, 30);
+            this.Lbl_TenKhach.Location = new System.Drawing.Point(23, 11);
             this.Lbl_TenKhach.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_TenKhach.Name = "Lbl_TenKhach";
             this.Lbl_TenKhach.Size = new System.Drawing.Size(123, 22);
             this.Lbl_TenKhach.TabIndex = 0;
             this.Lbl_TenKhach.Text = "Nguyễn Văn A";
             // 
-            // Lbl_Ve
+            // Lbl_ChieuDi
             // 
-            this.Lbl_Ve.AutoSize = true;
-            this.Lbl_Ve.Location = new System.Drawing.Point(283, 30);
-            this.Lbl_Ve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_Ve.Name = "Lbl_Ve";
-            this.Lbl_Ve.Size = new System.Drawing.Size(66, 22);
-            this.Lbl_Ve.TabIndex = 4;
-            this.Lbl_Ve.Text = "Mã vé:";
+            this.Lbl_ChieuDi.AutoSize = true;
+            this.Lbl_ChieuDi.Location = new System.Drawing.Point(235, 11);
+            this.Lbl_ChieuDi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_ChieuDi.Name = "Lbl_ChieuDi";
+            this.Lbl_ChieuDi.Size = new System.Drawing.Size(77, 22);
+            this.Lbl_ChieuDi.TabIndex = 5;
+            this.Lbl_ChieuDi.Text = "Chiều đi";
             // 
             // UC_HanhKhachChonChoNgoi
             // 
@@ -125,5 +137,6 @@
         public System.Windows.Forms.Label Lbl_MaVe;
         public System.Windows.Forms.Label Lbl_MaGhe;
         public System.Windows.Forms.Label Lbl_Ve;
+        public System.Windows.Forms.Label Lbl_ChieuDi;
     }
 }
