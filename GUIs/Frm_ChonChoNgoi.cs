@@ -101,7 +101,7 @@ namespace QuanLyBanVeMayBay.GUIs
             BLL_ChuyenBay bll = new BLL_ChuyenBay();
             string error = "";
 
-            DataSet dataset = bll.lay_DanhSachChoNgoi_PROC(machuyenbay, ref error);
+            DataSet dataset = bll.lay_DanhSachChoNgoi(machuyenbay, ref error);
             DataTable datatable = new DataTable();
             datatable.Clear();
             datatable = dataset.Tables[0];
