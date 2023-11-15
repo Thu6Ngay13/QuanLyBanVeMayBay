@@ -90,9 +90,9 @@ namespace QuanLyBanVeMayBay.GUIs
             this.Hide();
             
             Frm_QuanLyNguoiDung quanlynguoidung = new Frm_QuanLyNguoiDung();
-            quanlynguoidung.Show();
+            quanlynguoidung.ShowDialog();
             
-            this.Show();
+            //this.Show();
         }
 
         private void Frm_TrangChuNguoiQuanLy_Load(object sender, EventArgs e)
