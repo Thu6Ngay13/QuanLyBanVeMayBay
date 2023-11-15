@@ -232,7 +232,7 @@ namespace QuanLyBanVeMayBay.GUIs
                 khachHangTreEms[j2].Giatienvechieuve = giave;
                 j2 = j2 + 1;
             }
-
+            buttons[idx].BackColor = Color.Silver;
             buttons[idx].Text = "";
             buttons[idx].Click -= chonGhe;
             buttons[idx].Enabled = false;
@@ -244,9 +244,9 @@ namespace QuanLyBanVeMayBay.GUIs
             if (i2 >= thongTinChuyenBay.Sokhachnguoilon
                && j2 >= thongTinChuyenBay.Sokhachtreem)
                 return;
-
+            
             LayDanhSachKhachHang();
-            buttons[idx].BackColor = Color.Silver;
+            
             if (i1 >= thongTinChuyenBay.Sokhachnguoilon 
                 && j1 >= thongTinChuyenBay.Sokhachtreem
                 && thongTinChuyenBay.Machieuve > 0
@@ -255,6 +255,7 @@ namespace QuanLyBanVeMayBay.GUIs
                 currentSelect = 10;
                 LayThongTinChoNgoi(thongTinChuyenBay.Machieuve);
             }
+            
         }
 
         private void Btn_TiepTuc_Click(object sender, EventArgs e)
