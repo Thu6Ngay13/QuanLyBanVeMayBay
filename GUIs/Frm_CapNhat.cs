@@ -111,8 +111,6 @@ namespace QuanLyBanVeMayBay.GUIs
             }
         }
 
-
-
         private DateTime ConvertDateTime(string datetime)
         {
             string format = "MM/d/yyyy h:mm:ss tt";
