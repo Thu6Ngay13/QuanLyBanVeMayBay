@@ -85,16 +85,6 @@ namespace QuanLyBanVeMayBay.GUIs
             
         }
 
-        private void Btn_TraCuuChuyenBay_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            
-            Frm_QuanLyNguoiDung quanlynguoidung = new Frm_QuanLyNguoiDung();
-            quanlynguoidung.ShowDialog();
-            
-            this.Show();
-        }
-
         private void Frm_TrangChuNguoiQuanLy_Load(object sender, EventArgs e)
         {
             bLLMayBay = new BLL_MayBay();
@@ -107,6 +97,22 @@ namespace QuanLyBanVeMayBay.GUIs
         {
             Frm_CapNhat frm_CapNhat = new Frm_CapNhat();
             frm_CapNhat.ShowDialog();   
+        }
+
+        private void Btn_DoanhThu_Click(object sender, EventArgs e)
+        {
+            Frm_DoanhThu frm_DoanhThu = new Frm_DoanhThu();
+            frm_DoanhThu.ShowDialog();
+        }
+
+        private void Btn_QuanLyNguoiDung_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Frm_QuanLyNguoiDung quanlynguoidung = new Frm_QuanLyNguoiDung();
+            quanlynguoidung.ShowDialog();
+
+            this.Show();
         }
     }
 }

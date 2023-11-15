@@ -17,19 +17,16 @@ namespace QuanLyBanVeMayBay.BLLs
 
         public BLL_DoanhThu()
         {
-            db = new DBConnectionSQlServer();
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
         public DataSet lay_Nam()
         {
-            return db.executeQuery("SELECT DISTINCT YEAR(ThoiGianThanhToan) as Nam FROM view_ThongTinHoaDon", CommandType.Text, parameters, ref err);
+            return db.executeQuery("SELECT * FROM lay_Nam_FUNC()", CommandType.Text, parameters, ref err);
         }
 
         public DataSet lay_DoanhThuTheoThang(int nam)
         {
-            string sql = "SELECT MONTH(ThoiGianThanhToan) as Thang, sum(TongTien - TongTien * Thue) as DoanhThu\r\n" +
-                         "FROM view_ThongTinHoaDon\r\n" +
-                         "WHERE YEAR(ThoiGianThanhToan) = @nam\r\n" +
-                         "GROUP BY MONTH(ThoiGianThanhToan)";
+            string sql = "SELECT * FROM lay_DoanhThuTheoThang_FUNC(@nam)";
 
             parameters = new SqlParameter[1];
             parameters[0] = new SqlParameter()

@@ -17,7 +17,7 @@ namespace QuanLyBanVeMayBay
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_DoanhThu());
+            Application.Run(new Frm_TrangChuNguoiQuanLy());
         }
     }
 }
