@@ -65,7 +65,7 @@
             this.Lbl_HuongBay.AutoSize = true;
             this.Lbl_HuongBay.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Lbl_HuongBay.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_HuongBay.Location = new System.Drawing.Point(478, 53);
+            this.Lbl_HuongBay.Location = new System.Drawing.Point(478, 21);
             this.Lbl_HuongBay.Name = "Lbl_HuongBay";
             this.Lbl_HuongBay.Size = new System.Drawing.Size(86, 26);
             this.Lbl_HuongBay.TabIndex = 23;
@@ -76,9 +76,9 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.Pnl_HanhTrinh);
             this.panel6.Controls.Add(this.Pnl_ChiTietChuyenBay);
-            this.panel6.Location = new System.Drawing.Point(780, 28);
+            this.panel6.Location = new System.Drawing.Point(780, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(462, 532);
+            this.panel6.Size = new System.Drawing.Size(462, 557);
             this.panel6.TabIndex = 22;
             // 
             // Pnl_HanhTrinh
@@ -87,7 +87,7 @@
             this.Pnl_HanhTrinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_HanhTrinh.Location = new System.Drawing.Point(0, 60);
             this.Pnl_HanhTrinh.Name = "Pnl_HanhTrinh";
-            this.Pnl_HanhTrinh.Size = new System.Drawing.Size(460, 470);
+            this.Pnl_HanhTrinh.Size = new System.Drawing.Size(460, 495);
             this.Pnl_HanhTrinh.TabIndex = 1;
             // 
             // Pnl_ChiTietChuyenBay
@@ -114,7 +114,7 @@
             // 
             this.Cmb_Chieu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Cmb_Chieu.FormattingEnabled = true;
-            this.Cmb_Chieu.Location = new System.Drawing.Point(570, 49);
+            this.Cmb_Chieu.Location = new System.Drawing.Point(570, 17);
             this.Cmb_Chieu.Name = "Cmb_Chieu";
             this.Cmb_Chieu.Size = new System.Drawing.Size(170, 34);
             this.Cmb_Chieu.TabIndex = 7;
@@ -124,7 +124,7 @@
             this.Lbl_TenKhachHang.AutoSize = true;
             this.Lbl_TenKhachHang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Lbl_TenKhachHang.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_TenKhachHang.Location = new System.Drawing.Point(30, 53);
+            this.Lbl_TenKhachHang.Location = new System.Drawing.Point(10, 37);
             this.Lbl_TenKhachHang.Name = "Lbl_TenKhachHang";
             this.Lbl_TenKhachHang.Size = new System.Drawing.Size(135, 26);
             this.Lbl_TenKhachHang.TabIndex = 6;
@@ -143,9 +143,9 @@
             // 
             // Pnl_GoiHanhLy
             // 
-            this.Pnl_GoiHanhLy.Location = new System.Drawing.Point(18, 89);
+            this.Pnl_GoiHanhLy.Location = new System.Drawing.Point(3, 64);
             this.Pnl_GoiHanhLy.Name = "Pnl_GoiHanhLy";
-            this.Pnl_GoiHanhLy.Size = new System.Drawing.Size(756, 471);
+            this.Pnl_GoiHanhLy.Size = new System.Drawing.Size(771, 496);
             this.Pnl_GoiHanhLy.TabIndex = 4;
             // 
             // Btn_TiepTuc_GoiHanhLy
@@ -164,7 +164,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(27, 15);
+            this.label1.Location = new System.Drawing.Point(9, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 32);
             this.label1.TabIndex = 0;

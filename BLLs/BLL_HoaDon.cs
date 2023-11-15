@@ -22,7 +22,7 @@ namespace QuanLyBanVeMayBay.BLLs
                 ParameterName = "@MaHoaDon",
                 Value = MaHoaDon
             };
-            return db.executeQuery(sql, CommandType.Text, sqlParameters, ref error); ;
+            return db.executeQuery(sql, CommandType.Text, sqlParameters, ref error);
         }
 
         // Hàm nhận tham số mã vé máy bay và thực hiện hủy vé trong cơ sở dữ liệu
