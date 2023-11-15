@@ -53,6 +53,9 @@ namespace QuanLyBanVeMayBay.GUIs
                 Init();
                 ds = HoaDon.ThongTinHoaDon(Txt_MaHoaDon.Text.Trim(), ref error);
                 dt = ds.Tables[0];
+
+                if (dt.Rows.Count <= 0) return;
+
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     UC_ThongTinHoaDon thongTinHoaDon = new UC_ThongTinHoaDon();
