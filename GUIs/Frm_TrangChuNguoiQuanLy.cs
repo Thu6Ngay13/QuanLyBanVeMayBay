@@ -102,5 +102,11 @@ namespace QuanLyBanVeMayBay.GUIs
             Cbb_MaMayBay.DataSource = dt;
             Cbb_MaMayBay.DisplayMember = "MaMaybay";
         }
+
+        private void Btn_CapNhatChuyenBay_Click(object sender, EventArgs e)
+        {
+            Frm_CapNhat frm_CapNhat = new Frm_CapNhat();
+            frm_CapNhat.ShowDialog();   
+        }
     }
 }

@@ -370,6 +370,7 @@
             this.Btn_CapNhatChuyenBay.TabIndex = 2;
             this.Btn_CapNhatChuyenBay.Text = "Cập nhật chuyến bay";
             this.Btn_CapNhatChuyenBay.UseVisualStyleBackColor = true;
+            this.Btn_CapNhatChuyenBay.Click += new System.EventHandler(this.Btn_CapNhatChuyenBay_Click);
             // 
             // Btn_ThemChuyenBay
             // 

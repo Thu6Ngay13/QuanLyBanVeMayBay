@@ -39,6 +39,7 @@
             this.Lbl1 = new System.Windows.Forms.Label();
             this.Lbl2 = new System.Windows.Forms.Label();
             this.Lbl_MaChuyenBay = new System.Windows.Forms.Label();
+            this.Lbl_TinhTrangChuyenBay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Btn_CapNhat
@@ -57,7 +58,7 @@
             this.Lbl_GiaVeThuongGia.AutoSize = true;
             this.Lbl_GiaVeThuongGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_GiaVeThuongGia.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_GiaVeThuongGia.Location = new System.Drawing.Point(502, 101);
+            this.Lbl_GiaVeThuongGia.Location = new System.Drawing.Point(480, 101);
             this.Lbl_GiaVeThuongGia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_GiaVeThuongGia.Name = "Lbl_GiaVeThuongGia";
             this.Lbl_GiaVeThuongGia.Size = new System.Drawing.Size(39, 22);
@@ -69,7 +70,7 @@
             this.Lbl_GiaVePhoThong.AutoSize = true;
             this.Lbl_GiaVePhoThong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_GiaVePhoThong.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_GiaVePhoThong.Location = new System.Drawing.Point(502, 69);
+            this.Lbl_GiaVePhoThong.Location = new System.Drawing.Point(480, 69);
             this.Lbl_GiaVePhoThong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_GiaVePhoThong.Name = "Lbl_GiaVePhoThong";
             this.Lbl_GiaVePhoThong.Size = new System.Drawing.Size(39, 22);
@@ -80,7 +81,7 @@
             // 
             this.Lbl_GioDen.AutoSize = true;
             this.Lbl_GioDen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_GioDen.Location = new System.Drawing.Point(346, 9);
+            this.Lbl_GioDen.Location = new System.Drawing.Point(334, 9);
             this.Lbl_GioDen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_GioDen.Name = "Lbl_GioDen";
             this.Lbl_GioDen.Size = new System.Drawing.Size(55, 22);
@@ -125,7 +126,7 @@
             // 
             this.Lbl_DiemDen.AutoSize = true;
             this.Lbl_DiemDen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_DiemDen.Location = new System.Drawing.Point(346, 39);
+            this.Lbl_DiemDen.Location = new System.Drawing.Point(334, 39);
             this.Lbl_DiemDen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_DiemDen.Name = "Lbl_DiemDen";
             this.Lbl_DiemDen.Size = new System.Drawing.Size(103, 22);
@@ -137,7 +138,7 @@
             this.Lbl1.AutoSize = true;
             this.Lbl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl1.Location = new System.Drawing.Point(346, 69);
+            this.Lbl1.Location = new System.Drawing.Point(334, 69);
             this.Lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl1.Name = "Lbl1";
             this.Lbl1.Size = new System.Drawing.Size(150, 22);
@@ -149,7 +150,7 @@
             this.Lbl2.AutoSize = true;
             this.Lbl2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl2.Location = new System.Drawing.Point(346, 101);
+            this.Lbl2.Location = new System.Drawing.Point(334, 101);
             this.Lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl2.Name = "Lbl2";
             this.Lbl2.Size = new System.Drawing.Size(150, 22);
@@ -160,19 +161,32 @@
             // 
             this.Lbl_MaChuyenBay.AutoSize = true;
             this.Lbl_MaChuyenBay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_MaChuyenBay.Location = new System.Drawing.Point(225, 53);
+            this.Lbl_MaChuyenBay.Location = new System.Drawing.Point(766, 112);
             this.Lbl_MaChuyenBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_MaChuyenBay.Name = "Lbl_MaChuyenBay";
-            this.Lbl_MaChuyenBay.Size = new System.Drawing.Size(28, 22);
+            this.Lbl_MaChuyenBay.Size = new System.Drawing.Size(133, 22);
             this.Lbl_MaChuyenBay.TabIndex = 38;
-            this.Lbl_MaChuyenBay.Text = "xx";
+            this.Lbl_MaChuyenBay.Text = "@machuyenbay";
             this.Lbl_MaChuyenBay.Visible = false;
+            // 
+            // Lbl_TinhTrangChuyenBay
+            // 
+            this.Lbl_TinhTrangChuyenBay.AutoSize = true;
+            this.Lbl_TinhTrangChuyenBay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_TinhTrangChuyenBay.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Lbl_TinhTrangChuyenBay.Location = new System.Drawing.Point(42, 101);
+            this.Lbl_TinhTrangChuyenBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_TinhTrangChuyenBay.Name = "Lbl_TinhTrangChuyenBay";
+            this.Lbl_TinhTrangChuyenBay.Size = new System.Drawing.Size(90, 22);
+            this.Lbl_TinhTrangChuyenBay.TabIndex = 39;
+            this.Lbl_TinhTrangChuyenBay.Text = "Tình trạng";
             // 
             // UC_ThongTinChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Controls.Add(this.Lbl_TinhTrangChuyenBay);
             this.Controls.Add(this.Lbl_MaChuyenBay);
             this.Controls.Add(this.Lbl2);
             this.Controls.Add(this.Lbl1);
@@ -206,5 +220,6 @@
         public System.Windows.Forms.Label Lbl1;
         public System.Windows.Forms.Label Lbl2;
         public System.Windows.Forms.Label Lbl_MaChuyenBay;
+        public System.Windows.Forms.Label Lbl_TinhTrangChuyenBay;
     }
 }

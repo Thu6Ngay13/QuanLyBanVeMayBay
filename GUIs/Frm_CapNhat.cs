@@ -70,6 +70,7 @@ namespace QuanLyBanVeMayBay.GUIs
                 ttcb.Lbl_GioDen.Text = datatable.Rows[i]["ThoiGianDuKienDen"].ToString();
                 ttcb.Lbl_DiemDi.Text = datatable.Rows[i]["DiemDi"].ToString();
                 ttcb.Lbl_DiemDen.Text = datatable.Rows[i]["DiemDen"].ToString();
+                ttcb.Lbl_TinhTrangChuyenBay.Text = datatable.Rows[i]["TinhTrangChuyenBay"].ToString();
                 TimeSpan ThoiGianBayDuKien = ((DateTime)datatable.Rows[i]["ThoiGianDuKienDen"])
                     .Subtract((DateTime)datatable.Rows[i]["ThoiGianDi"]);
                 ttcb.Lbl_ThoiGianDuKienBay.Text = ThoiGianBayDuKien.ToString("h' giờ 'mm");
@@ -102,7 +103,7 @@ namespace QuanLyBanVeMayBay.GUIs
                 if (Btn_CapNhat.Parent is UC_ThongTinChuyenBay ttcb)
                 {
                     Frm_CapNhatThongTin frm = new Frm_CapNhatThongTin(ttcb.Lbl_MaChuyenBay.Text, ttcb.Lbl_DiemDi.Text, ttcb.Lbl_DiemDen.Text,
-                        Cbb_TinhTrang.Text, ConvertDateTime(ttcb.Lbl_GioDi.Text), ConvertDateTime(ttcb.Lbl_GioDen.Text), ttcb.Lbl_GiaVePhoThong.Text,
+                        ttcb.Lbl_TinhTrangChuyenBay.Text, ConvertDateTime(ttcb.Lbl_GioDi.Text), ConvertDateTime(ttcb.Lbl_GioDen.Text), ttcb.Lbl_GiaVePhoThong.Text,
                         ttcb.Lbl_GiaVeThuongGia.Text);
                     frm.ShowDialog();
                     Load_Form();
