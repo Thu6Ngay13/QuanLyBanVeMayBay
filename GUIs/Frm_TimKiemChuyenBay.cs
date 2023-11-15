@@ -1,11 +1,10 @@
 ﻿using HeQuanTriDemo01.Models;
-using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.BLLs;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_TimKiemChuyenBay : Form
     {
@@ -171,7 +170,11 @@ namespace QuanLyBanVeMayBay.GUI
                 Frm_ThongTinKhachHang khachhang = new Frm_ThongTinKhachHang(thongtinchuyenbay);
                 khachhang.ShowDialog();
 
-                if (Frm_ThanhToan.thanhtoanthanhcong == 999) this.Close();
+                if (Frm_ThanhToan.thanhtoanthanhcong == 999)
+                {
+                    this.Close();
+                    Frm_ThanhToan.thanhtoanthanhcong = 0;
+                }
                 this.Show();
             }
         }

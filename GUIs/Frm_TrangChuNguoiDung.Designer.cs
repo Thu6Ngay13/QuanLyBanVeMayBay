@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.GUI
+﻿namespace QuanLyBanVeMayBay.GUIs
 {
     partial class Frm_TrangChuNguoiDung
     {
@@ -32,10 +32,6 @@
             this.Btn_TraCuuChuyenBay = new System.Windows.Forms.Button();
             this.Btn_TraCuuHoaDon = new System.Windows.Forms.Button();
             this.Btn_MuaVe = new System.Windows.Forms.Button();
-            this.Pnl_Header = new System.Windows.Forms.Panel();
-            this.Ptb_Logo = new System.Windows.Forms.PictureBox();
-            this.Btn_DangKy = new System.Windows.Forms.Button();
-            this.Btn_DangNhap = new System.Windows.Forms.Button();
             this.Pnl_DeXuatChuyenBay = new System.Windows.Forms.Panel();
             this.Pnl_DanhSachDeXuat = new System.Windows.Forms.Panel();
             this.Pnl_TimKiem = new System.Windows.Forms.Panel();
@@ -45,8 +41,6 @@
             this.Cmb_DiemDen = new System.Windows.Forms.ComboBox();
             this.Cmb_DiemDi = new System.Windows.Forms.ComboBox();
             this.Pnl_ChucNang.SuspendLayout();
-            this.Pnl_Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Logo)).BeginInit();
             this.Pnl_DeXuatChuyenBay.SuspendLayout();
             this.Pnl_TimKiem.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +50,7 @@
             this.Pnl_ChucNang.Controls.Add(this.Btn_TraCuuChuyenBay);
             this.Pnl_ChucNang.Controls.Add(this.Btn_TraCuuHoaDon);
             this.Pnl_ChucNang.Controls.Add(this.Btn_MuaVe);
-            this.Pnl_ChucNang.Location = new System.Drawing.Point(12, 80);
+            this.Pnl_ChucNang.Location = new System.Drawing.Point(12, 6);
             this.Pnl_ChucNang.Name = "Pnl_ChucNang";
             this.Pnl_ChucNang.Size = new System.Drawing.Size(1241, 71);
             this.Pnl_ChucNang.TabIndex = 4;
@@ -91,51 +85,14 @@
             this.Btn_MuaVe.UseVisualStyleBackColor = true;
             this.Btn_MuaVe.Click += new System.EventHandler(this.Btn_MuaVe_Click);
             // 
-            // Pnl_Header
-            // 
-            this.Pnl_Header.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Pnl_Header.Controls.Add(this.Ptb_Logo);
-            this.Pnl_Header.Controls.Add(this.Btn_DangKy);
-            this.Pnl_Header.Controls.Add(this.Btn_DangNhap);
-            this.Pnl_Header.Location = new System.Drawing.Point(12, 9);
-            this.Pnl_Header.Name = "Pnl_Header";
-            this.Pnl_Header.Size = new System.Drawing.Size(1241, 65);
-            this.Pnl_Header.TabIndex = 3;
-            // 
-            // Ptb_Logo
-            // 
-            this.Ptb_Logo.Location = new System.Drawing.Point(6, 3);
-            this.Ptb_Logo.Name = "Ptb_Logo";
-            this.Ptb_Logo.Size = new System.Drawing.Size(953, 59);
-            this.Ptb_Logo.TabIndex = 3;
-            this.Ptb_Logo.TabStop = false;
-            // 
-            // Btn_DangKy
-            // 
-            this.Btn_DangKy.Location = new System.Drawing.Point(1110, 12);
-            this.Btn_DangKy.Name = "Btn_DangKy";
-            this.Btn_DangKy.Size = new System.Drawing.Size(119, 36);
-            this.Btn_DangKy.TabIndex = 2;
-            this.Btn_DangKy.Text = "Đăng ký";
-            this.Btn_DangKy.UseVisualStyleBackColor = true;
-            // 
-            // Btn_DangNhap
-            // 
-            this.Btn_DangNhap.Location = new System.Drawing.Point(965, 12);
-            this.Btn_DangNhap.Name = "Btn_DangNhap";
-            this.Btn_DangNhap.Size = new System.Drawing.Size(119, 36);
-            this.Btn_DangNhap.TabIndex = 1;
-            this.Btn_DangNhap.Text = "Đăng nhập";
-            this.Btn_DangNhap.UseVisualStyleBackColor = true;
-            // 
             // Pnl_DeXuatChuyenBay
             // 
             this.Pnl_DeXuatChuyenBay.AutoScroll = true;
             this.Pnl_DeXuatChuyenBay.Controls.Add(this.Pnl_DanhSachDeXuat);
             this.Pnl_DeXuatChuyenBay.Controls.Add(this.Pnl_TimKiem);
-            this.Pnl_DeXuatChuyenBay.Location = new System.Drawing.Point(16, 159);
+            this.Pnl_DeXuatChuyenBay.Location = new System.Drawing.Point(16, 83);
             this.Pnl_DeXuatChuyenBay.Name = "Pnl_DeXuatChuyenBay";
-            this.Pnl_DeXuatChuyenBay.Size = new System.Drawing.Size(1236, 502);
+            this.Pnl_DeXuatChuyenBay.Size = new System.Drawing.Size(1236, 578);
             this.Pnl_DeXuatChuyenBay.TabIndex = 5;
             // 
             // Pnl_DanhSachDeXuat
@@ -143,7 +100,7 @@
             this.Pnl_DanhSachDeXuat.AutoScroll = true;
             this.Pnl_DanhSachDeXuat.Location = new System.Drawing.Point(3, 46);
             this.Pnl_DanhSachDeXuat.Name = "Pnl_DanhSachDeXuat";
-            this.Pnl_DanhSachDeXuat.Size = new System.Drawing.Size(1230, 453);
+            this.Pnl_DanhSachDeXuat.Size = new System.Drawing.Size(1230, 532);
             this.Pnl_DanhSachDeXuat.TabIndex = 7;
             // 
             // Pnl_TimKiem
@@ -213,7 +170,6 @@
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.Pnl_DeXuatChuyenBay);
             this.Controls.Add(this.Pnl_ChucNang);
-            this.Controls.Add(this.Pnl_Header);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_TrangChuNguoiDung";
@@ -221,8 +177,6 @@
             this.Text = "Trang chủ người dùng";
             this.Load += new System.EventHandler(this.Frm_TrangChuNguoiDung_Load);
             this.Pnl_ChucNang.ResumeLayout(false);
-            this.Pnl_Header.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Logo)).EndInit();
             this.Pnl_DeXuatChuyenBay.ResumeLayout(false);
             this.Pnl_TimKiem.ResumeLayout(false);
             this.Pnl_TimKiem.PerformLayout();
@@ -236,10 +190,6 @@
         private System.Windows.Forms.Button Btn_TraCuuChuyenBay;
         private System.Windows.Forms.Button Btn_TraCuuHoaDon;
         private System.Windows.Forms.Button Btn_MuaVe;
-        private System.Windows.Forms.Panel Pnl_Header;
-        private System.Windows.Forms.Button Btn_DangKy;
-        private System.Windows.Forms.Button Btn_DangNhap;
-        private System.Windows.Forms.PictureBox Ptb_Logo;
         private System.Windows.Forms.Panel Pnl_DeXuatChuyenBay;
         private System.Windows.Forms.Panel Pnl_TimKiem;
         private System.Windows.Forms.Button Btn_TimKiem;

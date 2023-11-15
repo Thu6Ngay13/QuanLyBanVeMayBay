@@ -1,11 +1,6 @@
 ﻿using QuanLyBanVeMayBay.DAL;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuanLyBanVeMayBay.BLLs
 {
@@ -16,7 +11,7 @@ namespace QuanLyBanVeMayBay.BLLs
         string err = "";
         public BLL_MayBay()
         {
-            db = new DBConnectionSQlServer();
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
         public DataSet DanhSachMayBay()
         {

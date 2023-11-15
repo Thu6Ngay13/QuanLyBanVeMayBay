@@ -12,10 +12,20 @@ namespace QuanLyBanVeMayBay.Models
         private string sodienthoai;
         private string email;
         private string diachi;
+        
         private int magoihanhlychieudi;
+        private double giatiengoihanhlychieudi;
+
         private int magoihanhlychieuve;
+        private double giatiengoihanhlychieuve;
+
         private int mavechieudi;
+        private double giatienvechieudi;
+
         private int mavechieuve;
+        private double giatienvechieuve;
+
+
 
         public KhachHangNguoiLon() {}
         public KhachHangNguoiLon(
@@ -42,9 +52,13 @@ namespace QuanLyBanVeMayBay.Models
         public string Email { get => email; set => email = value; }
         public string Diachi { get => diachi; set => diachi = value; }
         public int Magoihanhlychieudi { get => magoihanhlychieudi; set => magoihanhlychieudi = value; }
+        public double Giatiengoihanhlychieudi { get => giatiengoihanhlychieudi; set => giatiengoihanhlychieudi = value; }
         public int Magoihanhlychieuve { get => magoihanhlychieuve; set => magoihanhlychieuve = value; }
+        public double Giatiengoihanhlychieuve { get => giatiengoihanhlychieuve; set => giatiengoihanhlychieuve = value; }
         public int Mavechieudi { get => mavechieudi; set => mavechieudi = value; }
+        public double Giatienvechieudi { get => giatienvechieudi; set => giatienvechieudi = value; }
         public int Mavechieuve { get => mavechieuve; set => mavechieuve = value; }
+        public double Giatienvechieuve { get => giatienvechieuve; set => giatienvechieuve = value; }
     }
 }
 

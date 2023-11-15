@@ -1,13 +1,13 @@
 using HeQuanTriDemo01.Models;
-using QuanLyBanVeMayBay.BLL;
+using QuanLyBanVeMayBay.BLLs;
 using QuanLyBanVeMayBay.Models;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_ThongTinKhachHang : Form
     {

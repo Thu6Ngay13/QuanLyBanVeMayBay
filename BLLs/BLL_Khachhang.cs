@@ -3,14 +3,14 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace QuanLyBanVeMayBay.BLL
+namespace QuanLyBanVeMayBay.BLLs
 {
     public class BLL_KhachHang
     {
         DBConnectionSQlServer db = null;
         public BLL_KhachHang()
         {
-            db = new DBConnectionSQlServer();
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
         public int them_KhachHangNguoiLon(
             string hoten,
@@ -80,14 +80,14 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[6] = new SqlParameter()
             {
                 ParameterName = "@MaVe",
-                Value = ((mave == -1) ? DBNull.Value : (object)mave)
+                Value = ((mave <= 0) ? DBNull.Value : (object)mave)
 
             };
 
             sqlParameter[7] = new SqlParameter()
             {
                 ParameterName = "@MaGoi",
-                Value = magoi
+                Value = ((magoi <= 0) ? DBNull.Value : (object)magoi)
 
             };
 
@@ -154,14 +154,14 @@ namespace QuanLyBanVeMayBay.BLL
             sqlParameter[3] = new SqlParameter()
             {
                 ParameterName = "@MaVe",
-                Value = ((mave == -1) ? DBNull.Value : (object)mave)
+                Value = ((mave <= 0) ? DBNull.Value : (object)mave)
 
             };
 
             sqlParameter[4] = new SqlParameter()
             {
                 ParameterName = "@MaGoi",
-                Value = magoi
+                Value = ((magoi <= 0) ? DBNull.Value : (object)magoi)
 
             };
 

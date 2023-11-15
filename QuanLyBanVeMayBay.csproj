@@ -52,14 +52,22 @@
     <Compile Include="BLLs\BLL_GoiHanhLy.cs" />
     <Compile Include="BLLs\BLL_HoaDon.cs" />
     <Compile Include="BLLs\BLL_Khachhang.cs" />
+    <Compile Include="BLLs\BLL_Login.cs" />
     <Compile Include="BLLs\BLL_MayBay.cs" />
     <Compile Include="BLLs\BLL_NguoiDung.cs" />
+    <Compile Include="ConstantDATA.cs" />
     <Compile Include="DAL\DBConnectionSQLServer.cs" />
     <Compile Include="GUIs\Frm_CapNhat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUIs\Frm_CapNhat.designer.cs">
       <DependentUpon>Frm_CapNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\Frm_CapNhatThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\Frm_CapNhatThongTin.Designer.cs">
+      <DependentUpon>Frm_CapNhatThongTin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUIs\Frm_ChonChoNgoi.cs">
       <SubType>Form</SubType>
@@ -84,6 +92,12 @@
     </Compile>
     <Compile Include="GUIs\Frm_HanhKhach.designer.cs">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="GUIs\Frm_TimKiemChuyenBay.cs">
       <SubType>Form</SubType>
@@ -148,6 +162,7 @@
     <Compile Include="Models\KhachHangNguoiLon.cs" />
     <Compile Include="Models\KhachHangTreEm.cs" />
     <Compile Include="Models\ThongTinChuyenBay.cs" />
+    <Compile Include="Pair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UCs\UC_ButtonChonViTriChuaMua.cs">
@@ -216,11 +231,17 @@
     <Compile Include="UCs\UC_ThongTinNguoiLon.designer.cs">
       <DependentUpon>UC_ThongTinNguoiLon.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCs\UC_ThongTinTongTien.cs">
+    <Compile Include="UCs\UC_ThongTinThanhToan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCs\UC_ThongTinTongTien.Designer.cs">
-      <DependentUpon>UC_ThongTinTongTien.cs</DependentUpon>
+    <Compile Include="UCs\UC_ThongTinThanhToan.Designer.cs">
+      <DependentUpon>UC_ThongTinThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UC_ThongTinVeChieuBay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UC_ThongTinVeChieuBay.Designer.cs">
+      <DependentUpon>UC_ThongTinVeChieuBay.cs</DependentUpon>
     </Compile>
     <Compile Include="UCs\UC_ThongTinTreEm.cs">
       <SubType>UserControl</SubType>
@@ -243,6 +264,9 @@
     <EmbeddedResource Include="GUIs\Frm_CapNhat.resx">
       <DependentUpon>Frm_CapNhat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_CapNhatThongTin.resx">
+      <DependentUpon>Frm_CapNhatThongTin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_ChonChoNgoi.resx">
       <DependentUpon>Frm_ChonChoNgoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_HanhKhach.resx">
       <DependentUpon>Frm_HanhKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\Frm_MuaVe.resx">
       <DependentUpon>Frm_MuaVe.cs</DependentUpon>
@@ -313,11 +340,20 @@
     <EmbeddedResource Include="UCs\UC_ThongTinChuyenBayDeXuat.resx">
       <DependentUpon>UC_ThongTinChuyenBayDeXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinGiaoDich.resx">
+      <DependentUpon>UC_ThongTinGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinHoaDon.resx">
       <DependentUpon>UC_ThongTinHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinNguoiLon.resx">
       <DependentUpon>UC_ThongTinNguoiLon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinThanhToan.resx">
+      <DependentUpon>UC_ThongTinThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UC_ThongTinVeChieuBay.resx">
+      <DependentUpon>UC_ThongTinVeChieuBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCs\UC_ThongTinTreEm.resx">
       <DependentUpon>UC_ThongTinTreEm.cs</DependentUpon>
@@ -343,6 +379,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ImageDeXuatChuyenBay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HinhNen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

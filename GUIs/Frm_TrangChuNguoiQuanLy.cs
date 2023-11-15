@@ -1,11 +1,9 @@
-﻿using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.BLLs;
+﻿using QuanLyBanVeMayBay.BLLs;
 using System;
 using System.Data;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_TrangChuNguoiQuanLy : Form
     {
@@ -92,7 +90,7 @@ namespace QuanLyBanVeMayBay.GUI
             this.Hide();
             
             Frm_QuanLyNguoiDung quanlynguoidung = new Frm_QuanLyNguoiDung();
-            quanlynguoidung.Show();
+            quanlynguoidung.ShowDialog();
             
             this.Show();
         }
@@ -103,6 +101,12 @@ namespace QuanLyBanVeMayBay.GUI
             dt = bLLMayBay.DanhSachMayBay().Tables[0];
             Cbb_MaMayBay.DataSource = dt;
             Cbb_MaMayBay.DisplayMember = "MaMaybay";
+        }
+
+        private void Btn_CapNhatChuyenBay_Click(object sender, EventArgs e)
+        {
+            Frm_CapNhat frm_CapNhat = new Frm_CapNhat();
+            frm_CapNhat.ShowDialog();   
         }
     }
 }
