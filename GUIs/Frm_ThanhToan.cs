@@ -62,6 +62,7 @@ namespace QuanLyBanVeMayBay.GUIs
         {
             bool success1 = true;
             bool success2 = true;
+            bool success = true;
 
             // Chieu di
             for (int i = 0; i < khachHangNguoiLons.Count; ++i)
@@ -94,15 +95,6 @@ namespace QuanLyBanVeMayBay.GUIs
 
                 khachHangTreEms[i].Makhachhangtreem = matreem;
                 success1 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieudi, ConstantDATA.maNguoiDung) && success1;
-            }
-
-            // Chieu di
-            for (int i = 0; i < khachHangNguoiLons.Count; ++i)
-            {
-                for(int j = 0; j < khachHangTreEms.Count; ++j)
-                {
-                    success1 = them_NguoiLonQuanLyTreEm(khachHangNguoiLons[i].Makhachhangnguoilon, khachHangTreEms[j].Makhachhangtreem) && success1;
-                }
             }
 
             /*---------------------------------------------------------------------------------------*/
@@ -142,18 +134,20 @@ namespace QuanLyBanVeMayBay.GUIs
                     khachHangTreEms[i].Makhachhangtreem = matreem;
                     success2 = them_ThongTinNguoiDungMuaVe(khachHangTreEms[i].Mavechieuve, ConstantDATA.maNguoiDung) && success2;
                 }
+            }
 
-                // Chieu ve
-                for (int i = 0; i < khachHangNguoiLons.Count; ++i)
+            for (int i = 0; i < khachHangNguoiLons.Count; ++i)
+            {
+                for (int j = 0; j < khachHangTreEms.Count; ++j)
                 {
-                    for (int j = 0; j < khachHangTreEms.Count; ++j)
-                    {
-                        success2 = them_NguoiLonQuanLyTreEm(khachHangNguoiLons[i].Makhachhangnguoilon, khachHangTreEms[j].Makhachhangtreem) && success2;
-                    }
+                    success = them_NguoiLonQuanLyTreEm(khachHangNguoiLons[i].Makhachhangnguoilon, khachHangTreEms[j].Makhachhangtreem) 
+                        && success1 
+                        && success2
+                        && success;
                 }
             }
 
-            if (success1 && success2) MessageBox.Show("Thành công!");
+            if (success) MessageBox.Show("Thành công!");
             else MessageBox.Show("Thất bại!");
 
             thanhtoanthanhcong = 999;

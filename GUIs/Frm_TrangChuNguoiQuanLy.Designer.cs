@@ -54,17 +54,11 @@
             this.Btn_QuanLyNguoiDung = new System.Windows.Forms.Button();
             this.Btn_DoanhThu = new System.Windows.Forms.Button();
             this.Btn_QuanLyThongTinChuyenBay = new System.Windows.Forms.Button();
-            this.Pnl_Header = new System.Windows.Forms.Panel();
-            this.Ptb_Logo = new System.Windows.Forms.PictureBox();
-            this.Btn_DangKy = new System.Windows.Forms.Button();
-            this.Btn_DangNhap = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Btn_CapNhatChuyenBay = new System.Windows.Forms.Button();
             this.Btn_ThemChuyenBay = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.Pnl_ChucNang.SuspendLayout();
-            this.Pnl_Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Logo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,9 +86,9 @@
             this.panel4.Controls.Add(this.Lbl_ThoiGianDi);
             this.panel4.Controls.Add(this.Lbl_DiemDi);
             this.panel4.Controls.Add(this.Lbl_MaMayBay);
-            this.panel4.Location = new System.Drawing.Point(13, 237);
+            this.panel4.Location = new System.Drawing.Point(13, 157);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1237, 420);
+            this.panel4.Size = new System.Drawing.Size(1237, 500);
             this.panel4.TabIndex = 22;
             // 
             // Cbb_MaMayBay
@@ -283,7 +277,7 @@
             this.Pnl_ChucNang.Controls.Add(this.Btn_QuanLyNguoiDung);
             this.Pnl_ChucNang.Controls.Add(this.Btn_DoanhThu);
             this.Pnl_ChucNang.Controls.Add(this.Btn_QuanLyThongTinChuyenBay);
-            this.Pnl_ChucNang.Location = new System.Drawing.Point(8, 83);
+            this.Pnl_ChucNang.Location = new System.Drawing.Point(8, 3);
             this.Pnl_ChucNang.Name = "Pnl_ChucNang";
             this.Pnl_ChucNang.Size = new System.Drawing.Size(1241, 71);
             this.Pnl_ChucNang.TabIndex = 24;
@@ -316,48 +310,11 @@
             this.Btn_QuanLyThongTinChuyenBay.Text = "Quản lý thông tin chuyến bay";
             this.Btn_QuanLyThongTinChuyenBay.UseVisualStyleBackColor = true;
             // 
-            // Pnl_Header
-            // 
-            this.Pnl_Header.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Pnl_Header.Controls.Add(this.Ptb_Logo);
-            this.Pnl_Header.Controls.Add(this.Btn_DangKy);
-            this.Pnl_Header.Controls.Add(this.Btn_DangNhap);
-            this.Pnl_Header.Location = new System.Drawing.Point(9, 12);
-            this.Pnl_Header.Name = "Pnl_Header";
-            this.Pnl_Header.Size = new System.Drawing.Size(1241, 65);
-            this.Pnl_Header.TabIndex = 23;
-            // 
-            // Ptb_Logo
-            // 
-            this.Ptb_Logo.Location = new System.Drawing.Point(6, 3);
-            this.Ptb_Logo.Name = "Ptb_Logo";
-            this.Ptb_Logo.Size = new System.Drawing.Size(953, 59);
-            this.Ptb_Logo.TabIndex = 3;
-            this.Ptb_Logo.TabStop = false;
-            // 
-            // Btn_DangKy
-            // 
-            this.Btn_DangKy.Location = new System.Drawing.Point(1110, 12);
-            this.Btn_DangKy.Name = "Btn_DangKy";
-            this.Btn_DangKy.Size = new System.Drawing.Size(119, 36);
-            this.Btn_DangKy.TabIndex = 2;
-            this.Btn_DangKy.Text = "Đăng ký";
-            this.Btn_DangKy.UseVisualStyleBackColor = true;
-            // 
-            // Btn_DangNhap
-            // 
-            this.Btn_DangNhap.Location = new System.Drawing.Point(965, 12);
-            this.Btn_DangNhap.Name = "Btn_DangNhap";
-            this.Btn_DangNhap.Size = new System.Drawing.Size(119, 36);
-            this.Btn_DangNhap.TabIndex = 1;
-            this.Btn_DangNhap.Text = "Đăng nhập";
-            this.Btn_DangNhap.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.Btn_CapNhatChuyenBay);
             this.panel1.Controls.Add(this.Btn_ThemChuyenBay);
-            this.panel1.Location = new System.Drawing.Point(8, 160);
+            this.panel1.Location = new System.Drawing.Point(8, 80);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1241, 71);
             this.panel1.TabIndex = 25;
@@ -388,7 +345,6 @@
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Pnl_ChucNang);
-            this.Controls.Add(this.Pnl_Header);
             this.Controls.Add(this.panel4);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -399,8 +355,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.Pnl_ChucNang.ResumeLayout(false);
-            this.Pnl_Header.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -431,10 +385,6 @@
         private System.Windows.Forms.Button Btn_QuanLyNguoiDung;
         private System.Windows.Forms.Button Btn_DoanhThu;
         private System.Windows.Forms.Button Btn_QuanLyThongTinChuyenBay;
-        private System.Windows.Forms.Panel Pnl_Header;
-        private System.Windows.Forms.PictureBox Ptb_Logo;
-        private System.Windows.Forms.Button Btn_DangKy;
-        private System.Windows.Forms.Button Btn_DangNhap;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Btn_CapNhatChuyenBay;
         private System.Windows.Forms.Button Btn_ThemChuyenBay;
