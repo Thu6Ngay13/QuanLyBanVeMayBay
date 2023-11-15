@@ -212,7 +212,7 @@ namespace QuanLyBanVeMayBay.BLLs
 
         // Hàm này nhận vào các thông tin của 1 chuyến bay 
         // sau đó thêm chuyến bay này vào trong cơ sở dữ liệu
-        public void ThemChuyenBay(
+        public bool ThemChuyenBay(
             int MaMayMay,
             string LoaiChuyenBay,
             string DiemDi,
@@ -248,10 +248,16 @@ namespace QuanLyBanVeMayBay.BLLs
 
             DataSet ds = new DataSet();
             ds = db.executeQuery(sql, CommandType.Text, sqlParameters, ref error);
-            string MaChuyenBay = ds.Tables[0].Rows[0][0].ToString();
 
-            ThemMayBayKhoiTaoChuyenBay(MaMayMay.ToString(), MaChuyenBay, ref error);
-            ThemChuyenBayPhatHanhVeMayBay(GiaVeThuongGia, GiaVePhoThong, KhoiLuongHanhLy, MaChuyenBay, ref error);
+            if(string.IsNullOrEmpty(error))
+            {
+                string MaChuyenBay = ds.Tables[0].Rows[0][0].ToString();
+
+                ThemMayBayKhoiTaoChuyenBay(MaMayMay.ToString(), MaChuyenBay, ref error);
+                ThemChuyenBayPhatHanhVeMayBay(GiaVeThuongGia, GiaVePhoThong, KhoiLuongHanhLy, MaChuyenBay, ref error);
+                return true;
+            }
+            return false;
         }
 
         // Hàm này nhận vào 
