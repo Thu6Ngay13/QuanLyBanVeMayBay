@@ -1,4 +1,5 @@
 using QuanLyBanVeMayBay.GUI;
+using QuanLyBanVeMayBay.GUIs;
 using System;
 using System.Windows.Forms;
 
@@ -10,11 +11,12 @@ namespace QuanLyBanVeMayBay
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_MuaVe1());
+            Application.Run(new Frm_Login());
         }
     }
 }

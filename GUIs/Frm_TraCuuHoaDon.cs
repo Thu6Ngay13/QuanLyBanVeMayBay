@@ -1,11 +1,11 @@
-﻿using QuanLyBanVeMayBay.BLL;
-using QuanLyBanVeMayBay.UC;
+﻿using QuanLyBanVeMayBay.BLLs;
+using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs    
 {
     public partial class Frm_TraCuuHoaDon : Form
     {
@@ -53,6 +53,9 @@ namespace QuanLyBanVeMayBay.GUI
                 Init();
                 ds = HoaDon.ThongTinHoaDon(Txt_MaHoaDon.Text.Trim(), ref error);
                 dt = ds.Tables[0];
+
+                if (dt.Rows.Count <= 0) return;
+
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     UC_ThongTinHoaDon thongTinHoaDon = new UC_ThongTinHoaDon();

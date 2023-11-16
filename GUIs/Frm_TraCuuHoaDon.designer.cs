@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.GUI
+﻿namespace QuanLyBanVeMayBay.GUIs
 {
     partial class Frm_TraCuuHoaDon
     {
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Lbl_TongTienHoaDon = new System.Windows.Forms.Label();
             this.Lbl_ThongTinHoaDon = new System.Windows.Forms.Label();
             this.Btn_TimKiem = new System.Windows.Forms.Button();
@@ -42,22 +40,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Location = new System.Drawing.Point(12, 90);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1238, 60);
-            this.panel2.TabIndex = 16;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1238, 72);
-            this.panel1.TabIndex = 15;
             // 
             // Lbl_TongTienHoaDon
             // 
@@ -73,7 +55,7 @@
             // Lbl_ThongTinHoaDon
             // 
             this.Lbl_ThongTinHoaDon.AutoSize = true;
-            this.Lbl_ThongTinHoaDon.Location = new System.Drawing.Point(10, 237);
+            this.Lbl_ThongTinHoaDon.Location = new System.Drawing.Point(12, 52);
             this.Lbl_ThongTinHoaDon.Name = "Lbl_ThongTinHoaDon";
             this.Lbl_ThongTinHoaDon.Size = new System.Drawing.Size(152, 22);
             this.Lbl_ThongTinHoaDon.TabIndex = 13;
@@ -83,8 +65,7 @@
             // 
             this.Btn_TimKiem.BackColor = System.Drawing.Color.White;
             this.Btn_TimKiem.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Btn_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_TimKiem.Location = new System.Drawing.Point(791, 179);
+            this.Btn_TimKiem.Location = new System.Drawing.Point(786, 8);
             this.Btn_TimKiem.Name = "Btn_TimKiem";
             this.Btn_TimKiem.Size = new System.Drawing.Size(130, 38);
             this.Btn_TimKiem.TabIndex = 12;
@@ -95,7 +76,7 @@
             // Txt_MaHoaDon
             // 
             this.Txt_MaHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Txt_MaHoaDon.Location = new System.Drawing.Point(488, 183);
+            this.Txt_MaHoaDon.Location = new System.Drawing.Point(483, 12);
             this.Txt_MaHoaDon.Name = "Txt_MaHoaDon";
             this.Txt_MaHoaDon.Size = new System.Drawing.Size(255, 30);
             this.Txt_MaHoaDon.TabIndex = 11;
@@ -103,7 +84,7 @@
             // Lbl_MaHoaDon
             // 
             this.Lbl_MaHoaDon.AutoSize = true;
-            this.Lbl_MaHoaDon.Location = new System.Drawing.Point(319, 187);
+            this.Lbl_MaHoaDon.Location = new System.Drawing.Point(314, 16);
             this.Lbl_MaHoaDon.Name = "Lbl_MaHoaDon";
             this.Lbl_MaHoaDon.Size = new System.Drawing.Size(148, 22);
             this.Lbl_MaHoaDon.TabIndex = 10;
@@ -122,9 +103,9 @@
             // 
             this.Pnl_ThongTinHoaDon.AutoScroll = true;
             this.Pnl_ThongTinHoaDon.BackColor = System.Drawing.SystemColors.Control;
-            this.Pnl_ThongTinHoaDon.Location = new System.Drawing.Point(16, 19);
+            this.Pnl_ThongTinHoaDon.Location = new System.Drawing.Point(10, 3);
             this.Pnl_ThongTinHoaDon.Name = "Pnl_ThongTinHoaDon";
-            this.Pnl_ThongTinHoaDon.Size = new System.Drawing.Size(1216, 280);
+            this.Pnl_ThongTinHoaDon.Size = new System.Drawing.Size(1216, 511);
             this.Pnl_ThongTinHoaDon.TabIndex = 17;
             // 
             // label2
@@ -150,9 +131,9 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.Pnl_ThongTinHoaDon);
-            this.panel3.Location = new System.Drawing.Point(12, 275);
+            this.panel3.Location = new System.Drawing.Point(12, 77);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1238, 321);
+            this.panel3.Size = new System.Drawing.Size(1238, 519);
             this.panel3.TabIndex = 21;
             // 
             // Frm_TraCuuHoaDon
@@ -164,8 +145,6 @@
             this.Controls.Add(this.Lbl_ThoiGianThanhToan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Lbl_TongTienHoaDon);
             this.Controls.Add(this.Lbl_ThongTinHoaDon);
             this.Controls.Add(this.Btn_TimKiem);
@@ -174,6 +153,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_TraCuuHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_TraCuuHoaDon";
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -182,8 +162,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Lbl_TongTienHoaDon;
         private System.Windows.Forms.Label Lbl_ThongTinHoaDon;
         private System.Windows.Forms.Button Btn_TimKiem;

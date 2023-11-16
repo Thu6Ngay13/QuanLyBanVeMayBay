@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.UC
+﻿namespace QuanLyBanVeMayBay.UCs
 {
     partial class UC_ThongTinChuyenBay
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_CapNhat2 = new System.Windows.Forms.Button();
+            this.Btn_CapNhat = new System.Windows.Forms.Button();
             this.Lbl_GiaVeThuongGia = new System.Windows.Forms.Label();
             this.Lbl_GiaVePhoThong = new System.Windows.Forms.Label();
             this.Lbl_GioDen = new System.Windows.Forms.Label();
@@ -36,48 +36,52 @@
             this.Lbl_GioDi = new System.Windows.Forms.Label();
             this.Lbl_DiemDi = new System.Windows.Forms.Label();
             this.Lbl_DiemDen = new System.Windows.Forms.Label();
+            this.Lbl1 = new System.Windows.Forms.Label();
+            this.Lbl2 = new System.Windows.Forms.Label();
+            this.Lbl_MaChuyenBay = new System.Windows.Forms.Label();
+            this.Lbl_TinhTrangChuyenBay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Btn_CapNhat2
+            // Btn_CapNhat
             // 
-            this.Btn_CapNhat2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_CapNhat2.Location = new System.Drawing.Point(685, 39);
-            this.Btn_CapNhat2.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_CapNhat2.Name = "Btn_CapNhat2";
-            this.Btn_CapNhat2.Size = new System.Drawing.Size(164, 50);
-            this.Btn_CapNhat2.TabIndex = 26;
-            this.Btn_CapNhat2.Text = "Cập nhật";
-            this.Btn_CapNhat2.UseVisualStyleBackColor = true;
+            this.Btn_CapNhat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_CapNhat.Location = new System.Drawing.Point(685, 39);
+            this.Btn_CapNhat.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_CapNhat.Name = "Btn_CapNhat";
+            this.Btn_CapNhat.Size = new System.Drawing.Size(164, 50);
+            this.Btn_CapNhat.TabIndex = 26;
+            this.Btn_CapNhat.Text = "Cập nhật";
+            this.Btn_CapNhat.UseVisualStyleBackColor = true;
             // 
             // Lbl_GiaVeThuongGia
             // 
             this.Lbl_GiaVeThuongGia.AutoSize = true;
             this.Lbl_GiaVeThuongGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_GiaVeThuongGia.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_GiaVeThuongGia.Location = new System.Drawing.Point(346, 103);
+            this.Lbl_GiaVeThuongGia.Location = new System.Drawing.Point(480, 101);
             this.Lbl_GiaVeThuongGia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_GiaVeThuongGia.Name = "Lbl_GiaVeThuongGia";
-            this.Lbl_GiaVeThuongGia.Size = new System.Drawing.Size(191, 22);
+            this.Lbl_GiaVeThuongGia.Size = new System.Drawing.Size(39, 22);
             this.Lbl_GiaVeThuongGia.TabIndex = 33;
-            this.Lbl_GiaVeThuongGia.Text = "Giá vé thương gia: 50k";
+            this.Lbl_GiaVeThuongGia.Text = "50k";
             // 
             // Lbl_GiaVePhoThong
             // 
             this.Lbl_GiaVePhoThong.AutoSize = true;
             this.Lbl_GiaVePhoThong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_GiaVePhoThong.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_GiaVePhoThong.Location = new System.Drawing.Point(346, 69);
+            this.Lbl_GiaVePhoThong.Location = new System.Drawing.Point(480, 69);
             this.Lbl_GiaVePhoThong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_GiaVePhoThong.Name = "Lbl_GiaVePhoThong";
-            this.Lbl_GiaVePhoThong.Size = new System.Drawing.Size(184, 22);
+            this.Lbl_GiaVePhoThong.Size = new System.Drawing.Size(39, 22);
             this.Lbl_GiaVePhoThong.TabIndex = 32;
-            this.Lbl_GiaVePhoThong.Text = "Giá vé phổ thông: 30k";
+            this.Lbl_GiaVePhoThong.Text = "30k";
             // 
             // Lbl_GioDen
             // 
             this.Lbl_GioDen.AutoSize = true;
             this.Lbl_GioDen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_GioDen.Location = new System.Drawing.Point(346, 9);
+            this.Lbl_GioDen.Location = new System.Drawing.Point(334, 9);
             this.Lbl_GioDen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_GioDen.Name = "Lbl_GioDen";
             this.Lbl_GioDen.Size = new System.Drawing.Size(55, 22);
@@ -122,21 +126,73 @@
             // 
             this.Lbl_DiemDen.AutoSize = true;
             this.Lbl_DiemDen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_DiemDen.Location = new System.Drawing.Point(346, 39);
+            this.Lbl_DiemDen.Location = new System.Drawing.Point(334, 39);
             this.Lbl_DiemDen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_DiemDen.Name = "Lbl_DiemDen";
             this.Lbl_DiemDen.Size = new System.Drawing.Size(103, 22);
             this.Lbl_DiemDen.TabIndex = 35;
             this.Lbl_DiemDen.Text = "HoChiMinh";
             // 
+            // Lbl1
+            // 
+            this.Lbl1.AutoSize = true;
+            this.Lbl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Lbl1.Location = new System.Drawing.Point(334, 69);
+            this.Lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl1.Name = "Lbl1";
+            this.Lbl1.Size = new System.Drawing.Size(150, 22);
+            this.Lbl1.TabIndex = 36;
+            this.Lbl1.Text = "Giá vé phổ thông:";
+            // 
+            // Lbl2
+            // 
+            this.Lbl2.AutoSize = true;
+            this.Lbl2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Lbl2.Location = new System.Drawing.Point(334, 101);
+            this.Lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl2.Name = "Lbl2";
+            this.Lbl2.Size = new System.Drawing.Size(150, 22);
+            this.Lbl2.TabIndex = 37;
+            this.Lbl2.Text = "Giá vé phổ thông:";
+            // 
+            // Lbl_MaChuyenBay
+            // 
+            this.Lbl_MaChuyenBay.AutoSize = true;
+            this.Lbl_MaChuyenBay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_MaChuyenBay.Location = new System.Drawing.Point(766, 112);
+            this.Lbl_MaChuyenBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_MaChuyenBay.Name = "Lbl_MaChuyenBay";
+            this.Lbl_MaChuyenBay.Size = new System.Drawing.Size(133, 22);
+            this.Lbl_MaChuyenBay.TabIndex = 38;
+            this.Lbl_MaChuyenBay.Text = "@machuyenbay";
+            this.Lbl_MaChuyenBay.Visible = false;
+            // 
+            // Lbl_TinhTrangChuyenBay
+            // 
+            this.Lbl_TinhTrangChuyenBay.AutoSize = true;
+            this.Lbl_TinhTrangChuyenBay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_TinhTrangChuyenBay.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Lbl_TinhTrangChuyenBay.Location = new System.Drawing.Point(42, 101);
+            this.Lbl_TinhTrangChuyenBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_TinhTrangChuyenBay.Name = "Lbl_TinhTrangChuyenBay";
+            this.Lbl_TinhTrangChuyenBay.Size = new System.Drawing.Size(90, 22);
+            this.Lbl_TinhTrangChuyenBay.TabIndex = 39;
+            this.Lbl_TinhTrangChuyenBay.Text = "Tình trạng";
+            // 
             // UC_ThongTinChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Controls.Add(this.Lbl_TinhTrangChuyenBay);
+            this.Controls.Add(this.Lbl_MaChuyenBay);
+            this.Controls.Add(this.Lbl2);
+            this.Controls.Add(this.Lbl1);
             this.Controls.Add(this.Lbl_DiemDen);
             this.Controls.Add(this.Lbl_DiemDi);
-            this.Controls.Add(this.Btn_CapNhat2);
+            this.Controls.Add(this.Btn_CapNhat);
             this.Controls.Add(this.Lbl_GiaVeThuongGia);
             this.Controls.Add(this.Lbl_GiaVePhoThong);
             this.Controls.Add(this.Lbl_GioDen);
@@ -153,7 +209,7 @@
 
         #endregion
 
-        public System.Windows.Forms.Button Btn_CapNhat2;
+        public System.Windows.Forms.Button Btn_CapNhat;
         public System.Windows.Forms.Label Lbl_GiaVeThuongGia;
         public System.Windows.Forms.Label Lbl_GiaVePhoThong;
         public System.Windows.Forms.Label Lbl_GioDen;
@@ -161,5 +217,9 @@
         public System.Windows.Forms.Label Lbl_GioDi;
         public System.Windows.Forms.Label Lbl_DiemDi;
         public System.Windows.Forms.Label Lbl_DiemDen;
+        public System.Windows.Forms.Label Lbl1;
+        public System.Windows.Forms.Label Lbl2;
+        public System.Windows.Forms.Label Lbl_MaChuyenBay;
+        public System.Windows.Forms.Label Lbl_TinhTrangChuyenBay;
     }
 }

@@ -1,41 +1,44 @@
-﻿using QuanLyBanVeMayBay.BLL;
+using HeQuanTriDemo01.Models;
+using QuanLyBanVeMayBay.BLLs;
 using QuanLyBanVeMayBay.Models;
-using QuanLyBanVeMayBay.UC;
+using QuanLyBanVeMayBay.UCs;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_ThongTinKhachHang : Form
     {
-        BLL_KhachHang themThongTinKhachHang = null;
-        string error = null;
-        string Ho = null;
-        string Ten = null;
-        string GioiTinh = null;
-        string NgaySinh = null;
-        string SoDienThoai = null;
-        string Email = null;
-        string DiaChi = null;
+        private ThongTinChuyenBay thongtinchuyenbay;
+        private string ho = "-1";
+        private string ten = "-1";
+        private string gioitinh = "-1";
+        private DateTime ngaysinh = new DateTime(2010, 1, 1);
+        private string sodienthoai = "-1";
+        private string email = "-1";
+        private string diachi = "-1";
 
         public Frm_ThongTinKhachHang()
         {
             InitializeComponent();
         }
 
-        public void Init()
+        public Frm_ThongTinKhachHang(ThongTinChuyenBay thongtinchuyenbay)
         {
-            themThongTinKhachHang = new BLL_KhachHang();
+            InitializeComponent();
+            this.thongtinchuyenbay = thongtinchuyenbay;
         }
 
         private void Frm_ThongTinKhachHang_Load(object sender, EventArgs e)
         {
+            BLL_KhachHang bll = new BLL_KhachHang();
+
+            // Load form dien thong tin khach hang 
             int X = 3;
             int Y = 0;
-            // Test 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < thongtinchuyenbay.Sokhachnguoilon; i++)
             {
                 UC_ThongTinNguoiLon nl = new UC_ThongTinNguoiLon();
                 Y = 540 * i;
@@ -44,44 +47,46 @@ namespace QuanLyBanVeMayBay.GUI
                 Pnl_ThongTinKhachHang.Controls.Add(nl);
             }
 
-            for (int i = 2; i < 3; i++)
+            for (int i = thongtinchuyenbay.Sokhachnguoilon; i < (thongtinchuyenbay.Sokhachnguoilon + thongtinchuyenbay.Sokhachtreem); i++)
             {
                 UC_ThongTinTreEm te = new UC_ThongTinTreEm();
-                Y = i == 2 ? 540 * i : Y + 350;
-                te.Lbl_TreEm.Text = string.Concat("TRẺ EM ", i - 3);
+                Y = i == thongtinchuyenbay.Sokhachnguoilon ? 540 * i : Y + 350;
+                te.Lbl_TreEm.Text = string.Concat("TRẺ EM ", i - thongtinchuyenbay.Sokhachnguoilon + 1);
                 te.Location = new Point(X, Y); ;
                 Pnl_ThongTinKhachHang.Controls.Add(te);
             }
+
+            // Lay thong tin chuyen bay
+            LayThongTinChuyenBay();
         }
 
         private bool KiemTraThongTinNguoiLon(UC_ThongTinNguoiLon thongTinNguoiLon)
         {
-            Ho = thongTinNguoiLon.Txt_Ho.Text.Trim();
-            Ten = thongTinNguoiLon.Txt_TenDemVaTen.Text.Trim();
-            GioiTinh = thongTinNguoiLon.Cmb_GioiTinh.Text.Trim();
-            NgaySinh = thongTinNguoiLon.Mtb_NgaySinh.Text.Trim();
-            SoDienThoai = thongTinNguoiLon.Txt_SoDienThoai.Text.Trim();
-            Email = thongTinNguoiLon.Txt_Email.Text.Trim();
-            DiaChi = thongTinNguoiLon.Txt_DiaChi.Text.Trim();
+            ho = thongTinNguoiLon.Txt_Ho.Text.Trim();
+            ten = thongTinNguoiLon.Txt_TenDemVaTen.Text.Trim();
+            gioitinh = thongTinNguoiLon.Cmb_GioiTinh.Text.Trim();
+            ngaysinh = thongTinNguoiLon.Dtp_NgaySinh.Value;
+            sodienthoai = thongTinNguoiLon.Txt_SoDienThoai.Text.Trim();
+            email = thongTinNguoiLon.Txt_Email.Text.Trim();
+            diachi = thongTinNguoiLon.Txt_DiaChi.Text.Trim();
 
-            return string.IsNullOrEmpty(Ho)
-                || string.IsNullOrEmpty(Ten)
-                || string.IsNullOrEmpty(GioiTinh)
-                || string.IsNullOrEmpty(SoDienThoai)
-                || string.IsNullOrEmpty(Email)
-                || string.IsNullOrEmpty(DiaChi) ? false : true;
-        }
-
+            return string.IsNullOrEmpty(ho)
+                || string.IsNullOrEmpty(ten)
+                || string.IsNullOrEmpty(gioitinh)
+                || string.IsNullOrEmpty(sodienthoai)
+                || string.IsNullOrEmpty(email)
+                || string.IsNullOrEmpty(diachi) ? false : true;
+        }                               
         private bool KiemTraThongTinTreEm(UC_ThongTinTreEm thongTinTreEm)
         {
-            Ho = thongTinTreEm.Txt_Ho.Text.Trim();
-            Ten = thongTinTreEm.Txt_TenDemVaTen.Text.Trim();
-            GioiTinh = thongTinTreEm.Cmb_GioiTinh.Text.Trim();
-            NgaySinh = thongTinTreEm.Mtb_NgaySinh.Text.Trim();
+            ho = thongTinTreEm.Txt_Ho.Text.Trim();
+            ten = thongTinTreEm.Txt_TenDemVaTen.Text.Trim();
+            gioitinh = thongTinTreEm.Cmb_GioiTinh.Text.Trim();
+            ngaysinh = thongTinTreEm.Dtp_NgaySinh.Value;
 
-            return string.IsNullOrEmpty(Ho)
-                || string.IsNullOrEmpty(Ten)
-                || string.IsNullOrEmpty(GioiTinh) ? false : true;
+            return string.IsNullOrEmpty(ho)
+                || string.IsNullOrEmpty(ten)
+                || string.IsNullOrEmpty(gioitinh) ? false : true;
         }
 
         private bool DanhSachNguoiLon(ref List<KhachHangNguoiLon> khachHangNguoiLons)
@@ -94,17 +99,17 @@ namespace QuanLyBanVeMayBay.GUI
 
                     string HoTen = string.Concat(thongTinNguoiLon.Txt_Ho.Text.Trim(), " ",
                                                  thongTinNguoiLon.Txt_TenDemVaTen.Text.Trim());
-                    GioiTinh = thongTinNguoiLon.Cmb_GioiTinh.Text.Trim();
-                    NgaySinh = thongTinNguoiLon.Mtb_NgaySinh.Text.Trim();
-                    SoDienThoai = thongTinNguoiLon.Txt_SoDienThoai.Text.Trim();
-                    Email = thongTinNguoiLon.Txt_Email.Text.Trim();
-                    DiaChi = thongTinNguoiLon.Txt_DiaChi.Text.Trim();
+                    gioitinh = thongTinNguoiLon.Cmb_GioiTinh.Text.Trim();
+                    ngaysinh = thongTinNguoiLon.Dtp_NgaySinh.Value;
+                    sodienthoai = thongTinNguoiLon.Txt_SoDienThoai.Text.Trim();
+                    email = thongTinNguoiLon.Txt_Email.Text.Trim();
+                    diachi = thongTinNguoiLon.Txt_DiaChi.Text.Trim();
 
-                    KhachHangNguoiLon khachHangNguoiLon = 
-                        new KhachHangNguoiLon(HoTen, GioiTinh, NgaySinh, SoDienThoai, Email, DiaChi);
-                    
+                    KhachHangNguoiLon khachHangNguoiLon =
+                        new KhachHangNguoiLon(HoTen, gioitinh, ngaysinh, sodienthoai, email, diachi);
+
                     if (!KiemTraThongTinNguoiLon(thongTinNguoiLon)) return false;
-                    
+
                     khachHangNguoiLons.Add(khachHangNguoiLon);
                 }
             }
@@ -121,10 +126,10 @@ namespace QuanLyBanVeMayBay.GUI
 
                     string HoTen = string.Concat(thongTinTreEm.Txt_Ho.Text.Trim(), " ",
                                                  thongTinTreEm.Txt_TenDemVaTen.Text.Trim());
-                    GioiTinh = thongTinTreEm.Cmb_GioiTinh.Text.Trim();
-                    NgaySinh = thongTinTreEm.Mtb_NgaySinh.Text.Trim();
+                    gioitinh = thongTinTreEm.Cmb_GioiTinh.Text.Trim();
+                    ngaysinh = thongTinTreEm.Dtp_NgaySinh.Value;
 
-                    KhachHangTreEm khachHangTreEm = new KhachHangTreEm(HoTen, GioiTinh, NgaySinh);
+                    KhachHangTreEm khachHangTreEm = new KhachHangTreEm(HoTen, gioitinh, ngaysinh);
 
                     if (!KiemTraThongTinTreEm(thongTinTreEm)) return false;
 
@@ -134,79 +139,52 @@ namespace QuanLyBanVeMayBay.GUI
             return true;
         }
 
+        private void LayThongTinChuyenBay()
+        {
+            // Thong tin chieu di
+            UC_ThongTinChieuBay thongTinChieuBay = new UC_ThongTinChieuBay();
+            thongTinChieuBay.Location = new Point(2, 3);
+            thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongtinchuyenbay.Machieudi);
+            thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongtinchuyenbay.Mamaybaydi);
+            thongTinChieuBay.Lbl_DiemDi.Text = thongtinchuyenbay.Diemdi;
+            thongTinChieuBay.Lbl_DiemDen.Text = thongtinchuyenbay.Diemden;
+            thongTinChieuBay.Lbl_GioDi.Text = thongtinchuyenbay.Thoigiandi.ToString();
+            Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
+
+            // Thong tin ve chieu ve
+            if (thongtinchuyenbay.Machieuve != -1)
+            {
+                thongTinChieuBay = new UC_ThongTinChieuBay();
+                thongTinChieuBay.Location = new Point(2, 145);
+                thongTinChieuBay.Lbl_MaChuyenBay.Text = string.Concat("Mã chuyến bay: ", thongtinchuyenbay.Machieuve);
+                thongTinChieuBay.Lbl_MaMayBay.Text = string.Concat("Mã máy bay: ", thongtinchuyenbay.Mamaybayve);
+                thongTinChieuBay.Lbl_DiemDi.Text = thongtinchuyenbay.Diemden;
+                thongTinChieuBay.Lbl_DiemDen.Text = thongtinchuyenbay.Diemdi;
+                thongTinChieuBay.Lbl_ChieuBay.Text = "Chiều về";
+                thongTinChieuBay.Lbl_GioDi.Text = thongtinchuyenbay.Thoigianve.ToString();
+                Pnl_HanhTrinh.Controls.Add(thongTinChieuBay);
+            }
+        }
+
         private void Btn_TiepTuc_Click(object sender, EventArgs e)
         {
-            /*List<string> lstMaNguoiLon = new List<string>();
-            List<string> lstMaTreEm = new List<string>();
-            Init();
-            foreach(Control control in Pnl_ThongTinKhachHang.Controls)
-            {
-                if(control is UC_ThongTinNguoiLon)
-                {
-                    DataSet ds = new DataSet();
-                    UC_ThongTinNguoiLon thongTinNguoiLon = (UC_ThongTinNguoiLon)control;
-                    ds = themThongTinKhachHang.ThemKhachHangNguoiLon(
-                        string.Concat(thongTinNguoiLon.Txt_Ho.Text.Trim(), " ", thongTinNguoiLon.Txt_TenDemVaTen.Text.Trim()),
-                        thongTinNguoiLon.Cmb_GioiTinh.Text.Trim(),
-                        thongTinNguoiLon.Mtb_NgaySinh.Text.Trim(),
-                        thongTinNguoiLon.Txt_SoDienThoai.Text.Trim(),
-                        thongTinNguoiLon.Txt_Email.Text.Trim(),
-                        thongTinNguoiLon.Txt_DiaChi.Text.Trim(),
-                        "1",
-                        ref error
-                    );
-                    lstMaNguoiLon.Add(ds.Tables[0].Rows[0][0].ToString());
-                }
-                if (control is UC_ThongTinTreEm)
-                {
-                    DataSet ds = new DataSet();
-                    UC_ThongTinTreEm thongTinNguoiLon = (UC_ThongTinTreEm)control;
-                    ds = themThongTinKhachHang.ThemKhachHangTreEm(
-                        string.Concat(thongTinNguoiLon.Txt_Ho.Text.Trim(), " ", thongTinNguoiLon.Txt_TenDemVaTen.Text.Trim()),
-                        thongTinNguoiLon.Cmb_GioiTinh.Text.Trim(),
-                        thongTinNguoiLon.Mtb_NgaySinh.Text.Trim(),
-                        "1",
-                        ref error
-                    );
-                    lstMaTreEm.Add(ds.Tables[0].Rows[0][0].ToString());
-                }
-            }
-            if(lstMaTreEm.Count > 0)
-            {
-                foreach(string MaNguoiLon in lstMaNguoiLon)
-                {
-                    foreach(string MaTreEm in lstMaTreEm)
-                    {
-                        themThongTinKhachHang.ThemKhachHangNguoiLonQuanLyTreEm(MaNguoiLon, MaTreEm, ref error);
-                    }
-                }
-            }*/
-
-
-            // Lay thong tin khach hang
-
             List<KhachHangNguoiLon> khachHangNguoiLons = new List<KhachHangNguoiLon>();
             List<KhachHangTreEm> khachHangTreEms = new List<KhachHangTreEm>();
 
-            if (DanhSachNguoiLon(ref khachHangNguoiLons))
+            if (DanhSachNguoiLon(ref khachHangNguoiLons) && DanhSachTreEm(ref khachHangTreEms))
             {
-                MessageBox.Show("Them nguoi lon thanh cong");
+                this.Hide();
+                
+                Frm_GoiHanhLy frm_GoiHanhLy = new Frm_GoiHanhLy(khachHangNguoiLons, khachHangTreEms, thongtinchuyenbay);
+                frm_GoiHanhLy.ShowDialog();
+
+                if (Frm_ThanhToan.thanhtoanthanhcong == 999) this.Close();
+                this.Show();
             }
             else
             {
-                MessageBox.Show("loi them nguoi lon");
+                MessageBox.Show("Thông tin khách hàng không hợp lệ!");
             }
-
-
-            if (DanhSachTreEm(ref khachHangTreEms))
-            {
-                MessageBox.Show("Them tre thanh cong");
-            }
-            else
-            {
-                MessageBox.Show("loi them tre em");
-            }
-
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Data.SqlClient;
 using System.Data;
 
-namespace QuanLyBanVeMayBay.BLL
+namespace QuanLyBanVeMayBay.BLLs
 {
     public class BLL_NguoiDung
     {
@@ -10,7 +10,7 @@ namespace QuanLyBanVeMayBay.BLL
 
         public BLL_NguoiDung()
         {
-            db = new DBConnectionSQlServer();
+            db = new DBConnectionSQlServer(ConstantDATA.stringConnection);
         }
 
         public bool them_ThongTinNguoiDungMuaVe(int mave, int manguoidung, ref string error)

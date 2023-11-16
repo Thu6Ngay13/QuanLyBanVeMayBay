@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace QuanLyBanVeMayBay.GUI
+namespace QuanLyBanVeMayBay.GUIs
 {
     public partial class Frm_HanhKhach : Form
     {
@@ -10,7 +10,7 @@ namespace QuanLyBanVeMayBay.GUI
             InitializeComponent();
         }
 
-        private void Btn_Close_Click(object sender, EventArgs e)
+        private void Btn_Chon_Click(object sender, EventArgs e)
         {
             this.Close();
         }

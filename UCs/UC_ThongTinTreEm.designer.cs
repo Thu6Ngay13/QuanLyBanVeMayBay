@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.UC
+﻿namespace QuanLyBanVeMayBay.UCs
 {
     partial class UC_ThongTinTreEm
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Mtb_NgaySinh = new System.Windows.Forms.MaskedTextBox();
             this.Cmb_GioiTinh = new System.Windows.Forms.ComboBox();
             this.Lbl_GioiTinh = new System.Windows.Forms.Label();
             this.Lbl_NgaySinh = new System.Windows.Forms.Label();
@@ -41,19 +40,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Lbl_LuuY = new System.Windows.Forms.Label();
+            this.Dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Mtb_NgaySinh
-            // 
-            this.Mtb_NgaySinh.Location = new System.Drawing.Point(24, 228);
-            this.Mtb_NgaySinh.Mask = "00/00/0000";
-            this.Mtb_NgaySinh.Name = "Mtb_NgaySinh";
-            this.Mtb_NgaySinh.Size = new System.Drawing.Size(300, 30);
-            this.Mtb_NgaySinh.TabIndex = 48;
-            this.Mtb_NgaySinh.ValidatingType = typeof(System.DateTime);
             // 
             // Cmb_GioiTinh
             // 
@@ -139,11 +130,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Honeydew;
+            this.panel2.Controls.Add(this.Dtp_NgaySinh);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Lbl_LuuY);
             this.panel2.Controls.Add(this.Cmb_GioiTinh);
             this.panel2.Controls.Add(this.Txt_Ho);
-            this.panel2.Controls.Add(this.Mtb_NgaySinh);
             this.panel2.Controls.Add(this.Txt_TenDemVaTen);
             this.panel2.Controls.Add(this.Lbl_TenDemVaTen);
             this.panel2.Controls.Add(this.Lbl_GioiTinh);
@@ -174,6 +165,15 @@
             this.Lbl_LuuY.TabIndex = 49;
             this.Lbl_LuuY.Text = "Lưu ý: * Trường bắt buộc nhập thông tin";
             // 
+            // Dtp_NgaySinh
+            // 
+            this.Dtp_NgaySinh.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_NgaySinh.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_NgaySinh.Location = new System.Drawing.Point(23, 231);
+            this.Dtp_NgaySinh.Name = "Dtp_NgaySinh";
+            this.Dtp_NgaySinh.Size = new System.Drawing.Size(302, 25);
+            this.Dtp_NgaySinh.TabIndex = 51;
+            // 
             // UC_ThongTinTreEm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -202,10 +202,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Lbl_LuuY;
         public System.Windows.Forms.Label Lbl_TreEm;
-        public System.Windows.Forms.MaskedTextBox Mtb_NgaySinh;
         public System.Windows.Forms.ComboBox Cmb_GioiTinh;
         public System.Windows.Forms.TextBox Txt_TenDemVaTen;
         public System.Windows.Forms.TextBox Txt_Ho;
         public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.DateTimePicker Dtp_NgaySinh;
     }
 }

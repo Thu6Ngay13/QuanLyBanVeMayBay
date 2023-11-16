@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanVeMayBay.UC
+﻿namespace QuanLyBanVeMayBay.UCs
 {
     partial class UC_ThongTinChieuBay
     {
@@ -30,13 +30,14 @@
         {
             this.Lbl_DiemDi = new System.Windows.Forms.Label();
             this.Lbl_DiemDen = new System.Windows.Forms.Label();
-            this.Lbl_TenMayBay = new System.Windows.Forms.Label();
             this.Lbl_HangKhaiThac = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Lbl_ChieuBay = new System.Windows.Forms.Label();
             this.Lbl_KhoiHanh = new System.Windows.Forms.Label();
             this.Lbl_GioDi = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Lbl_MaChuyenBay = new System.Windows.Forms.Label();
+            this.Lbl_MaMayBay = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -63,17 +64,6 @@
             this.Lbl_DiemDen.TabIndex = 4;
             this.Lbl_DiemDen.Text = "Hà Nội (HAN)";
             // 
-            // Lbl_TenMayBay
-            // 
-            this.Lbl_TenMayBay.AutoSize = true;
-            this.Lbl_TenMayBay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_TenMayBay.ForeColor = System.Drawing.Color.Teal;
-            this.Lbl_TenMayBay.Location = new System.Drawing.Point(10, 52);
-            this.Lbl_TenMayBay.Name = "Lbl_TenMayBay";
-            this.Lbl_TenMayBay.Size = new System.Drawing.Size(181, 22);
-            this.Lbl_TenMayBay.TabIndex = 5;
-            this.Lbl_TenMayBay.Text = "VN 206 Boeing B787";
-            // 
             // Lbl_HangKhaiThac
             // 
             this.Lbl_HangKhaiThac.AutoSize = true;
@@ -95,7 +85,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Teal;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(455, 47);
+            this.panel1.Size = new System.Drawing.Size(445, 47);
             this.panel1.TabIndex = 15;
             // 
             // Lbl_ChieuBay
@@ -134,16 +124,37 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.Lbl_MaChuyenBay);
+            this.panel3.Controls.Add(this.Lbl_MaMayBay);
             this.panel3.Controls.Add(this.Lbl_DiemDen);
             this.panel3.Controls.Add(this.Lbl_DiemDi);
-            this.panel3.Controls.Add(this.Lbl_TenMayBay);
             this.panel3.Controls.Add(this.Lbl_HangKhaiThac);
             this.panel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.ForeColor = System.Drawing.Color.Teal;
             this.panel3.Location = new System.Drawing.Point(3, 51);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(455, 94);
+            this.panel3.Size = new System.Drawing.Size(445, 94);
             this.panel3.TabIndex = 17;
+            // 
+            // Lbl_MaChuyenBay
+            // 
+            this.Lbl_MaChuyenBay.AutoSize = true;
+            this.Lbl_MaChuyenBay.Location = new System.Drawing.Point(126, 53);
+            this.Lbl_MaChuyenBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_MaChuyenBay.Name = "Lbl_MaChuyenBay";
+            this.Lbl_MaChuyenBay.Size = new System.Drawing.Size(128, 22);
+            this.Lbl_MaChuyenBay.TabIndex = 23;
+            this.Lbl_MaChuyenBay.Text = "Mã chuyến bay";
+            // 
+            // Lbl_MaMayBay
+            // 
+            this.Lbl_MaMayBay.AutoSize = true;
+            this.Lbl_MaMayBay.Location = new System.Drawing.Point(10, 53);
+            this.Lbl_MaMayBay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_MaMayBay.Name = "Lbl_MaMayBay";
+            this.Lbl_MaMayBay.Size = new System.Drawing.Size(106, 22);
+            this.Lbl_MaMayBay.TabIndex = 22;
+            this.Lbl_MaMayBay.Text = "Mã máy bay";
             // 
             // UC_ThongTinChieuBay
             // 
@@ -154,7 +165,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_ThongTinChieuBay";
-            this.Size = new System.Drawing.Size(461, 147);
+            this.Size = new System.Drawing.Size(451, 147);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -164,14 +175,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label Lbl_DiemDi;
-        private System.Windows.Forms.Label Lbl_DiemDen;
-        private System.Windows.Forms.Label Lbl_TenMayBay;
-        private System.Windows.Forms.Label Lbl_HangKhaiThac;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label Lbl_ChieuBay;
         private System.Windows.Forms.Label Lbl_KhoiHanh;
-        private System.Windows.Forms.Label Lbl_GioDi;
+        public System.Windows.Forms.Label Lbl_MaChuyenBay;
+        public System.Windows.Forms.Label Lbl_MaMayBay;
+        public System.Windows.Forms.Label Lbl_DiemDi;
+        public System.Windows.Forms.Label Lbl_DiemDen;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label Lbl_ChieuBay;
+        public System.Windows.Forms.Label Lbl_GioDi;
+        private System.Windows.Forms.Label Lbl_HangKhaiThac;
     }
 }
