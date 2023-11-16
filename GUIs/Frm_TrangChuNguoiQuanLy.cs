@@ -1,6 +1,7 @@
 ﻿using QuanLyBanVeMayBay.BLLs;
 using System;
 using System.Data;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace QuanLyBanVeMayBay.GUIs
@@ -10,8 +11,7 @@ namespace QuanLyBanVeMayBay.GUIs
         BLL_ChuyenBay themChuyenBay = null;
         BLL_MayBay bLLMayBay = null;
         DataTable dt = null; 
-        
-        string error = null;
+       
         string MaMaybay = null;
         string LoaiChuyenBay = null;
         string DiemDi = null;
@@ -41,7 +41,7 @@ namespace QuanLyBanVeMayBay.GUIs
             GiaVeThuongGia = Txt_GiaVeThuongGia.Text.Trim();
             KhoiLuongHanhLy = Txt_KhoiLuongHanhLy.Text.Trim();
         }
-
+        
         private bool KiemTraThongTin()
         {
             LayThongTinChuyenBay();
@@ -58,14 +58,30 @@ namespace QuanLyBanVeMayBay.GUIs
                 || string.IsNullOrEmpty(GiaVeThuongGia)
                 || string.IsNullOrEmpty(KhoiLuongHanhLy) ? false : true;
         }
+
+        private void Reload()
+        {
+            Cbb_MaMayBay.ResetText();
+            Cmb_LoaiChuyenBay.ResetText();
+            Txt_DiemDi.ResetText();
+            Txt_DiemDen.ResetText();
+            Dtp_ThoiGianDi.ResetText();
+            Dtp_ThoiGianDuKienDen.ResetText();
+            Txt_ChiPhi.ResetText();
+            Txt_GiaVePhoThong.ResetText();
+            Txt_GiaVeThuongGia.ResetText(); ;
+            Txt_KhoiLuongHanhLy.ResetText(); ;
+        }
+
         private void Btn_Them_Click(object sender, EventArgs e)
         {
+            string error = null;
             themChuyenBay = new BLL_ChuyenBay();
 
             LayThongTinChuyenBay();
             if (KiemTraThongTin())
             {
-                themChuyenBay.ThemChuyenBay(int.Parse(MaMaybay),
+                bool success = themChuyenBay.ThemChuyenBay(int.Parse(MaMaybay),
                                             LoaiChuyenBay,
                                             DiemDi,
                                             DiemDen,
@@ -76,7 +92,17 @@ namespace QuanLyBanVeMayBay.GUIs
                                             GiaVeThuongGia,
                                             KhoiLuongHanhLy,
                                             ref error);
-                MessageBox.Show("Thêm chuyến bay thành công!");
+                
+                if(success)
+                {
+                    MessageBox.Show("Thêm chuyến bay thành công!");
+                    Reload();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm chuyến bay thất bại!\n" + error);
+                }
+                    
             }
             else
             {

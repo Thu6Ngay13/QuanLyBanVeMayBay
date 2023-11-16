@@ -213,6 +213,7 @@
             // 
             this.Txt_NhapLaiMatKhau_DKy.Location = new System.Drawing.Point(202, 348);
             this.Txt_NhapLaiMatKhau_DKy.Name = "Txt_NhapLaiMatKhau_DKy";
+            this.Txt_NhapLaiMatKhau_DKy.PasswordChar = '*';
             this.Txt_NhapLaiMatKhau_DKy.Size = new System.Drawing.Size(260, 30);
             this.Txt_NhapLaiMatKhau_DKy.TabIndex = 7;
             // 
@@ -220,6 +221,7 @@
             // 
             this.Txt_MatKhau_DKy.Location = new System.Drawing.Point(202, 285);
             this.Txt_MatKhau_DKy.Name = "Txt_MatKhau_DKy";
+            this.Txt_MatKhau_DKy.PasswordChar = '*';
             this.Txt_MatKhau_DKy.Size = new System.Drawing.Size(260, 30);
             this.Txt_MatKhau_DKy.TabIndex = 6;
             // 
