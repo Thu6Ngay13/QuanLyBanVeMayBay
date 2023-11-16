@@ -11,8 +11,7 @@ namespace QuanLyBanVeMayBay.GUIs
         BLL_ChuyenBay themChuyenBay = null;
         BLL_MayBay bLLMayBay = null;
         DataTable dt = null; 
-        
-        string error = null;
+       
         string MaMaybay = null;
         string LoaiChuyenBay = null;
         string DiemDi = null;
@@ -60,7 +59,7 @@ namespace QuanLyBanVeMayBay.GUIs
                 || string.IsNullOrEmpty(KhoiLuongHanhLy) ? false : true;
         }
 
-        private void Reset()
+        private void Reload()
         {
             Cbb_MaMayBay.ResetText();
             Cmb_LoaiChuyenBay.ResetText();
@@ -76,6 +75,7 @@ namespace QuanLyBanVeMayBay.GUIs
 
         private void Btn_Them_Click(object sender, EventArgs e)
         {
+            string error = null;
             themChuyenBay = new BLL_ChuyenBay();
 
             LayThongTinChuyenBay();
@@ -96,7 +96,7 @@ namespace QuanLyBanVeMayBay.GUIs
                 if(success)
                 {
                     MessageBox.Show("Thêm chuyến bay thành công!");
-                    Reset();
+                    Reload();
                 }
                 else
                 {
