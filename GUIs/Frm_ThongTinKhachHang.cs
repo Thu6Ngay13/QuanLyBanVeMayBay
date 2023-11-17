@@ -105,6 +105,8 @@ namespace QuanLyBanVeMayBay.GUIs
                     email = thongTinNguoiLon.Txt_Email.Text.Trim();
                     diachi = thongTinNguoiLon.Txt_DiaChi.Text.Trim();
 
+                    if (DateTime.Now.Subtract(thongTinNguoiLon.Dtp_NgaySinh.Value).TotalDays < 5110) return false;
+
                     KhachHangNguoiLon khachHangNguoiLon =
                         new KhachHangNguoiLon(HoTen, gioitinh, ngaysinh, sodienthoai, email, diachi);
 
@@ -128,6 +130,8 @@ namespace QuanLyBanVeMayBay.GUIs
                                                  thongTinTreEm.Txt_TenDemVaTen.Text.Trim());
                     gioitinh = thongTinTreEm.Cmb_GioiTinh.Text.Trim();
                     ngaysinh = thongTinTreEm.Dtp_NgaySinh.Value;
+
+                    if (DateTime.Now.Subtract(thongTinTreEm.Dtp_NgaySinh.Value).TotalDays > 5110) return false;
 
                     KhachHangTreEm khachHangTreEm = new KhachHangTreEm(HoTen, gioitinh, ngaysinh);
 
