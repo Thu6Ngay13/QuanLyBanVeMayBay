@@ -260,6 +260,37 @@ namespace QuanLyBanVeMayBay.GUIs
 
         private void Btn_TiepTuc_Click(object sender, EventArgs e)
         {
+            for(int i = 0; i < thongTinChuyenBay.Sokhachnguoilon; i++)
+                if (khachHangNguoiLons[i].Mavechieudi <= 0)
+                {
+                    MessageBox.Show("Quý khách vui lòng chọn ghế ");
+                    return;
+                }
+
+            for (int i = 0; i < thongTinChuyenBay.Sokhachtreem; i++)
+                if (khachHangTreEms[i].Mavechieudi <= 0)
+                {
+                    MessageBox.Show("Quý khách vui lòng chọn ghế ");
+                    return;
+                }
+
+            if(thongTinChuyenBay.Machieuve > 0)
+            {
+                for (int i = 0; i < thongTinChuyenBay.Sokhachnguoilon; i++)
+                    if (khachHangNguoiLons[i].Mavechieuve <= 0)
+                    {
+                        MessageBox.Show("Quý khách vui lòng chọn ghế ");
+                        return;
+                    }
+
+                for (int i = 0; i < thongTinChuyenBay.Sokhachnguoilon; i++)
+                    if (khachHangTreEms[i].Mavechieuve <= 0)
+                    {
+                        MessageBox.Show("Quý khách vui lòng chọn ghế ");
+                        return;
+                    }
+            }
+
             this.Hide();
 
             Frm_ThanhToan thanhToan = new Frm_ThanhToan(khachHangNguoiLons, khachHangTreEms, thongTinChuyenBay);

@@ -147,7 +147,7 @@ namespace QuanLyBanVeMayBay.GUIs
                 }
             }
 
-            if (success) MessageBox.Show("Thành công!");
+            if (success) MessageBox.Show("Thành công! Hóa đơn của bạn có mã số là: " + thongtinhoadon.first.ToString());
             else MessageBox.Show("Thất bại!");
 
             thanhtoanthanhcong = 999;

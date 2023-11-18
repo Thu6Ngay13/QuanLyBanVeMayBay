@@ -53,7 +53,7 @@
             // 
             // Nud_TreEm
             // 
-            this.Nud_TreEm.Location = new System.Drawing.Point(178, 32);
+            this.Nud_TreEm.Location = new System.Drawing.Point(230, 31);
             this.Nud_TreEm.Maximum = new decimal(new int[] {
             5,
             0,
@@ -66,11 +66,11 @@
             // Lbl_TreEm
             // 
             this.Lbl_TreEm.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_TreEm.Location = new System.Drawing.Point(32, 34);
+            this.Lbl_TreEm.Location = new System.Drawing.Point(10, 32);
             this.Lbl_TreEm.Name = "Lbl_TreEm";
-            this.Lbl_TreEm.Size = new System.Drawing.Size(75, 28);
+            this.Lbl_TreEm.Size = new System.Drawing.Size(162, 28);
             this.Lbl_TreEm.TabIndex = 1;
-            this.Lbl_TreEm.Text = "Trẻ em";
+            this.Lbl_TreEm.Text = "Trẻ em (<14 tuổi)";
             // 
             // Pnl_NguoiLon
             // 
@@ -84,7 +84,7 @@
             // 
             // Nud_NguoiLon
             // 
-            this.Nud_NguoiLon.Location = new System.Drawing.Point(178, 32);
+            this.Nud_NguoiLon.Location = new System.Drawing.Point(230, 30);
             this.Nud_NguoiLon.Maximum = new decimal(new int[] {
             5,
             0,
@@ -107,7 +107,7 @@
             // Lbl_NguoiLon
             // 
             this.Lbl_NguoiLon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_NguoiLon.Location = new System.Drawing.Point(32, 34);
+            this.Lbl_NguoiLon.Location = new System.Drawing.Point(10, 31);
             this.Lbl_NguoiLon.Name = "Lbl_NguoiLon";
             this.Lbl_NguoiLon.Size = new System.Drawing.Size(98, 28);
             this.Lbl_NguoiLon.TabIndex = 0;
